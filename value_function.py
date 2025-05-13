@@ -1,4 +1,8 @@
 from collections import defaultdict
+from policy import *
+
+
+'''Missing: Policy for minimaxQ_Function and general Policy -> i have to look at this first'''
 
 class Value_Function():
 
@@ -17,7 +21,7 @@ class Value_Function():
 
 class Q_Function(Value_Function):
 
-    def __init__(self, Q = None, start_value: int = 0.0):
+    def __init__(self, policy: Policy, Q = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9):
         """
         Initializes the value function with a default value.
         """
@@ -27,13 +31,18 @@ class Q_Function(Value_Function):
             # creates dict of form {state: {action: value}} 
             self.Q = defaultdict(lambda: defaultdict(lambda: start_value))
 
+        self.start_value = start_value
+        self.learning_rate = learning_rate
+        self.discount_factor = discount_factor
+        self.policy = policy
+
         
 
     def getValue(self, state:list) -> float:
         """
         Returns the state-value of a given state.
         """
-        return max(self.Q[state].valiues())
+        return max(self.Q[state].values())
 
     def getQValue(self, state:list, action: str) -> float:
         """
@@ -41,39 +50,51 @@ class Q_Function(Value_Function):
         """
         return self.Q[state][action]
     
-    def updateQValue(self, state: list, action: str, action_opponent: str, reward: int):
+    def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """
-        pass
+        self.Q[state][action] = (1 - self.learning_rate) * self.Q[state][action] + self.learning_rate * (reward + self.discount_factor * self.getValue(future_state))
+        self.learning_rate = self.learning_rate * self.discount_factor
+     
         
 class minimaxQ_Function(Value_Function):
 
-    def __init__(self, Q = None, start_value: int = 0.0):
+    def __init__(self, Q = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9):
         """
         Initializes the value function with a default value.
         """
+        self.start_value = start_value
         if Q is not None:
             self.Q = Q
         else:
-            # creates dict of form {state: {action: value}} 
-            self.Q = defaultdict(lambda: defaultdict(lambda: start_value))
+            # creates dict of form {state: {action: {opponent_action:value}}} 
+            self.Q = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: start_value)))
+        self.start_value = start_value
+        self.learning_rate = learning_rate
+        self.discount_factor = discount_factor
         
 
     def getValue(self, state:list) -> float:
         """
         Returns the state-value of a given state.
         """
-        return max(self.Q[state].valiues())
+        if state not in self.Q:
+            return self.start_value
+        
+        return max(min(self.Q[state][action].values()) for action in self.Q[state].keys())
 
-    def getQValue(self, state:list, action: str) -> float:
+
+    def getQValue(self, state:list, action: str, action_opponent: str) -> float:
         """
         returns the state-action-value or Q-Value of a given state-action pair.
         """
-        return self.Q[state][action]
+        return self.Q[state][action][action_opponent]
     
-    def updateQValue(self, state: list, action: str, action_opponent: str, reward: int):
+    def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """
-        pass
+        self.Q[state][action][action_opponent] = (1 - self.learning_rate) * self.Q[state][action][action_opponent] + self.learning_rate * (reward + self.discount_factor * self.getValue(state))
+        self.learning_rate = self.learning_rate * self.discount_factor
+        
