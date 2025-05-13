@@ -41,7 +41,7 @@ class Q_Function(Value_Function):
         """
         return self.Q[state][action]
     
-    def updateQValue(self, state: list, action: str, reward: int):
+    def updateQValue(self, state: list, action: str, action_opponent: str, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """
@@ -72,7 +72,7 @@ class minimaxQ_Function(Value_Function):
         """
         return self.Q[state][action]
     
-    def updateQValue(self, state: list, action: str, reward: int):
+    def updateQValue(self, state: list, action: str, action_opponent: str, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """
