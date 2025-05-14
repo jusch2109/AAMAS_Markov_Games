@@ -18,6 +18,12 @@ class Value_Function():
         """
         #abstract
 
+    def updateQValue(self, state, future_state, action, possible_actions: list, possible_opponent_actions: list,):
+        """
+        Updates the Q-value of a given state-action pair.
+        """
+        #abstract
+
 
 class Q_Function(Value_Function):
 
@@ -44,13 +50,13 @@ class Q_Function(Value_Function):
         """
         return max(self.Q[state].values())
 
-    def getQValue(self, state:list, action: str) -> float:
+    def getQValue(self, state:list, action: str, action_opponent: str) -> float:
         """
         returns the state-action-value or Q-Value of a given state-action pair.
         """
         return self.Q[state][action]
     
-    def updateQValue(self, state: list, future_state: list, action: str, reward: int):
+    def updateQValue(self, state: list, future_state: list, action: str, possible_actions: list, possible_opponent_actions: list, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """
