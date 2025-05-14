@@ -73,6 +73,7 @@ class EpsilonGreedyPolicy(Policy):
 class LearnedMiniMaxPolicy(Policy):
     def __init__(self, environment, agent_idx, explore) -> None:
 
+        self.explore = explore
         self.pi = {}
         # Initialisiere gleichverteilte Policy
         for a in range(5):
