@@ -8,7 +8,7 @@ from policy import LearnedMiniMaxPolicy
 from value_function import MinimaxQ_Function
 
 env = Environment()
-run_random = False
+run_random = True
 if run_random:
     agentA = Agent(env, RandomPolicy_Value_Function(0), 0)
     agentB = Agent(env, RandomPolicy_Value_Function(1), 1)
