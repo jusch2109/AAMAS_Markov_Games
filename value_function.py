@@ -33,7 +33,6 @@ class Q_Function(Value_Function):
 
         self.start_value = start_value
         self.learning_rate = learning_rate
-        self.gamma = 1
         self.policy = policy
 
         
