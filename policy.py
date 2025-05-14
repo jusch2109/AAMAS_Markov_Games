@@ -64,7 +64,7 @@ class EpsilonGreedyPolicy(Policy):
     
 
 class LearnedMiniMaxPolicy(Policy):
-    def __init__(self, environment) -> None:
+    def __init__(self, environment, agent_idx) -> None:
 
         self.pi = {}
         # Initialisiere gleichverteilte Policy
@@ -74,7 +74,7 @@ class LearnedMiniMaxPolicy(Policy):
                     for d in range(4):
                         for e in [0, 1]:
                             state = [(a, b), (c, d), e]
-                            actions = environment.getPossibleActions(state)
+                            actions = environment.getPossibleActions(state, agent_idx)
                             if actions:
                                 self.pi[state] = {action: 1 / len(actions) for action in actions}
 
