@@ -118,8 +118,8 @@ class RandomPolicy_Value_Function(Value_Function):
     """
     A random policy that selects actions uniformly at random.
     """
-    def __init__(self, ) -> None:
-        self.policy = RandomPolicy()
+    def __init__(self, agent:int) -> None:
+        self.policy = RandomPolicy(agent)
 
     def getValue(self, state: list) -> float:
         """

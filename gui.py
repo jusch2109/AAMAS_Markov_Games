@@ -48,6 +48,7 @@ class Gui():
                 for col in range(6):
                     rect = pygame.Rect(field_x + col * square_width, field_y + row * square_height, square_width, square_height)
                     pygame.draw.rect(screen, field_color, rect, 1)
+            # print(self.env.state)
             playerA_color = (0, 0, 255)
             playerB_color = (0, 0, 255)
             if self.env.state[2] == 0:
