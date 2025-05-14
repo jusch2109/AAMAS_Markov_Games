@@ -11,7 +11,7 @@ def state_to_tuple(state: list) -> tuple:
 
 class Policy():
 
-    def getAction(self, state, *args, **kwargs):
+    def getAction(self, state, q_table, *args, **kwargs):
         """
         Returns an action according to the policy based on the current state
         """
@@ -71,8 +71,9 @@ class EpsilonGreedyPolicy(Policy):
     
 
 class LearnedMiniMaxPolicy(Policy):
-    def __init__(self, environment, agent_idx) -> None:
+    def __init__(self, environment, agent_idx, explore) -> None:
 
+        self.explore = explore
         self.pi = {}
         # Initialisiere gleichverteilte Policy
         for a in range(5):
@@ -89,6 +90,8 @@ class LearnedMiniMaxPolicy(Policy):
         """
         Returns the action according to the policy based on the current state.
         """
+        if random.random() < self.explore:
+            return random.choice(possible_actions)
         state = state_to_tuple(state)
         if state not in self.pi:
             return None
@@ -142,7 +145,8 @@ class LearnedMiniMaxPolicy(Policy):
         if res.success:
             self.pi[state] = {a: res.x[i] for i, a in enumerate(possible_actions)}
             z = res.x[-1]
-            self.minimaxQ_Function.V[state] = z
+            return z
         else:
             # fallback to uniform distribution
             self.pi[state] = {a: 1 / len(possible_actions) for a in possible_actions}
+            return 0.0

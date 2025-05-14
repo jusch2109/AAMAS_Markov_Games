@@ -6,7 +6,7 @@ class Environment:
     """
     Initializes the environment
     """
-    self.ball = random.randint(0, 2)
+    self.ball = random.randint(0, 1)
     #structure: position A, position B, ball
     #position A and B are tuples of (x,y) coordinates
     #ball is an integer representing the index of the player with the ball

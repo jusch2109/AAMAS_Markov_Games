@@ -1,18 +1,23 @@
 from environment import Environment
 import pygame
 import threading
+import time
 
 class Gui():
-    def __init__(self,env: Environment):
+    def __init__(self,env: Environment,mac):
         self.env = env
+        self.mac = mac
         pass
 
     def run(self):
-        """
-        Starts the GUI in a separate thread.
-        """
-        self.running = True
-        threading.Thread(target=self._main_loop, daemon=True).start()
+        if self.mac:
+            self._main_loop()
+        else:
+            """
+            Starts the GUI in a separate thread.
+            """
+            self.running = True
+            threading.Thread(target=self._main_loop, daemon=True).start()
 
 
     def _main_loop(self):
@@ -25,15 +30,22 @@ class Gui():
         screen_width, screen_height = 700, 400   # Keep this ratio so players stay a a circle
         screen = pygame.display.set_mode((screen_width, screen_height))
         pygame.display.set_caption("Simulation GUI")
-
+        clock = pygame.time.Clock()
         # Main loop
         running = True
-        clock = pygame.time.Clock()
         # Initialize font
         pygame.font.init()
         font = pygame.font.Font(None, 36)  # Default font with size 36
-
+        if self.mac:
+            # Record the start time
+            start_time = time.time()
+        
         while running:
+
+            # Check if 1 second has passed
+            if self.mac and time.time() - start_time > 1:
+                running = False
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
