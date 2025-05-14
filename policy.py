@@ -6,13 +6,13 @@ import numpy as np
 
 class Policy():
 
-    def getAction(self, state):
+    def getAction(self, state, *args, **kwargs):
         """
         Returns an action according to the policy based on the current state
         """
         #abstract
 
-    def getActionProbability(self, state, action):
+    def getActionProbability(self, state, action, *args, **kwargs):
         """
         Returns the probability that a specific action is chosen in a specific state by this policy.
         """
