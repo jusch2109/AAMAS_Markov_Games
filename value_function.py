@@ -133,7 +133,7 @@ class RandomPolicy_Value_Function(Value_Function):
     """
     def __init__(self, agent:int) -> None:
         self.policy = RandomPolicy(agent)
-
+        self.Q = None
     def getValue(self, state: list) -> float:
         """
         Returns the state-value of a given state.
