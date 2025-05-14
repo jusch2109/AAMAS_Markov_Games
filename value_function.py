@@ -41,7 +41,6 @@ class Q_Function(Value_Function):
         self.learning_rate = learning_rate
         self.policy = policy
         self.discount_factor = discount_factor
-        self.policy = policy
         
 
     def getValue(self, state:list) -> float:

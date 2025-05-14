@@ -33,6 +33,7 @@ class Simulation():
         Runs the simulation for a given number of episodes.
         """
         for episode in range(num_episodes):
+            print("restarting episode", episode)
             self.environment.reset()
             self.state = self.environment.getCurrentState()
             done = False
