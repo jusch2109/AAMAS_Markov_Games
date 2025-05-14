@@ -16,7 +16,7 @@ class Agent():
         """
         Returns an action according to the policy based on the current state
         """
-        return self.value_function.policy.getAction(state)
+        return self.value_function.policy.getAction(state, self.environment.getPossibleActions(state, self.agent_index))
 
     def getValue(self, state):
         """

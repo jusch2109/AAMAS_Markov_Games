@@ -79,7 +79,7 @@ class LearnedMiniMaxPolicy(Policy):
                             if actions:
                                 self.pi[state] = {action: 1 / len(actions) for action in actions}
 
-    def getAction(self, state) -> str:
+    def getAction(self, state, possible_actions) -> str:
         """
         Returns the action according to the policy based on the current state.
         """
@@ -87,7 +87,10 @@ class LearnedMiniMaxPolicy(Policy):
             return None
         actions = list(self.pi[state].keys())
         probabilities = list(self.pi[state].values())
-        return np.random.choice(actions, p=probabilities)
+        action = np.random.choice(actions, p=probabilities)
+        if (action not in possible_actions):
+            ValueError(f"Action {action} not in possible actions {possible_actions}")
+        return action
 
 
     def update(self, state, possible_actions, possible_actions_opponent, Q_Function): 

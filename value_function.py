@@ -112,3 +112,27 @@ class MinimaxQ_Function(Value_Function):
         self.learning_rate = self.learning_rate * self.discount_factor
         
         self.V[state] = self.policy.update(state, possible_actions, possible_opponent_actions, self)
+
+
+class RandomPolicy_Value_Function(Value_Function):
+    """
+    A random policy that selects actions uniformly at random.
+    """
+    def __init__(self, ) -> None:
+        self.policy = RandomPolicy()
+
+    def getValue(self, state: list) -> float:
+        """
+        Returns the state-value of a given state.
+        """
+        return 0.0
+    def getQValue(self, state: list, action: str) -> float:
+        """
+        returns the state-action-value or Q-Value of a given state-action pair.
+        """
+        return 0.0
+    def updateQValue(self, state: list, future_state: list, action: str, possible_actions: list, possible_opponent_actions: list, reward: int):
+        """
+        Updates the Q-value of a given state-action pair.
+        """
+        pass
