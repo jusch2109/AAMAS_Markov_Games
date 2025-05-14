@@ -1,5 +1,8 @@
 from simulation import *
 from environment import Environment
+from policy import RandomPolicy
+from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function
+from policy import EpsilonGreedyPolicy
 from agent import Agent
 from policy import LearnedMiniMaxPolicy
 from value_function import MinimaxQ_Function

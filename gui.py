@@ -51,6 +51,7 @@ class Gui():
             # print(self.env.state)
             playerA_color = (0, 0, 255)
             playerB_color = (0, 0, 255)
+            print(self.env.state)
             if self.env.state[2] == 0:
                 playerA_color = (255, 0, 0)  # Red for player A with the ball
             elif self.env.state[2] == 1:

@@ -11,7 +11,7 @@ class Environment:
     #position A and B are tuples of (x,y) coordinates
     #ball is an integer representing the index of the player with the ball
     #0 = player A, 1 = player B
-    self.state = [[3,2], [1,1], self.ball]
+    self.state = [[3,2], [1,1], self.ball]  #  [3,2,1,1,1]
         
   def getCurrentState(self):
     """
@@ -26,8 +26,8 @@ class Environment:
     return the empty list if we are in 
     a terminal state.
     """
-    # A
 
+    # A
     if agent == 0 or agent == "A":
         posiible_actions_A = ['stay']
         if state[0][0] < 4:
@@ -95,7 +95,15 @@ class Environment:
         #can pass it to the other player
         if self.ball == idx:
             self.ball = 1 - idx
-        self.state[idx] = pos_old
+        ## undo move
+        if action == 'move_right':
+            self.state[idx][0] -= 1
+        elif action == 'move_left':
+            self.state[idx][0] += 1
+        elif action == 'move_up':
+            self.state[idx][1] -= 1
+        elif action == 'move_down':
+            self.state[idx][1] += 1
 
     reward = 0
     if (idx ==0 and self.ball == 0 and self.state[idx][0]<0 ) or (idx == 1 and self.ball == 1 and self.state[idx][0]>4):
@@ -111,7 +119,7 @@ class Environment:
     """
     Resets the current state to the start state
     """
-    self.ball = random.randint(0, 2)
+    self.ball = random.randint(0, 1)
     #structure: position A, position B, ball
     #position A and B are tuples of (x,y) coordinates
     #ball is an integer representing the index of the player with the ball
