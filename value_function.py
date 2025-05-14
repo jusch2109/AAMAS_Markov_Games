@@ -34,7 +34,8 @@ class Q_Function(Value_Function):
         self.start_value = start_value
         self.learning_rate = learning_rate
         self.policy = policy
-
+        self.discount_factor = discount_factor
+        self.policy = policy
         
 
     def getValue(self, state:list) -> float:
@@ -49,7 +50,7 @@ class Q_Function(Value_Function):
         """
         return self.Q[state][action]
     
-    def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, reward: int):
+    def updateQValue(self, state: list, future_state: list, action: str, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """
@@ -60,7 +61,7 @@ class Q_Function(Value_Function):
         
 class MinimaxQ_Function(Value_Function):
 
-    def __init__(self, Q = None, V = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9):
+    def __init__(self, policy: LearnedMiniMaxPolicy, Q: dict = None, V: dict = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9):
         """
         Initializes the value function with a default value.
         """
@@ -78,6 +79,7 @@ class MinimaxQ_Function(Value_Function):
         self.start_value = start_value
         self.learning_rate = learning_rate
         self.discount_factor = discount_factor
+        self.policy = policy
         
 
     def getValue(self, state:list) -> float:
@@ -96,10 +98,11 @@ class MinimaxQ_Function(Value_Function):
         """
         return self.Q[state][action][action_opponent]
     
-    def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, reward: int):
+    def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, possible_actions: list, possible_opponent_actions: list, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """
         self.Q[state][action][action_opponent] = (1 - self.learning_rate) * self.Q[state][action][action_opponent] + self.learning_rate * (reward + self.discount_factor * self.getValue(state))
         self.learning_rate = self.learning_rate * self.discount_factor
         
+        self.V[state] = self.policy.update(state, possible_actions, possible_opponent_actions, self)
