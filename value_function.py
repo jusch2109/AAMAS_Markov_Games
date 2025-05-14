@@ -59,7 +59,7 @@ class Q_Function(Value_Function):
 
      
         
-class minimaxQ_Function(Value_Function):
+class MinimaxQ_Function(Value_Function):
 
     def __init__(self, Q = None, V = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9):
         """

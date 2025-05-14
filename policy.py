@@ -1,9 +1,9 @@
 from collections import defaultdict
 from environment import Environment
-from policy import LearnedMiniMaxPolicy
 from scipy.optimize import linprog
 import random
 import numpy as np
+from value_function import MinimaxQ_Function
 
 class Policy():
 
@@ -73,7 +73,7 @@ class EpsilonGreedyPolicy(Policy):
     
 
 class LearnedMiniMaxPolicy(Policy):
-    def __init__(self, environment: Environment, minimaxQ_Function: LearnedMiniMaxPolicy,  agent) -> None:
+    def __init__(self, environment: Environment, minimaxQ_Function: MinimaxQ_Function,  agent) -> None:
         self.environment = environment
         self.minimaxQ_Function = minimaxQ_Function  # q_table[state][action][opponent_action]
         self.pi = {}
