@@ -4,7 +4,7 @@ import random
 
 class Policy():
 
-    def getAction(self, state, *args, **kwargs):
+    def getAction(self, state, agent, *args, **kwargs):
         """
         Returns an action according to the policy based on the current state
         """
@@ -20,19 +20,21 @@ class RandomPolicy(Policy):
     """
     Returns a random action among all possible ones with a uniform distribution.
     """
-    def __init__(self, environment: Environment) -> None:
+    def __init__(self, environment: Environment, agent_index:int) -> None:
         self.environment = environment
+        self.agent = agent_index
 
     def getAction(self, state, *args, **kwargs):
-        possible_actions = self.environment.getPossibleActions(state)
+        possible_actions = self.environment.getPossibleActions(state, self.agent)  ## 
         return np.random.choice(possible_actions)
     
 class GreedyPolicy(Policy):
     """
     Returns the action with the highest Q-value for the current state.
     """
-    def __init__(self, environment: Environment, q_table) -> None:
+    def __init__(self, environment: Environment, agent_index:int, q_table) -> None:
         self.environment = environment
+        self.agent = agent_index
         self.q_table = q_table
 
     def getAction(self, state, *args, **kwargs):

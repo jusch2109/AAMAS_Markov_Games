@@ -11,7 +11,7 @@ class Environment:
     #position A and B are tuples of (x,y) coordinates
     #ball is an integer representing the index of the player with the ball
     #0 = player A, 1 = player B
-    self.state = [(3,2), (1,1), self.ball]
+    self.state = [[3,2], [1,1], self.ball]
         
   def getCurrentState(self):
     """
@@ -31,26 +31,26 @@ class Environment:
     if agent == 0 or agent == "A":
         posiible_actions_A = ['stay']
         if state[0][0] < 4:
-            posiible_actions_A.append(['move_right'])
+            posiible_actions_A.append('move_right')
         if state[0][0] > 0 or (0 < state[0][1] < 3 and self.ball == 0):
-            posiible_actions_A.append(['move_left'])
+            posiible_actions_A.append('move_left')
         if state[0][1] < 3:
-            posiible_actions_A.append(['move_up'])
+            posiible_actions_A.append('move_up')
         if state[0][1] > 0:
-            posiible_actions_A.append(['move_down'])
+            posiible_actions_A.append('move_down')
         return posiible_actions_A
 
     # B
     if agent == 1 or agent == " ":
         posiible_actions_B = ['stay']
         if state[1][0] < 4 or (0 < state[1][1] < 3 and self.ball == 1):
-            posiible_actions_B.append(['move_right'])
+            posiible_actions_B.append('move_right')
         if state[1][0] > 0 :
-            posiible_actions_B.append(['move_left'])
+            posiible_actions_B.append('move_left')
         if state[1][1] < 3:
-            posiible_actions_B.append(['move_up'])
+            posiible_actions_B.append('move_up')
         if state[1][1] > 0:
-            posiible_actions_B.append(['move_down'])
+            posiible_actions_B.append('move_down')
         return posiible_actions_B
     
     return []
@@ -116,4 +116,4 @@ class Environment:
     #position A and B are tuples of (x,y) coordinates
     #ball is an integer representing the index of the player with the ball
     #0 = player A, 1 = player B
-    self.state = [(3,2), (1,1), self.ball]
+    self.state = [[3,2], [1,1], self.ball]
