@@ -33,7 +33,7 @@ class Q_Function(Value_Function):
 
         self.start_value = start_value
         self.learning_rate = learning_rate
-        self.discount_factor = discount_factor
+        self.gamma = 1
         self.policy = policy
 
         
@@ -54,13 +54,14 @@ class Q_Function(Value_Function):
         """
         Updates the Q-value of a given state-action pair.
         """
-        self.Q[state][action] = (1 - self.learning_rate) * self.Q[state][action] + self.learning_rate * (reward + self.discount_factor * self.getValue(future_state))
-        self.learning_rate = self.learning_rate * self.discount_factor
+        self.Q[state][action] = (1 - self.learning_rate) * self.Q[state][action] +\
+                                 self.learning_rate * (reward + self.discount_factor * self.getValue(future_state))
+
      
         
 class minimaxQ_Function(Value_Function):
 
-    def __init__(self, Q = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9):
+    def __init__(self, Q = None, V = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9):
         """
         Initializes the value function with a default value.
         """
@@ -70,6 +71,11 @@ class minimaxQ_Function(Value_Function):
         else:
             # creates dict of form {state: {action: {opponent_action:value}}} 
             self.Q = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: start_value)))
+        if V is not None:
+            self.V = V
+        else:
+            # creates dict of form {state: value}
+            self.V = defaultdict(lambda: start_value)
         self.start_value = start_value
         self.learning_rate = learning_rate
         self.discount_factor = discount_factor
@@ -79,10 +85,10 @@ class minimaxQ_Function(Value_Function):
         """
         Returns the state-value of a given state.
         """
-        if state not in self.Q:
+        if state not in self.V:
             return self.start_value
         
-        return max(min(self.Q[state][action].values()) for action in self.Q[state].keys())
+        return self.V[state]
 
 
     def getQValue(self, state:list, action: str, action_opponent: str) -> float:
