@@ -1,7 +1,4 @@
 from agent import *
-from environment import *
-from policy import *
-from value_function import *
 import random
 from gui import Gui
 from time import sleep
@@ -11,7 +8,7 @@ class Simulation():
     A class that runs a simulation of the environment with two agents.
     """
     
-    def __init__(self, environment: Environment, agentA: Agent, agentB: Agent) -> None:
+    def __init__(self, environment: Environment, agentA: Agent, agentB: Agent, use_gui = True) -> None:
         self.environment = environment
          #0 = player A, 1 = player B
         self.agentA = agentA
@@ -21,7 +18,6 @@ class Simulation():
         self.state = environment.reset()
         self.training = True
         self.cooldown = 2
-        use_gui = True
         if use_gui:
             self.gui = Gui(environment)
             self.gui.run()

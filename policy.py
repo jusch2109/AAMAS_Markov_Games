@@ -3,6 +3,12 @@ from scipy.optimize import linprog
 import random
 import numpy as np
 
+def state_to_tuple(state: list) -> tuple:
+    """
+    Converts a state from a list to a tuple.
+    """
+    return ((state[0][0], state[0][1]), (state[1][0], state[1][1]), state[2])
+
 class Policy():
 
     def getAction(self, state, *args, **kwargs):
@@ -36,6 +42,7 @@ class GreedyPolicy(Policy):
         self.agent = agent
 
     def getAction(self, state: list, possible_actions: list) -> str:
+        state = state_to_tuple(state)
         q_values = {action: self.q_table[state][action] for action in possible_actions}
         max_value = max(q_values.values())
         best_actions = [a for a, v in q_values.items() if v == max_value]
@@ -50,7 +57,7 @@ class EpsilonGreedyPolicy(Policy):
 
 
     def getAction(self, state: list, q_table: dict, possible_actions:list) -> str:
-
+        state = state_to_tuple(state)
         # Exploration
         if random.random() < self.epsilon:
             return random.choice(possible_actions)
@@ -64,7 +71,7 @@ class EpsilonGreedyPolicy(Policy):
     
 
 class LearnedMiniMaxPolicy(Policy):
-    def __init__(self, environment) -> None:
+    def __init__(self, environment, agent_idx) -> None:
 
         self.pi = {}
         # Initialisiere gleichverteilte Policy
@@ -73,8 +80,8 @@ class LearnedMiniMaxPolicy(Policy):
                 for c in range(5):
                     for d in range(4):
                         for e in [0, 1]:
-                            state = [(a, b), (c, d), e]
-                            actions = environment.getPossibleActions(state)
+                            state = ((a, b), (c, d), e)
+                            actions = environment.getPossibleActions(state, agent_idx)
                             if actions:
                                 self.pi[state] = {action: 1 / len(actions) for action in actions}
 
@@ -82,6 +89,7 @@ class LearnedMiniMaxPolicy(Policy):
         """
         Returns the action according to the policy based on the current state.
         """
+        state = state_to_tuple(state)
         if state not in self.pi:
             return None
         actions = list(self.pi[state].keys())
@@ -96,6 +104,7 @@ class LearnedMiniMaxPolicy(Policy):
         """
         Updates π[state] using linear programming.
         """
+        state = state_to_tuple(state)
         Q = Q_Function.Q[state]
         num_actions = len(possible_actions)
 
