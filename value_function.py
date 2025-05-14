@@ -24,7 +24,7 @@ class Value_Function():
         """
         #abstract
 
-    def updateQValue(self, state, future_state, action, possible_actions: list, possible_opponent_actions: list,):
+    def updateQValue(self, state, future_state, action, action_opponent: str, possible_actions: list, possible_opponent_actions: list, reward:int):
         """
         Updates the Q-value of a given state-action pair.
         """
@@ -64,7 +64,7 @@ class Q_Function(Value_Function):
         state = state_to_tuple(state)
         return self.Q[state][action]
     
-    def updateQValue(self, state: list, future_state: list, action: str, possible_actions: list, possible_opponent_actions: list, reward: int):
+    def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, possible_actions: list, possible_opponent_actions: list, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """
@@ -145,7 +145,7 @@ class RandomPolicy_Value_Function(Value_Function):
         returns the state-action-value or Q-Value of a given state-action pair.
         """
         return 0.0
-    def updateQValue(self, state: list, future_state: list, action: str, possible_actions: list, possible_opponent_actions: list, reward: int):
+    def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, possible_actions: list, possible_opponent_actions: list, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """

@@ -8,7 +8,7 @@ class Simulation():
     A class that runs a simulation of the environment with two agents.
     """
     
-    def __init__(self, environment: Environment, agentA: Agent, agentB: Agent, use_gui = True) -> None:
+    def __init__(self, environment: Environment, agentA: Agent, agentB: Agent, training = True, use_gui = True) -> None:
         self.environment = environment
          #0 = player A, 1 = player B
         self.agentA = agentA
@@ -16,7 +16,7 @@ class Simulation():
         self.agentA.agent_index = 0
         self.agentB.agent_index = 1
         self.state = environment.reset()
-        self.training = True
+        self.training = training
         self.cooldown = 2
         if use_gui:
             self.gui = Gui(environment)
@@ -33,7 +33,8 @@ class Simulation():
             self.state = self.environment.getCurrentState()
             done = False
             while not done:
-                sleep(self.cooldown)
+                if not self.training:
+                    sleep(self.cooldown)
                 actionA = self.agentA.getAction(self.state)
                 actionB = self.agentB.getAction(self.state)
                 print(self.environment.state)
@@ -46,9 +47,21 @@ class Simulation():
                     rewardA, next_state = self.environment.doAction(actionA, 0)
                 
                 # Update Q-values    TODO: probably has to be changed as we dont necessarily use Qlearning
-                if self.training and False:
-                    self.agentA.value_function.updateQValue(self.state, actionA, actionB, rewardA)
-                    self.agentB.value_function.updateQValue(self.state, actionB, actionB, rewardB)
+                if self.training:
+                    self.agentA.value_function.updateQValue(self.state, 
+                                                            next_state, 
+                                                            actionA, 
+                                                            actionB, 
+                                                            self.environment.getPossibleActions(self.state, self.agentA.agent_index), 
+                                                            self.environment.getPossibleActions(self.state, 1 - self.agentA.agent_index), 
+                                                            rewardA)
+                    self.agentB.value_function.updateQValue(self.state, 
+                                                            next_state, 
+                                                            actionB,
+                                                            actionA,
+                                                            self.environment.getPossibleActions(self.state, self.agentB.agent_index), 
+                                                            self.environment.getPossibleActions(self.state, 1 - self.agentB.agent_index), 
+                                                            rewardB)
 
                 # Check if the episode is done
                 if next_state[0][0] < 0 or next_state[1][0] > 4:
