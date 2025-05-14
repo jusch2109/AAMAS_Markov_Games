@@ -11,7 +11,7 @@ def state_to_tuple(state: list) -> tuple:
 
 class Policy():
 
-    def getAction(self, state, *args, **kwargs):
+    def getAction(self, state, q_table, *args, **kwargs):
         """
         Returns an action according to the policy based on the current state
         """
@@ -41,7 +41,7 @@ class GreedyPolicy(Policy):
         self.q_table = q_table
         self.agent = agent
 
-    def getAction(self, state: list, possible_actions: list) -> str:
+    def getAction(self, state: list, q_table, possible_actions: list) -> str:
         state = state_to_tuple(state)
         q_values = {action: self.q_table[state][action] for action in possible_actions}
         max_value = max(q_values.values())
@@ -85,7 +85,7 @@ class LearnedMiniMaxPolicy(Policy):
                             if actions:
                                 self.pi[state] = {action: 1 / len(actions) for action in actions}
 
-    def getAction(self, state, possible_actions) -> str:
+    def getAction(self, state, q_table, possible_actions) -> str:
         """
         Returns the action according to the policy based on the current state.
         """
