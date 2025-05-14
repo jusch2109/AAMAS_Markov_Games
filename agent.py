@@ -1,4 +1,3 @@
-from policy import Policy
 from value_function import Value_Function
 from environment import Environment
 

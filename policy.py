@@ -1,5 +1,4 @@
 from collections import defaultdict
-from policy import LearnedMiniMaxPolicy
 from scipy.optimize import linprog
 import random
 import numpy as np

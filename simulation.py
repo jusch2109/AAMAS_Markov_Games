@@ -1,7 +1,4 @@
 from agent import *
-from environment import *
-from policy import *
-from value_function import *
 import random
 from gui import Gui
 from time import sleep
