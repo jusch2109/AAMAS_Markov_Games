@@ -5,7 +5,7 @@ def state_to_tuple(state: list) -> tuple:
     """
     Converts a state from a list to a tuple.
     """
-    return tuple((state[0][0], state[0][1]), (state[1][0], state[1][1]), state[2])
+    return ((state[0][0], state[0][1]), (state[1][0], state[1][1]), state[2])
 
 
 '''Missing: Policy for minimaxQ_Function and general Policy -> i have to look at this first'''
