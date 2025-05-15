@@ -32,7 +32,7 @@ class RandomPolicy(Policy):
 
     def getAction(self, state: list, possible_actions: list,q_table: dict = None) -> str:
         return np.random.choice(possible_actions)
-    
+
 class GreedyPolicy(Policy):
     """
     Returns the action with the highest Q-value for the current state.
@@ -47,7 +47,7 @@ class GreedyPolicy(Policy):
         max_value = max(q_values.values())
         best_actions = [a for a, v in q_values.items() if v == max_value]
         return random.choice(best_actions)
-    
+
 
 class EpsilonGreedyPolicy(Policy):
     """
@@ -68,32 +68,24 @@ class EpsilonGreedyPolicy(Policy):
         max_value = max(q_values.values())
         best_actions = [a for a, v in q_values.items() if v == max_value]
         return random.choice(best_actions)
-    
-    
+
+
 
 class LearnedMiniMaxPolicy(Policy):
-    def __init__(self, environment, agent_idx, explore, pi=None) -> None:
+    def __init__(self, environment, agent_idx, explore) -> None:
 
         self.explore = explore
         self.pi = {}
-
-        if pi is not None:
-            self.pi = pi
-        else:
-            # Initialize the policy with uniform distribution over possible actions
-            # for all states in the environment
-            # Assuming the environment has a method to get all possible actions
-            # for each state and agent
-            
-            for a in range(5):
-                for b in range(4):
-                    for c in range(5):
-                        for d in range(4):
-                            for e in [0, 1]:
-                                state = ((a, b), (c, d), e)
-                                actions = environment.getPossibleActions(state, agent_idx)
-                                if actions:
-                                    self.pi[state] = {action: 1 / len(actions) for action in actions}
+        # Initialisiere gleichverteilte Policy
+        for a in range(5):
+            for b in range(4):
+                for c in range(5):
+                    for d in range(4):
+                        for e in [0, 1]:
+                            state = ((a, b), (c, d), e)
+                            actions = environment.getPossibleActions(state, agent_idx)
+                            if actions:
+                                self.pi[str(state)] = {action: 1 / len(actions) for action in actions}
 
     def getAction(self, state, possible_actions,q_table: dict = None) -> str:
         """
@@ -159,8 +151,6 @@ class LearnedMiniMaxPolicy(Policy):
             # fallback to uniform distribution
             self.pi[str(state)] = {a: 1 / len(possible_actions) for a in possible_actions}
             return 0.0
-        
-        
 
 class MockPolicy(Policy):
     """
@@ -178,6 +168,6 @@ class MockPolicy(Policy):
             self.environment.mock_actions[self.agent] = ""
             #print(old_action)
             return old_action
-    
+
     def update(self):
         pass
