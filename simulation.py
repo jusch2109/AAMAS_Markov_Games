@@ -1,4 +1,5 @@
 from agent import *
+from policy import *
 import random
 from gui import Gui
 from time import sleep
@@ -8,7 +9,7 @@ class Simulation():
     A class that runs a simulation of the environment with two agents.
     """
     
-    def __init__(self, environment: Environment, agentA: Agent, agentB: Agent, training = True, use_gui = True, mac=False) -> None:
+    def __init__(self, environment: Environment, agentA: Agent, agentB: Agent, explore_decay:int = 1, training = True, use_gui = True, mac=False) -> None:
         self.environment = environment
          #0 = player A, 1 = player B
         self.agentA = agentA
@@ -17,6 +18,8 @@ class Simulation():
         self.agentB.agent_index = 1
         environment.reset()
         self.state = environment.getCurrentState()
+
+        self.explore_decay = explore_decay
         
         self.training = training
         self.mac = mac
@@ -45,8 +48,8 @@ class Simulation():
                     sleep(self.cooldown)
                 actionA = self.agentA.getAction(self.state)
                 actionB = self.agentB.getAction(self.state)
-                print(self.environment.state)
-                print(actionA, actionB)
+                #print(self.environment.state)
+                #print(actionA, actionB)
                 if random.random() < 0.5:
                     rewardA, next_state = self.environment.doAction(actionA, 0)
                     rewardB, next_state = self.environment.doAction(actionB, 1)
@@ -77,3 +80,14 @@ class Simulation():
                 
                 # Update state
                 self.state = next_state
+
+            # Update exploration decay
+            if self.training:
+                if type(self.agentA.value_function.policy) == EpsilonGreedyPolicy:
+                    self.agentA.value_function.policy.epsilon *= self.explore_decay
+                if type(self.agentB.value_function.policy) == EpsilonGreedyPolicy:
+                    self.agentB.value_function.policy.epsilon *= self.explore_decay
+                if type(self.agentA.value_function.policy) == LearnedMiniMaxPolicy:
+                    self.agentA.value_function.policy.explore *= self.explore_decay
+                if type(self.agentB.value_function.policy) == LearnedMiniMaxPolicy:
+                    self.agentB.value_function.policy.explore *= self.explore_decay
