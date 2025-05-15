@@ -66,7 +66,7 @@ class Environment:
     Returns a (reward, nextState) pair
     """
 
-    print(action)
+    #print(action)
     idx = 0
     if agent == 0 or agent == "A":
         idx = 0
