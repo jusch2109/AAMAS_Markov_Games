@@ -123,7 +123,7 @@ class Q_Function(Value_Function):
         
 class MinimaxQ_Function(Value_Function):
 
-    def __init__(self, policy: LearnedMiniMaxPolicy, Q: dict = None, V: dict = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9):
+    def __init__(self, policy: LearnedMiniMaxPolicy, Q: dict = None, V: dict = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9, decay: float = 0.9999):
         """
         Initializes the value function with a default value.
         """
@@ -142,6 +142,7 @@ class MinimaxQ_Function(Value_Function):
         self.start_value = start_value
         self.learning_rate = learning_rate
         self.discount_factor = discount_factor
+        self.decay = decay
         self.policy = policy
         
 
@@ -149,7 +150,8 @@ class MinimaxQ_Function(Value_Function):
         """
         Returns the state-value of a given state.
         """
-        state = state_to_tuple(state)
+        if type(state) == list:
+            state = state_to_tuple(state)
         if state not in self.V:
             return self.start_value
         
@@ -169,16 +171,18 @@ class MinimaxQ_Function(Value_Function):
         """
         state = state_to_tuple(state)
         future_state = state_to_tuple(future_state)
-        self.Q[str(state)][action][action_opponent] = (1 - self.learning_rate) * self.Q[str(state)][action][action_opponent] + self.learning_rate * (reward + self.discount_factor * self.getValue(state))
-        self.learning_rate = self.learning_rate * self.discount_factor
+        self.Q[str(state)][action][action_opponent] = (1 - self.learning_rate) * self.Q[str(state)][action][action_opponent] + self.learning_rate * (reward + self.discount_factor * self.getValue(str(future_state)))
+        self.learning_rate = self.learning_rate * self.decay
         
-        self.V[str(state)] = self.policy.update(state, possible_actions, possible_opponent_actions, self)
+        self.V[str(state)] = self.policy.update(state, possible_actions, possible_opponent_actions, self.Q)
 
     def save_dict(self, filename="min_max"):
         if not filename.endswith(".json"):
             filename = filename + ".json"
-        out_file = open(filename, "w")
+        out_file = open("Q_" + filename, "w")
         json.dump(self.Q, out_file, indent = 4)
+        out_file = open("V_" + filename, "w")
+        json.dump(self.V, out_file, indent = 4)
 
     def load_dict(self, filename="min_max"):
         if not filename.endswith(".json"):
@@ -186,11 +190,13 @@ class MinimaxQ_Function(Value_Function):
         if not os.path.exists(filename):
             return
         # Opening JSON file
-        f = open(filename,)
+        f_Q = open("Q_" + filename,)
+        f_V = open("V_" + filename,)
         
         # returns JSON object as 
         # a dictionary
-        self.Q = json.load(f)
+        self.Q = json.load(f_Q)
+        self.V = json.load(f_V)
         return
 
 class RandomPolicy_Value_Function(Value_Function):
