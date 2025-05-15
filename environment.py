@@ -33,7 +33,7 @@ class Environment:
         posiible_actions_A = ['stay']
         if state[0][0] < 4:
             posiible_actions_A.append('move_right')
-        if state[0][0] > 0 or (0 < state[0][1] < 3 and self.ball == 0):
+        if state[0][0] > 0 or (0 < state[0][1] < 3 and state[2] == 0):
             posiible_actions_A.append('move_left')
         if state[0][1] < 3:
             posiible_actions_A.append('move_up')
@@ -44,7 +44,7 @@ class Environment:
     # B
     if agent == 1 or agent == " ":
         posiible_actions_B = ['stay']
-        if state[1][0] < 4 or (0 < state[1][1] < 3 and self.ball == 1):
+        if state[1][0] < 4 or (0 < state[1][1] < 3 and state[2] == 1):
             posiible_actions_B.append('move_right')
         if state[1][0] > 0 :
             posiible_actions_B.append('move_left')
