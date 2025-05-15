@@ -2,6 +2,8 @@ from collections import defaultdict
 from scipy.optimize import linprog
 import random
 import numpy as np
+import json
+import os
 
 def state_to_tuple(state: list) -> tuple:
     """
@@ -116,32 +118,80 @@ class LearnedMiniMaxPolicy(Policy):
     def update(self, state, possible_actions, possible_actions_opponent, Q_Function): 
         """
         Updates π[str(state)] using linear programming.
+        If multiple optimal policies exist, prefers the one closest to a uniform distribution.
         """
-        state = state_to_tuple(state)
-        Q = Q_Function.Q[str(state)]
+    
+        
+        if type(state) != tuple:
+            state = state_to_tuple(state)
+
+        Q = Q_Function[str(state)]
         num_actions = len(possible_actions)
 
-        # Objective: maximize z (min value over opponent actions), so we minimize -z
+        # Stage 1: Maximize z (min over opponent actions)
         c = np.zeros(num_actions + 1)
-        c[-1] = -1  # Coefficient for z
+        c[-1] = -1  # maximize z → minimize -z
 
-        # Constraints: z <= sum_a π[a] * Q[a][o]  →  -Q + z <= 0 for each opponent action o
         A_ub = []
         b_ub = []
         for o in possible_actions_opponent:
-            constraint = [-Q[a][o] for a in possible_actions]  # -Q[a][o] * π[a]
+            constraint = [-Q[a][o] for a in possible_actions]
             constraint.append(1)  # + z
             A_ub.append(constraint)
             b_ub.append(0)
 
-        # Sum of π[a] = 1 (probability distribution)
-        A_eq = [[1] * num_actions + [0]]
+        A_eq = [[1] * num_actions + [0]]  # sum of π = 1
         b_eq = [1]
-
-        # Bounds: π[a] in [0,1], z is unbounded
         bounds = [(0, 1)] * num_actions + [(None, None)]
 
-        # Solve linear program
+        res = linprog(
+            c=c,
+            A_ub=A_ub,
+            b_ub=b_ub,
+            A_eq=A_eq,
+            b_eq=b_eq,
+            bounds=bounds,
+            method="highs"
+        )
+
+        if not res.success:
+            self.pi[str(state)] = {a: 1 / len(possible_actions) for a in possible_actions}
+            return 0.0
+
+        z_star = res.x[-1]
+
+        # Stage 2: Find π that achieves z_star and minimizes the maximum π[i]
+        # Introduce variable t such that π[i] <= t for all i, and minimize t
+
+        num_vars = num_actions + 1  # π variables + z + t
+        c = [0] * (num_actions) + [1]  # Objective: minimize t
+
+        bounds = [(0, 1)] * (num_actions+1)  # bounds for π & t ∈ [0, 1]
+
+
+        # Equality constraint: sum of π = 1
+        A_eq = [[1 if i < num_actions else 0 for i in range(num_vars)]]
+        b_eq = [1]
+
+       
+
+        # Upper bound constraint: π[i] <= t → π[i] - t <= 0
+        A_ub = []
+        b_ub = []
+        for i in range(num_actions):
+            row = [0] * num_vars
+            row[i] = 1   # π[i]
+            row[-1] = -1 # -t
+            A_ub.append(row)
+            b_ub.append(0)
+
+         # Enforce z = z_star for each opponent action
+        for o in possible_actions_opponent:
+            row = [Q[a][o] for a in possible_actions]  # π part
+            row += [0]   # t
+            A_ub.append(row)
+            b_ub.append(z_star)
+
         res = linprog(
             c=c,
             A_ub=A_ub,
@@ -153,15 +203,32 @@ class LearnedMiniMaxPolicy(Policy):
         )
 
         if res.success:
-            self.pi[str(state)] = {a: res.x[i] for i, a in enumerate(possible_actions)}
-            z = res.x[-1]
-            return z
+            pi_values = res.x[:num_actions]
+            self.pi[str(state)] = {a: pi_values[i] for i, a in enumerate(possible_actions)}
+            return z_star
         else:
-            # fallback to uniform distribution
             self.pi[str(state)] = {a: 1 / len(possible_actions) for a in possible_actions}
             return 0.0
         
         
+    def save_dict(self, filename="Pi_min_max"):
+        if not filename.endswith(".json"):
+            filename = filename + ".json"
+        out_file = open(filename, "w")
+        json.dump(self.pi, out_file, indent = 4)
+
+    def load_dict(self, filename="Pi_min_max"):
+        if not filename.endswith(".json"):
+            filename = filename + ".json"
+        if not os.path.exists(filename):
+            return
+        # Opening JSON file
+        f = open(filename, )
+        
+        # returns JSON object as 
+        # a dictionary
+        self.pi = json.load(f)
+        return
 
 class MockPolicy(Policy):
     """
