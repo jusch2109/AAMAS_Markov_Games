@@ -3,13 +3,14 @@ from policy import *
 import random
 from gui import Gui
 from time import sleep
+from tqdm import tqdm
 
 class Simulation():
     """
     A class that runs a simulation of the environment with two agents.
     """
     
-    def __init__(self, environment: Environment, agentA: Agent, agentB: Agent, explore_decay:int = 1, training = True, use_gui = True, mac=False) -> None:
+    def __init__(self, environment: Environment, agentA: Agent, agentB: Agent, explore_decay:int = 0.9, training = True, use_gui = True, mac=False) -> None:
         self.environment = environment
          #0 = player A, 1 = player B
         self.agentA = agentA
@@ -23,7 +24,7 @@ class Simulation():
         
         self.training = training
         self.mac = mac
-        self.save_and_load = True
+        self.save_and_load = False
         self.cooldown = 2
         if use_gui:
             self.gui = Gui(environment,mac)
@@ -41,7 +42,7 @@ class Simulation():
         if self.save_and_load:
             self.agentA.value_function.load_dict("q_A")
             self.agentB.value_function.load_dict("q_B")
-        for episode in range(num_episodes):
+        for episode in tqdm(range(num_episodes)):
 
             #print("restarting episode", episode)
             self.state = self.environment.getCurrentState()
@@ -52,12 +53,16 @@ class Simulation():
                 if not self.training and self.gui:
                     print("sleeping")
                     sleep(self.cooldown)
+
                 actionA = self.agentA.getAction(self.state)
                 actionB = self.agentB.getAction(self.state)
                 #print(self.environment.state)
                 #print(actionA, actionB)
 
-                previous_state = [list(self.state[0]), list(self.state[1]), self.state[2]]   # copy with different reference
+                if self.state[2] == 1 and self.state[0][0] == 0 and self.state[0][1] == 1 and actionA == "move_left":
+                    x = 0
+
+                previous_state = self.state.copy() #[list(self.state[0]), list(self.state[1]), self.state[2]]   # copy with different reference
 
                 if random.random() < 0.5:
                     rewardA, next_state = self.environment.doAction(actionA, 0)
@@ -72,15 +77,15 @@ class Simulation():
                                                             next_state, 
                                                             actionA, 
                                                             actionB, 
-                                                            self.environment.getPossibleActions(self.state, self.agentA.agent_index), 
-                                                            self.environment.getPossibleActions(self.state, 1 - self.agentA.agent_index), 
+                                                            self.environment.getPossibleActions(previous_state, self.agentA.agent_index), 
+                                                            self.environment.getPossibleActions(previous_state, 1 - self.agentA.agent_index), 
                                                             rewardA)
                     self.agentB.value_function.updateQValue(previous_state, 
                                                             next_state, 
                                                             actionB,
                                                             actionA,
-                                                            self.environment.getPossibleActions(self.state, self.agentB.agent_index), 
-                                                            self.environment.getPossibleActions(self.state, 1 - self.agentB.agent_index), 
+                                                            self.environment.getPossibleActions(previous_state, self.agentB.agent_index), 
+                                                            self.environment.getPossibleActions(previous_state, 1 - self.agentB.agent_index), 
                                                             rewardB)
 
                 # Check if the episode is done
@@ -98,8 +103,8 @@ class Simulation():
 
             self.environment.reset()
             if self.training:
-                self.agentA.value_function.Q["training_episodes"] += 1
-                self.agentB.value_function.Q["training_episodes"] += 1
+                #self.agentA.value_function.Q["training_episodes"] += 1
+                #self.agentB.value_function.Q["training_episodes"] += 1
                         # Update exploration decay
                 if type(self.agentA.value_function.policy) == EpsilonGreedyPolicy:
                     self.agentA.value_function.policy.epsilon *= self.explore_decay
