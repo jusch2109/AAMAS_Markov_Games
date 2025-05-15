@@ -71,20 +71,28 @@ class EpsilonGreedyPolicy(Policy):
     
 
 class LearnedMiniMaxPolicy(Policy):
-    def __init__(self, environment, agent_idx, explore) -> None:
+    def __init__(self, environment, agent_idx, explore, pi=None) -> None:
 
         self.explore = explore
         self.pi = {}
         # Initialisiere gleichverteilte Policy
-        for a in range(5):
-            for b in range(4):
-                for c in range(5):
-                    for d in range(4):
-                        for e in [0, 1]:
-                            state = ((a, b), (c, d), e)
-                            actions = environment.getPossibleActions(state, agent_idx)
-                            if actions:
-                                self.pi[state] = {action: 1 / len(actions) for action in actions}
+        if pi is not None:
+            self.pi = pi
+        else:
+            # Initialize the policy with uniform distribution over possible actions
+            # for all states in the environment
+            # Assuming the environment has a method to get all possible actions
+            # for each state and agent
+            
+            for a in range(5):
+                for b in range(4):
+                    for c in range(5):
+                        for d in range(4):
+                            for e in [0, 1]:
+                                state = ((a, b), (c, d), e)
+                                actions = environment.getPossibleActions(state, agent_idx)
+                                if actions:
+                                    self.pi[state] = {action: 1 / len(actions) for action in actions}
 
     def getAction(self, state, possible_actions,q_table: dict = None) -> str:
         """
@@ -150,6 +158,8 @@ class LearnedMiniMaxPolicy(Policy):
             # fallback to uniform distribution
             self.pi[state] = {a: 1 / len(possible_actions) for a in possible_actions}
             return 0.0
+        
+        
 
 class MockPolicy(Policy):
     """
@@ -165,7 +175,7 @@ class MockPolicy(Policy):
         else:
             old_action = self.environment.mock_actions[self.agent]
             self.environment.mock_actions[self.agent] = ""
-            print(old_action)
+            #print(old_action)
             return old_action
     
     def update(self):
