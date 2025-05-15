@@ -43,11 +43,12 @@ class GreedyPolicy(Policy):
 
     def getAction(self, state: list, possible_actions: list,q_table: dict = None) -> str:
         state = state_to_tuple(state)
-        q_values = {action: self.q_table[state][action] for action in possible_actions}
+        q_values = {action: self.q_table[str(state)][action] for action in possible_actions}
         max_value = max(q_values.values())
         best_actions = [a for a, v in q_values.items() if v == max_value]
         return random.choice(best_actions)
     
+
 class EpsilonGreedyPolicy(Policy):
     """
     Exploits with probability epsilon or otherwise returns the action with the highest Q-value for the current state.
@@ -63,7 +64,7 @@ class EpsilonGreedyPolicy(Policy):
             return random.choice(possible_actions)
 
         # Exploitation
-        q_values = {action: q_table[state][action] for action in possible_actions}
+        q_values = {action: q_table[str(state)][action] for action in possible_actions}
         max_value = max(q_values.values())
         best_actions = [a for a, v in q_values.items() if v == max_value]
         return random.choice(best_actions)
@@ -92,7 +93,7 @@ class LearnedMiniMaxPolicy(Policy):
                                 state = ((a, b), (c, d), e)
                                 actions = environment.getPossibleActions(state, agent_idx)
                                 if actions:
-                                    self.pi[state] = {action: 1 / len(actions) for action in actions}
+                                    self.pi[str(state)] = {action: 1 / len(actions) for action in actions}
 
     def getAction(self, state, possible_actions,q_table: dict = None) -> str:
         """
@@ -101,10 +102,10 @@ class LearnedMiniMaxPolicy(Policy):
         if random.random() < self.explore:
             return random.choice(possible_actions)
         state = state_to_tuple(state)
-        if state not in self.pi:
+        if str(state) not in self.pi:
             return None
-        actions = list(self.pi[state].keys())
-        probabilities = list(self.pi[state].values())
+        actions = list(self.pi[str(state)].keys())
+        probabilities = list(self.pi[str(state)].values())
         action = np.random.choice(actions, p=probabilities)
         if (action not in possible_actions):
             ValueError(f"Action {action} not in possible actions {possible_actions}")
@@ -113,10 +114,10 @@ class LearnedMiniMaxPolicy(Policy):
 
     def update(self, state, possible_actions, possible_actions_opponent, Q_Function): 
         """
-        Updates π[state] using linear programming.
+        Updates π[str(state)] using linear programming.
         """
         state = state_to_tuple(state)
-        Q = Q_Function.Q[state]
+        Q = Q_Function.Q[str(state)]
         num_actions = len(possible_actions)
 
         # Objective: maximize z (min value over opponent actions), so we minimize -z
@@ -151,12 +152,12 @@ class LearnedMiniMaxPolicy(Policy):
         )
 
         if res.success:
-            self.pi[state] = {a: res.x[i] for i, a in enumerate(possible_actions)}
+            self.pi[str(state)] = {a: res.x[i] for i, a in enumerate(possible_actions)}
             z = res.x[-1]
             return z
         else:
             # fallback to uniform distribution
-            self.pi[state] = {a: 1 / len(possible_actions) for a in possible_actions}
+            self.pi[str(state)] = {a: 1 / len(possible_actions) for a in possible_actions}
             return 0.0
         
         
@@ -175,7 +176,7 @@ class MockPolicy(Policy):
         else:
             old_action = self.environment.mock_actions[self.agent]
             self.environment.mock_actions[self.agent] = ""
-            #print(old_action)
+            ##print(old_action)
             return old_action
     
     def update(self):

@@ -1,5 +1,7 @@
 from collections import defaultdict
 from policy import *
+import json
+import os
 
 def state_to_tuple(state: list) -> tuple:
     """
@@ -29,6 +31,17 @@ class Value_Function():
         Updates the Q-value of a given state-action pair.
         """
         #abstract
+    
+    def save_dict(self, filename: str):
+        """
+        Saves the Q-value dictionary to a file.
+        """
+        #abstract
+    def load_dict(self, filename: str):
+        """
+        Loads the Q-value dictionary from a file.
+        """
+        #abstract
 
 
 class Q_Function(Value_Function):
@@ -42,7 +55,7 @@ class Q_Function(Value_Function):
         else:
             # creates dict of form {state: {action: value}} 
             self.Q = defaultdict(lambda: defaultdict(lambda: start_value))
-
+            self.Q["training_episodes"] = 0
         self.start_value = start_value
         self.learning_rate = learning_rate
         self.policy = policy
@@ -54,24 +67,58 @@ class Q_Function(Value_Function):
         Returns the state-value of a given state.
         """
         state = state_to_tuple(state)
-        return max(self.Q[state].values())
+        if str(state) not in self.Q or self.Q[str(state)] == {}:
+            #print(self.Q[str(state)])
+            #print("\n\n")
+            return self.start_value
+        return max(self.Q[str(state)].values())
 
     def getQValue(self, state:list, action: str, action_opponent: str) -> float:
         """
         returns the state-action-value or Q-Value of a given state-action pair.
         """
         state = state_to_tuple(state)
-        return self.Q[state][action]
+        return self.Q[str(state)].get(action,self.start_value)
     
     def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, possible_actions: list, possible_opponent_actions: list, reward: int):
         """
         Updates the Q-value of a given state-action pair.
         """
+
         state = state_to_tuple(state)
         future_state = state_to_tuple(future_state)
-        self.Q[state][action] = (1 - self.learning_rate) * self.Q[state][action] +\
+        #print(self.Q[str(state)])
+        #print("\n")
+        self.Q[str(state)][action] = (1 - self.learning_rate) * self.Q[str(state)].get(action,self.start_value) +\
                                  self.learning_rate * (reward + self.discount_factor * self.getValue(future_state))
+        #if(self.getValue(future_state) != 0):
+            #print(future_state)
+            #print(state)
+            #print(self.Q[str(state)])
 
+
+    def save_dict(self, filename="q_table"):
+        if not filename.endswith(".json"):
+            filename = filename + ".json"
+        out_file = open(filename, "w")
+        json.dump(self.Q, out_file, indent = 4)
+
+    def load_dict(self, filename="q_table"):
+        if not filename.endswith(".json"):
+            filename = filename + ".json"
+        if not os.path.exists(filename):
+            print("File does not exist")
+            return
+        # Opening JSON file
+        f = open(filename,)
+        
+        # returns JSON object as 
+        # a dictionary
+        l = json.load(f)
+        
+        self.Q = defaultdict(lambda: defaultdict(lambda: self.start_value), l)
+        self.policy.q_table = self.Q
+        pass
      
         
 class MinimaxQ_Function(Value_Function):
@@ -86,6 +133,7 @@ class MinimaxQ_Function(Value_Function):
         else:
             # creates dict of form {state: {action: {opponent_action:value}}} 
             self.Q = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: start_value)))
+            self.Q["training_episodes"] = 0
         if V is not None:
             self.V = V
         else:
@@ -105,7 +153,7 @@ class MinimaxQ_Function(Value_Function):
         if state not in self.V:
             return self.start_value
         
-        return self.V[state]
+        return self.V[str(state)]
 
 
     def getQValue(self, state:list, action: str, action_opponent: str) -> float:
@@ -113,7 +161,7 @@ class MinimaxQ_Function(Value_Function):
         returns the state-action-value or Q-Value of a given state-action pair.
         """
         state = state_to_tuple(state)
-        return self.Q[state][action][action_opponent]
+        return self.Q[str(state)][action][action_opponent]
     
     def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, possible_actions: list, possible_opponent_actions: list, reward: int):
         """
@@ -121,11 +169,29 @@ class MinimaxQ_Function(Value_Function):
         """
         state = state_to_tuple(state)
         future_state = state_to_tuple(future_state)
-        self.Q[state][action][action_opponent] = (1 - self.learning_rate) * self.Q[state][action][action_opponent] + self.learning_rate * (reward + self.discount_factor * self.getValue(state))
+        self.Q[str(state)][action][action_opponent] = (1 - self.learning_rate) * self.Q[str(state)][action][action_opponent] + self.learning_rate * (reward + self.discount_factor * self.getValue(state))
         self.learning_rate = self.learning_rate * self.discount_factor
         
-        self.V[state] = self.policy.update(state, possible_actions, possible_opponent_actions, self)
+        self.V[str(state)] = self.policy.update(state, possible_actions, possible_opponent_actions, self)
 
+    def save_dict(self, filename="min_max"):
+        if not filename.endswith(".json"):
+            filename = filename + ".json"
+        out_file = open(filename, "w")
+        json.dump(self.Q, out_file, indent = 4)
+
+    def load_dict(self, filename="min_max"):
+        if not filename.endswith(".json"):
+            filename = filename + ".json"
+        if not os.path.exists(filename):
+            return
+        # Opening JSON file
+        f = open(filename,)
+        
+        # returns JSON object as 
+        # a dictionary
+        self.Q = json.load(f)
+        return
 
 class RandomPolicy_Value_Function(Value_Function):
     """
@@ -150,6 +216,12 @@ class RandomPolicy_Value_Function(Value_Function):
         """
         pass
 
+    def save_dict(self, filename):
+        pass
+
+    def load_dict(self, filename):
+        pass
+
 class Mock_Value_Function(Value_Function):
     """
     A mock value function for testing purposes.
@@ -171,4 +243,10 @@ class Mock_Value_Function(Value_Function):
         """
         Updates the Q-value of a given state-action pair.
         """
+        pass
+    
+    def save_dict(self, filename):
+        pass
+
+    def load_dict(self, filename):
         pass
