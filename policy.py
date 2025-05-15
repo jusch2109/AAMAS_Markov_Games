@@ -77,6 +77,7 @@ class LearnedMiniMaxPolicy(Policy):
         self.explore = explore
         self.pi = {}
         # Initialisiere gleichverteilte Policy
+
         if pi is not None:
             self.pi = pi
         else:

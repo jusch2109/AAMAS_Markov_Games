@@ -56,7 +56,9 @@ class Simulation():
                 actionB = self.agentB.getAction(self.state)
                 #print(self.environment.state)
                 #print(actionA, actionB)
+
                 previous_state = [list(self.state[0]), list(self.state[1]), self.state[2]]   # copy with different reference
+
                 if random.random() < 0.5:
                     rewardA, next_state = self.environment.doAction(actionA, 0)
                     rewardB, next_state = self.environment.doAction(actionB, 1)
@@ -94,8 +96,11 @@ class Simulation():
                 # Update state
                 self.state = next_state
 
-            # Update exploration decay
+            self.environment.reset()
             if self.training:
+                self.agentA.value_function.Q["training_episodes"] += 1
+                self.agentB.value_function.Q["training_episodes"] += 1
+                        # Update exploration decay
                 if type(self.agentA.value_function.policy) == EpsilonGreedyPolicy:
                     self.agentA.value_function.policy.epsilon *= self.explore_decay
                 if type(self.agentB.value_function.policy) == EpsilonGreedyPolicy:
@@ -104,10 +109,6 @@ class Simulation():
                     self.agentA.value_function.policy.explore *= self.explore_decay
                 if type(self.agentB.value_function.policy) == LearnedMiniMaxPolicy:
                     self.agentB.value_function.policy.explore *= self.explore_decay
-            self.environment.reset()
-            if self.training:
-                self.agentA.value_function.Q["training_episodes"] += 1
-                self.agentB.value_function.Q["training_episodes"] += 1
 
         if self.training and self.save_and_load:
             self.agentA.value_function.save_dict("q_A")
