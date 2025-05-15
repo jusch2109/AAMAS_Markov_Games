@@ -59,9 +59,6 @@ class Simulation():
                 #print(self.environment.state)
                 #print(actionA, actionB)
 
-                if self.state[2] == 1 and self.state[0][0] == 0 and self.state[0][1] == 1 and actionA == "move_left":
-                    x = 0
-
                 previous_state = self.state.copy() #[list(self.state[0]), list(self.state[1]), self.state[2]]   # copy with different reference
 
                 if random.random() < 0.5:
