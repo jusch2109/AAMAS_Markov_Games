@@ -150,3 +150,23 @@ class LearnedMiniMaxPolicy(Policy):
             # fallback to uniform distribution
             self.pi[state] = {a: 1 / len(possible_actions) for a in possible_actions}
             return 0.0
+
+class MockPolicy(Policy):
+    """
+    A mock policy that does nothing.
+    """
+    def __init__(self, agent, environment) -> None:
+        self.agent = agent
+        self.environment = environment
+
+    def getAction(self, state: list, possible_actions: list,q_table: dict = None) -> str:
+        if self.environment.mock_actions[self.agent] == "":
+            return "stay"
+        else:
+            old_action = self.environment.mock_actions[self.agent]
+            self.environment.mock_actions[self.agent] = ""
+            print(old_action)
+            return old_action
+    
+    def update(self):
+        pass

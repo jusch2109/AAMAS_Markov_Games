@@ -15,14 +15,16 @@ class Simulation():
         self.agentB = agentB
         self.agentA.agent_index = 0
         self.agentB.agent_index = 1
-        self.state = environment.reset()
+        environment.reset()
+        self.state = environment.getCurrentState()
+        
         self.training = training
         self.mac = mac
         self.cooldown = 2
         if use_gui:
             self.gui = Gui(environment,mac)
-            if not mac:
-                self.gui.run()
+            
+            self.gui.run()
         else:
             self.gui = None
 

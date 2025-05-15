@@ -12,6 +12,7 @@ class Environment:
     #ball is an integer representing the index of the player with the ball
     #0 = player A, 1 = player B
     self.state = [[3,2], [1,1], self.ball]  #  [3,2,1,1,1]
+    self.mock_actions = ["",""]
         
   def getCurrentState(self):
     """
@@ -64,6 +65,8 @@ class Environment:
     
     Returns a (reward, nextState) pair
     """
+
+    print(action)
     idx = 0
     if agent == 0 or agent == "A":
         idx = 0
@@ -95,6 +98,7 @@ class Environment:
         #can pass it to the other player
         if self.ball == idx:
             self.ball = 1 - idx
+            self.state[2] = self.ball
         ## undo move
         if action == 'move_right':
             self.state[idx][0] -= 1

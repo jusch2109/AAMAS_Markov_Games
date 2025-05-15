@@ -149,3 +149,26 @@ class RandomPolicy_Value_Function(Value_Function):
         Updates the Q-value of a given state-action pair.
         """
         pass
+
+class Mock_Value_Function(Value_Function):
+    """
+    A mock value function for testing purposes.
+    """
+    def __init__(self, agent, env) -> None:
+        self.policy = MockPolicy(agent, env)
+        self.Q = None
+    def getValue(self, state: list) -> float:
+        """
+        Returns the state-value of a given state.
+        """
+        return 0.0
+    def getQValue(self, state: list, action: str) -> float:
+        """
+        returns the state-action-value or Q-Value of a given state-action pair.
+        """
+        return 0.0
+    def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, possible_actions: list, possible_opponent_actions: list, reward: int):
+        """
+        Updates the Q-value of a given state-action pair.
+        """
+        pass

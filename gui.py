@@ -25,9 +25,8 @@ class Gui():
         GUI loop.
         """
         pygame.init()
-
         # Set up the display
-        screen_width, screen_height = 700, 400   # Keep this ratio so players stay a a circle
+        screen_width, screen_height = 600, 400   # Keep this ratio so players stay a a circle
         screen = pygame.display.set_mode((screen_width, screen_height))
         pygame.display.set_caption("Simulation GUI")
         clock = pygame.time.Clock()
@@ -49,21 +48,38 @@ class Gui():
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
+                ## actions if we are using the mock value function and policy
+                elif event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_w:
+                        self.env.mock_actions[1] = "move_up"
+                    if event.key == pygame.K_s:
+                        self.env.mock_actions[1] = "move_down"
+                    if event.key == pygame.K_a:
+                        self.env.mock_actions[1] = "move_left"
+                    if event.key == pygame.K_d:
+                        self.env.mock_actions[1] = "move_right"
+                    if event.key == pygame.K_UP:
+                        self.env.mock_actions[0] = "move_up"
+                    if event.key == pygame.K_DOWN:
+                        self.env.mock_actions[0] = "move_down"
+                    if event.key == pygame.K_LEFT:
+                        self.env.mock_actions[0] = "move_left"
+                    if event.key == pygame.K_RIGHT:
+                        self.env.mock_actions[0] = "move_right"
 
             # Clear the screen
             screen.fill((255, 255, 255))  # White background
             # Draw the environment
-            field_x, field_y = screen_width // 14, 0
-            square_width, square_height = screen_width // 7, screen_height // 4
+            field_x, field_y = screen_width // 12, 0
+            square_width, square_height = screen_width // 6, screen_height // 4
             field_color = (81, 219, 132)
             for row in range(4):
-                for col in range(6):
+                for col in range(5):
                     rect = pygame.Rect(field_x + col * square_width, field_y + row * square_height, square_width, square_height)
                     pygame.draw.rect(screen, field_color, rect, 1)
             # print(self.env.state)
             playerA_color = (0, 0, 255)
             playerB_color = (0, 0, 255)
-            print(self.env.state)
             if self.env.state[2] == 0:
                 playerA_color = (255, 0, 0)  # Red for player A with the ball
             elif self.env.state[2] == 1:
