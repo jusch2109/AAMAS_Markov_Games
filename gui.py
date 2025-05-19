@@ -1,10 +1,10 @@
-from environment import Environment
+from environment import SoccerEnvironment
 import pygame
 import threading
 import time
 
 class Gui():
-    def __init__(self,env: Environment,mac):
+    def __init__(self,env: SoccerEnvironment,mac):
         self.env = env
         self.mac = mac
         pass

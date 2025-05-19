@@ -1,6 +1,7 @@
 import random
+import numpy as np
 
-class Environment:
+class SoccerEnvironment:
   
   def __init__(self):
     """
@@ -129,3 +130,90 @@ class Environment:
     #ball is an integer representing the index of the player with the ball
     #0 = player A, 1 = player B
     self.state = [[3,2], [1,1], self.ball]
+
+
+class TicTacToeEnvironment:
+
+    def __init__(self):
+        """
+        Initializes the environment
+        """
+        
+        self.current_player = np.random.randint(0, 2)
+        self.state = np.zeros((3,3))
+        self.done = False
+
+    def getCurrentState(self):
+        """
+        Returns the current state of enviornment
+        """
+        return self.state, self.current_player
+    
+    def getPossibleActions(self) -> list:
+        """
+        Returns possible actions the agent 
+        can take in the given state. Can
+        return the empty list if we are in 
+        a terminal state.
+        """
+        if self.done:
+            return []
+        
+        possible_actions = []
+        for i in range(3):
+            for j in range(3):
+                if self.state[i][j] == 0:
+                    possible_actions.append((i,j))
+        
+        return possible_actions
+    
+    def doAction(self, action: tuple, agent: int ):
+        """
+        Performs the given action in the current
+        environment state and updates the enviornment.
+        
+        Returns a (reward, nextState) pair
+        """
+
+        if action not in self.getPossibleActions():
+            raise ValueError("Invalid action for the given state")
+
+        self.state[action[0]][action[1]] = agent + 1
+
+        reward = 0
+        if self.check_winner(self.current_player):
+            reward = 1
+            self.done = True
+
+
+        self.current_player = 1 - self.current_player
+
+        return (reward, self.state, self.done)
+    
+    def check_winner(self, player):
+        """
+        Checks if the given player has won the game
+        """
+        # Check rows
+        for row in self.state:
+            if np.all(row == player + 1):
+                return True
+
+        # Check columns
+        for col in self.state.T:
+            if np.all(col == player + 1):
+                return True
+
+        # Check diagonals
+        if np.all(np.diag(self.state) == player + 1) or np.all(np.diag(np.fliplr(self.state)) == player + 1):
+            return True
+
+        return False
+    
+    def reset(self):
+        """
+        Resets the current state to the start state
+        """
+        self.current_player = np.random.randint(0, 2)
+        self.state = np.zeros((3,3))
+        self.done = False
