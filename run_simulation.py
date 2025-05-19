@@ -9,7 +9,7 @@ from value_function import MinimaxQ_Function
 
 env = SoccerEnvironment()
 
-mode = "train"  # "train" or "test" or "play" ... todo: finish this
+mode = "test"  # "train" or "test" or "play" ... todo: finish this
 
 if mode == "test":
     # test greedy vs random
@@ -30,7 +30,7 @@ if mode == "test":
     value_Function_B = RandomPolicy_Value_Function(1)
     agent_B = Agent(env, value_Function_B, 1)
 
-    SoccerSimulation(env, agent_A, agent_B, TRAINING, USE_GUI, IS_MAC).run()
+    SoccerSimulation(env, agent_A, agent_B, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run()
 
 if mode == "train":
     TRAINING = True
