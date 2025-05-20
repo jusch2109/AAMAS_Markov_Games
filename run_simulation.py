@@ -9,9 +9,46 @@ from value_function import MinimaxQ_Function
 
 env = SoccerEnvironment()
 
-mode = "test"  # "train" or "test" or "play" ... todo: finish this
+mode = "test_catch"  # "train" or "test" or "play" ... todo: finish this
 
-if mode == "test":
+if mode == "train_catch":
+    env = CatchEnvironment()
+    # Training thing:
+    TRAINING = True
+    USE_GUI = False
+    IS_MAC = False
+    #Training thing:
+    policy_A = LearnedMiniMaxPolicy(env, 0, 0.2)
+    value_Function_A = MinimaxQ_Function(policy_A, start_value=1, learning_rate=0.2, decay=0.99999)
+    agent_A = Agent(env, value_Function_A, 0)
+    policy_B = RandomPolicy(1)
+    value_Function_B = RandomPolicy_Value_Function(1)
+    agent_B = Agent(env, value_Function_B, 1)
+
+    CatchSimulation(env, agent_A, agent_B, training=True).run(100000)
+    policy_A.save_dict("catch_pi_minimax.json")
+    value_Function_A.save_dict("catch_minimax.json")
+
+if mode == "test_catch":
+    env = CatchEnvironment()
+    # Training thing:
+    TRAINING = False
+    USE_GUI = True
+    IS_MAC = True
+
+    policy_A = LearnedMiniMaxPolicy(env, 0, 0.2)
+    policy_A.load_dict("catch_pi_minimax.json")
+    value_Function_A = MinimaxQ_Function(policy_A, start_value=1, learning_rate=0.2, decay=0.99999)
+    value_Function_A.load_dict("catch_minimax.json")
+    agent_A = Agent(env, value_Function_A, 0)
+
+    policy_B = RandomPolicy(1)
+    value_Function_B = RandomPolicy_Value_Function(1)
+    agent_B = Agent(env, value_Function_B, 1)
+
+    CatchSimulation(env, agent_A, agent_B, training=True, use_gui=USE_GUI, mac=IS_MAC).run(1000000)
+
+if mode == "test_soccer":
     # test greedy vs random
     TRAINING = False
     USE_GUI = True
@@ -20,9 +57,9 @@ if mode == "test":
     # load the trained policy
 
     policy_A = LearnedMiniMaxPolicy(env,0, 0)
-    policy_A.load_dict("pi_minimax.json")
+    policy_A.load_dict("soccer_pi_minimax.json")
     value_Function_A = MinimaxQ_Function(policy_A, start_value=1)
-    value_Function_A.load_dict("minimax.json")
+    value_Function_A.load_dict("soccer_minimax.json")
 
     agent_A = Agent(env, value_Function_A, 0)
 
@@ -32,22 +69,22 @@ if mode == "test":
 
     SoccerSimulation(env, agent_A, agent_B, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run()
 
-if mode == "train":
+if mode == "train_soccer":
     TRAINING = True
     USE_GUI = False
     IS_MAC = False
     #Training thing:
     policy_A = LearnedMiniMaxPolicy(env, 0, 0.2)
-    value_Function_A = MinimaxQ_Function(policy_A, start_value=1, learning_rate=0.2)
+    value_Function_A = MinimaxQ_Function(policy_A, start_value=1, learning_rate=0.2, decay=0.99999)
     agent_A = Agent(env, value_Function_A, 0)
     policy_B = RandomPolicy(1)
     value_Function_B = RandomPolicy_Value_Function(1)
     agent_B = Agent(env, value_Function_B, 1)
 
-    SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(1000)
+    SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(100000)
 
-    policy_A.save_dict("pi_minimax.json")
-    value_Function_A.save_dict("minimax.json")
+    #policy_A.save_dict("soccer_pi_minimax.json")
+    #value_Function_A.save_dict("soccer_minimax.json")
 
 
 """

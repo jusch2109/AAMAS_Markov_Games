@@ -132,42 +132,65 @@ class SoccerEnvironment:
     self.state = [[3,2], [1,1], self.ball]
 
 
-class TicTacToeEnvironment:
+class CatchEnvironment:
 
     def __init__(self):
         """
         Initializes the environment
         """
-        
-        self.current_player = np.random.randint(0, 2)
-        self.state = np.zeros((3,3))
-        self.done = False
-
+        self.hunter = random.randint(0, 1)
+        #structure: position A, position B, ball
+        #position A and B are tuples of (x,y) coordinates
+        #ball is an integer representing the index of the player with the ball
+        #0 = player A, 1 = player B
+        self.state = [[0,0], [3,3], self.hunter]  #  [3,2,1,1,1]
+        self.mock_actions = ["",""]
+            
     def getCurrentState(self):
         """
         Returns the current state of enviornment
         """
-        return self.state, self.current_player
-    
-    def getPossibleActions(self) -> list:
+        return self.state
+        
+    def getPossibleActions(self, state: list, agent: int | str) -> list:
         """
         Returns possible actions the agent 
         can take in the given state. Can
         return the empty list if we are in 
         a terminal state.
         """
-        if self.done:
-            return []
+
+        # A
+        if agent == 0 or agent == "A":
+            possible_actions_A = ['stay']
+            if state[0][0] < 3:
+                possible_actions_A.append('move_right')
+            if state[0][0] > 0:
+                possible_actions_A.append('move_left')
+            if state[0][1] < 3:
+                possible_actions_A.append('move_up')
+            if state[0][1] > 0:
+                possible_actions_A.append('move_down')
+            return possible_actions_A
+
+        # B
+        if agent == 1 or agent == " ":
+            possible_actions_B = ['stay']
+            if state[1][0] < 3:
+                possible_actions_B.append('move_right')
+            if state[1][0] > 0 :
+                possible_actions_B.append('move_left')
+            if state[1][1] < 3:
+                possible_actions_B.append('move_up')
+            if state[1][1] > 0:
+                possible_actions_B.append('move_down')
+            return possible_actions_B
         
-        possible_actions = []
-        for i in range(3):
-            for j in range(3):
-                if self.state[i][j] == 0:
-                    possible_actions.append((i,j))
-        
-        return possible_actions
-    
-    def doAction(self, action: tuple, agent: int ):
+        return []
+
+
+                    
+    def doAction(self, agentA, action_A: str, agentB, action_B: str):
         """
         Performs the given action in the current
         environment state and updates the enviornment.
@@ -175,45 +198,107 @@ class TicTacToeEnvironment:
         Returns a (reward, nextState) pair
         """
 
-        if action not in self.getPossibleActions():
+        
+        if action_A not in self.getPossibleActions(self.state, agentA):
+            raise ValueError("Invalid action for the given state")
+        if action_B not in self.getPossibleActions(self.state, agentB):
             raise ValueError("Invalid action for the given state")
 
-        self.state[action[0]][action[1]] = agent + 1
+        if random.random() < 0.5:
+            if action_A == 'move_right':
+                self.state[agentA][0] += 1
+            elif action_A == 'move_left':
+                self.state[agentA][0] -= 1
+            elif action_A == 'move_up':
+                self.state[agentA][1] += 1
+            elif action_A == 'move_down':
+                self.state[agentA][1] -= 1
+            elif action_A == 'stay':
+                pass
+            else:
+                raise ValueError("Invalid action")
+        
+            if self.state[agentA] == self.state[agentB]:
+                if self.hunter == agentA:
+                    self.reset()
+                    return (1,-1), self.state
+                else:
+                    self.reset()
+                    return (-1,1), self.state
+                
+            if action_B == 'move_right':
+                self.state[agentB][0] += 1
+            elif action_B == 'move_left':
+                self.state[agentB][0] -= 1
+            elif action_B == 'move_up':
+                self.state[agentB][1] += 1
+            elif action_B == 'move_down':
+                self.state[agentB][1] -= 1
+            elif action_B == 'stay':
+                pass
+            else:
+                raise ValueError("Invalid action")
+        
+            if self.state[agentA] == self.state[agentB]:
+                if self.hunter == agentA:
+                    self.reset()
+                    return (1,-1), self.state
+                else:
+                    self.reset()
+                    return (-1,1), self.state
+        else:
+            if action_B == 'move_right':
+                self.state[agentB][0] += 1
+            elif action_B == 'move_left':
+                self.state[agentB][0] -= 1
+            elif action_B == 'move_up':
+                self.state[agentB][1] += 1
+            elif action_B == 'move_down':
+                self.state[agentB][1] -= 1
+            elif action_B == 'stay':
+                pass
+            else:
+                raise ValueError("Invalid action")
+        
+            if self.state[agentA] == self.state[agentB]:
+                self.reset()
+                if self.hunter == agentA:
+                    return (1,-1), self.state
+                else:
+                    return (-1,1), self.state
+                
+            if action_A == 'move_right':
+                self.state[agentA][0] += 1
+            elif action_A == 'move_left':
+                self.state[agentA][0] -= 1
+            elif action_A == 'move_up':
+                self.state[agentA][1] += 1
+            elif action_A == 'move_down':
+                self.state[agentA][1] -= 1
+            elif action_A == 'stay':
+                pass
+            else:
+                raise ValueError("Invalid action")
+        
+            if self.state[agentA] == self.state[agentB]:
+                self.reset()
+                if self.hunter == agentA:
+                    return (1,-1), self.state
+                else:
+                    return (-1,1), self.state
+            
+            
+        return (0,0), self.state
+            
 
-        reward = 0
-        if self.check_winner(self.current_player):
-            reward = 1
-            self.done = True
-
-
-        self.current_player = 1 - self.current_player
-
-        return (reward, self.state, self.done)
-    
-    def check_winner(self, player):
-        """
-        Checks if the given player has won the game
-        """
-        # Check rows
-        for row in self.state:
-            if np.all(row == player + 1):
-                return True
-
-        # Check columns
-        for col in self.state.T:
-            if np.all(col == player + 1):
-                return True
-
-        # Check diagonals
-        if np.all(np.diag(self.state) == player + 1) or np.all(np.diag(np.fliplr(self.state)) == player + 1):
-            return True
-
-        return False
-    
+            
     def reset(self):
         """
         Resets the current state to the start state
         """
-        self.current_player = np.random.randint(0, 2)
-        self.state = np.zeros((3,3))
-        self.done = False
+        self.hunter = random.randint(0, 1)
+        #structure: position A, position B, ball
+        #position A and B are tuples of (x,y) coordinates
+        #ball is an integer representing the index of the player with the ball
+        #0 = player A, 1 = player B
+        self.state = [[0,0], [3,3], self.hunter]
