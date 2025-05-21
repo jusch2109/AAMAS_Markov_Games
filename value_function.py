@@ -182,9 +182,9 @@ class MinimaxQ_Function(Value_Function):
     def save_dict(self, filename="min_max"):
         if not filename.endswith(".json"):
             filename = filename + ".json"
-        out_file = open("Q_" + filename, "w")
+        out_file = open(filename + '_Q', "w")
         json.dump(self.Q, out_file, indent = 4)
-        out_file = open("V_" + filename, "w")
+        out_file = open(filename + '_V', "w")
         json.dump(self.V, out_file, indent = 4)
 
     def load_dict(self, filename="min_max"):
@@ -193,8 +193,8 @@ class MinimaxQ_Function(Value_Function):
         if not os.path.exists(filename):
             return
         # Opening JSON file
-        f_Q = open("Q_" + filename,)
-        f_V = open("V_" + filename,)
+        f_Q = open(filename + '_Q',)
+        f_V = open(filename + '_V',)
         
         # returns JSON object as 
         # a dictionary
