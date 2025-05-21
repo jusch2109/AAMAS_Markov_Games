@@ -25,5 +25,5 @@ value_Function_B = RandomPolicy_Value_Function(1)
 agent_B = Agent(env, value_Function_B, 1)
 
 CatchSimulation(env, agent_A, agent_B, training=True).run(100000)
-policy_A.save_dict("catch_pi_minimax.json")
-value_Function_A.save_dict("catch_minimax.json")
+policy_A.save_dict("catch_pi_minimax")
+value_Function_A.save_dict("catch_minimax")

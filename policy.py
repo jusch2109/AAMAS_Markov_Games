@@ -189,6 +189,31 @@ class LearnedMiniMaxPolicy(Policy):
         # a dictionary
         self.pi = json.load(f)
         return
+    
+
+class JAL_AM_Policy(Policy):
+    """
+    Exploits with probability epsilon or otherwise returns the action with the highest Q-value for the current state.
+    """
+    def __init__(self, epsilon: float = 0.1, decay = 0.99999) -> None:
+        self.epsilon = epsilon
+        self.decay = decay
+
+
+    def getAction(self, state: list, possible_actions:list, av_table: dict) -> str:
+        state = state_to_tuple(state)
+        # Exploration
+        if random.random() < self.epsilon:
+            return random.choice(possible_actions)
+
+        # Exploitation
+        av_values = {action: av_table[str(state)][action] for action in possible_actions}
+        max_value = max(av_values.values())
+        best_actions = [a for a, v in av_values.items() if v == max_value]
+
+        self.epsilon = self.epsilon * self.decay
+
+        return random.choice(best_actions)
 
 class MockPolicy(Policy):
     """
