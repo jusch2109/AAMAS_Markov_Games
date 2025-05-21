@@ -2,6 +2,7 @@ from collections import defaultdict
 from policy import *
 import json
 import os
+from environment import SoccerEnvironment
 
 def state_to_tuple(state: list) -> tuple:
     """
@@ -148,31 +149,33 @@ class JAL_AM_Q_Function(Value_Function):
         else:
             # creates dict of form {state: {action: {opponent_action: value}}} 
             self.Q = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: start_value)))
-            for a in range(5):
+            for a in range(4):
                 for b in range(4):
-                    for c in range(5):
+                    for c in range(4):
                         for d in range(4):
                             for e in [0, 1]:
                                 state = ((a, b), (c, d), e)
                                 for action in env.getPossibleActions(state, agent_idx):
                                     for opponent_action in env.getPossibleActions(state, 1 - agent_idx):
-                                        self.Q[str(state)][actions][opponent_action] = start_value
+                                        if  state[1]==(3,3) and opponent_action == "move_up":
+                                            start_value = 0
+                                        self.Q[str(state_to_tuple(state))][action][opponent_action] = start_value
                                        
         if opponent_model is not None:
             self.opponent_model = opponent_model
         else:
             # creates dict of form {state: {action: value}} 
             self.opponent_model = defaultdict(lambda: defaultdict(lambda: 0.0))
-            for a in range(5):
+            for a in range(4):
                 for b in range(4):
-                    for c in range(5):
+                    for c in range(4):
                         for d in range(4):
                             for e in [0, 1]:
                                 state = ((a, b), (c, d), e)
                                 actions = env.getPossibleActions(state, 1 - agent_idx)
                                 if actions:
                                     self.opponent_model[str(state_to_tuple(state))] = {action: 1 / len(actions) for action in actions}
-
+        
         # create dict of form {state: {action: value}}
         self.opponent_counter = defaultdict(lambda: defaultdict(lambda: 0))
 
@@ -221,7 +224,7 @@ class JAL_AM_Q_Function(Value_Function):
         self.opponent_model[str(state)][action_opponent] = self.opponent_counter[str(state)][action_opponent] / sum(self.opponent_counter[str(state)].values())
 
         # update the action value
-        self.Q[str(state)][action] = (1 - self.learning_rate) * self.Q[str(state)][action][action_opponent] +\
+        self.Q[str(state)][action][action_opponent] = (1 - self.learning_rate) * self.Q[str(state)][action][action_opponent] +\
                                  self.learning_rate * (reward + self.discount_factor * (max(self.AV[str(future_state)].values()) - self.Q[str(state)][action][action_opponent]))
         
         # update value function
@@ -231,7 +234,8 @@ class JAL_AM_Q_Function(Value_Function):
 
 
     def update_AV(self):
-        for state in self.Q:
+        self.AV = defaultdict(lambda: defaultdict(lambda: 0))
+        for state in self.Q.keys():
             for action in self.Q[state].keys():
                 for action_opponent in self.Q[state][action].keys():
                     self.AV[state][action] += self.Q[state][action][action_opponent]*self.opponent_model[state][action_opponent]
