@@ -1,0 +1,116 @@
+from simulation import *
+from environment import SoccerEnvironment
+from policy import RandomPolicy
+from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function
+from policy import EpsilonGreedyPolicy, GreedyPolicy, MockPolicy
+from agent import Agent
+from policy import LearnedMiniMaxPolicy
+from value_function import MinimaxQ_Function
+
+# ToDo: Add QQ and QR
+
+"""
+Set Variables for training
+"""
+explore = 0.2
+decy = 0.9999954
+steps = 10**6
+
+def training(policy,steps):
+    """
+    Helper function for training the agents depending on the policies
+    """
+    TRAINING = True
+    USE_GUI = False
+    IS_MAC = False
+    match policy:
+        case "MR":
+            #minimax-Q trained against random
+            env = SoccerEnvironment()
+
+            policy_A = LearnedMiniMaxPolicy(env, 0, 0.2)
+            value_Function_A = MinimaxQ_Function(policy_A, start_value=1, learning_rate=0.2, decay=0.9999954)
+            agent_A = Agent(env, value_Function_A, 0)
+            policy_B = RandomPolicy(1)
+            value_Function_B = RandomPolicy_Value_Function(1)
+            agent_B = Agent(env, value_Function_B, 1)
+
+            SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999954, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(steps)
+
+        case "MM":
+            #minimax-Q trained against minimax-Q
+            env = SoccerEnvironment()
+
+            policy_A = LearnedMiniMaxPolicy(env, 0, 0.2)
+            value_Function_A = MinimaxQ_Function(policy_A, start_value=1, learning_rate=0.2, decay=0.9999954)
+            agent_A = Agent(env, value_Function_A, 0)
+
+            policy_B = LearnedMiniMaxPolicy(env, 1, 0.2)
+            value_Function_B = MinimaxQ_Function(policy_B, start_value=1, learning_rate=0.2, decay=60.9999954)
+            agent_B = Agent(env, value_Function_B, 1)
+
+            SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999954, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(steps)
+
+        case "QR":
+            #Q trained against random
+            env = SoccerEnvironment()
+
+            #policy_A = EpsilonGreedyPolicy(0.1) # Q learning policy
+            value_Function_A = Q_Function(policy_A, start_value=1, learning_rate=0.2)
+            agent_A = Agent(env, value_Function_A, 0)
+            policy_B = RandomPolicy(1)
+            value_Function_B = RandomPolicy_Value_Function(1)
+            agent_B = Agent(env, value_Function_B, 1)
+
+            SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999954, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(steps)
+
+        case "QQ":
+            #Q trained against Q
+            env = SoccerEnvironment()
+
+            #policy_A = LearnedMiniMaxPolicy(env, 1, 0.2)
+            value_Function_A = Q_Function(policy_A, start_value=1, learning_rate=0.2, decay=0.9999954)
+            agent_A = Agent(env, value_Function_A, 0)
+            #policy_B = RandomPolicy(1)
+            #value_Function_B = RandomPolicy_Value_Function(1)
+            #agent_B = Agent(env, value_Function_B, 1)
+
+            SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999954, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(steps)
+
+        case "MR_challenger":
+            env = SoccerEnvironment()
+
+            # agent A follows the QR policy
+
+
+            # agent B has fixed MR policy
+            policy_B = LearnedMiniMaxPolicy(env,0, 0)
+            policy_B.load_dict(f"soccer_pi_minimax_MR.json")
+            value_Function_B = MinimaxQ_Function(policy_B, start_value=1)
+            value_Function_B.load_dict(f"soccer_minimax_MR.json")
+            agent_B = Agent(env, value_Function_B, 1)
+
+            SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999954, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(steps)
+
+        # ToDo: training challenger
+
+    policy_A.save_dict(f"soccer_pi_minimax_{policy}.json")
+    value_Function_A.save_dict(f"soccer_minimax_{policy}.json")
+
+"""
+Invoke training function for each polity
+"""
+print("Training MR:")
+training("MR", 10**6)
+#print("Training MM:")
+#training("MM", 10**6)
+#print("Training MM:")
+#training("QR", 10**6)
+#print("Training MM:")
+#training("QQ", 10**6)
+
+"""
+Invoke training function for each champion challenger
+"""
+#training("MR_challenger",10**6)
+
