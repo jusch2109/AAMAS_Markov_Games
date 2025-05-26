@@ -171,17 +171,26 @@ def main():
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
+    timesteps = 1000000    
+
     A_type = "minimax"
     B_type = "minimax"
     env = SoccerEnvironment()
-    timesteps = 1000000    
     #train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps)
     env = CatchEnvironment()
-    explore = 0
+    #explore = 0
+    print("handcrafted vs random catch")
     A_type = "handcrafted"
-    B_type = "mock"
+    B_type = "random"
     timesteps = 100000    
-    test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=True, mac=False)
+    test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=False, mac=False)
+    env = SoccerEnvironment()
+    print("handcrafted vs random soccer")
+    A_type = "handcrafted"
+    B_type = "random"
+    timesteps = 100000    
+    test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=False, mac=False)
+
 
 # Using the special variable 
 # __name__

@@ -263,10 +263,11 @@ class CatchEnvironment:
                 raise ValueError("Invalid action")
         
             if self.state[agentA] == self.state[agentB]:
-                self.reset()
                 if self.hunter == agentA:
+                    self.reset()
                     return (1,-1), self.state
                 else:
+                    self.reset()
                     return (-1,1), self.state
                 
             if action_A == 'move_right':
@@ -283,10 +284,11 @@ class CatchEnvironment:
                 raise ValueError("Invalid action")
         
             if self.state[agentA] == self.state[agentB]:
-                self.reset()
                 if self.hunter == agentA:
+                    self.reset()
                     return (1,-1), self.state
                 else:
+                    self.reset()
                     return (-1,1), self.state
             
             

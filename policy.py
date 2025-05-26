@@ -307,11 +307,11 @@ class HandcraftedPolicy(Policy):
 
                 if abs(state[self.agent][0] - state[1-self.agent][0]) + abs(state[self.agent][1] - state[1-self.agent][1]) > 2: # if distance is greater than 2 its safe to move to objective
                     self.finta = None
-                    print("hes far")
+                    #print("hes far")
                     return "move_right" if state[self.agent][0] < goals[0][0] else "move_left"
                 if state[1-self.agent][1] == state[self.agent][1]:  # if we are in the same row
                     if abs(state[1-self.agent][0] - goals[0][0]) <  abs(state[self.agent][0] - goals[0][0]):  ## if he is closer to the goal
-                        print("he is closer to the goal")
+                        #print("he is closer to the goal")
                         if self.finta is None:
                             self.finta = state[self.agent][1]
                             if self.finta == 1:
@@ -324,12 +324,12 @@ class HandcraftedPolicy(Policy):
                             return "stay"
                     else:
                         # if we are closer to the goal we just want to move to the goal
-                        print("we are closer to the goal")
+                        #print("we are closer to the goal")
                         self.finta = None
                         return "move_right" if state[self.agent][0] < goals[0][0] else "move_left"
                 else: # we are close but not on the same row, but maybe well just try to move to the goal
                     self.finta = None
-                    print("we are close but not on the same row, but maybe well just try to move to the goal")
+                    #print("we are close but not on the same row, but maybe well just try to move to the goal")
                     return "move_right" if state[self.agent][0] < goals[0][0] else "move_left"
             else:
                 # if we are defending:
