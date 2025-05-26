@@ -122,7 +122,10 @@ class SoccerSimulation():
 
         print("A wins:", A_wins)
         print("B wins:", B_wins)
-        print("A winrate: ", A_wins/(B_wins+A_wins))
+        if B_wins + A_wins == 0:
+            print("No wins")
+        else:
+            print("A winrate: ", A_wins/(B_wins+A_wins))
 
 
 class CatchSimulation():
@@ -214,6 +217,11 @@ class CatchSimulation():
                     self.agentA.value_function.policy.explore *= self.explore_decay
                 if type(self.agentB.value_function.policy) == LearnedMiniMaxPolicy:
                     self.agentB.value_function.policy.explore *= self.explore_decay
-
-        print("Steps A wins:", sum(steps_A_wins)/len(steps_A_wins))
-        print("Steps B wins:", sum(steps_B_wins)/len(steps_B_wins))
+        if len(steps_A_wins) == 0:
+            print("Steps A wins: infinite")
+        else:
+            print("Steps A wins:", sum(steps_A_wins)/len(steps_A_wins))
+        if len(steps_B_wins) == 0:
+            print("Steps B wins: infinite")
+        else:
+            print("Steps B wins:", sum(steps_B_wins)/len(steps_B_wins))

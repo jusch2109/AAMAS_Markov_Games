@@ -87,6 +87,41 @@ class EpsilonGreedyPolicy(Policy):
     def load_dict(self,filename = "a"):
         pass
 
+
+class QPolicy(Policy):
+    """
+    Returns the action with the highest Q-value for the current state.
+    """
+    def __init__(self, q_table, agent, epsilon = 0) -> None:
+        self.epsilon = epsilon
+        self.q_table = q_table
+        self.agent = agent
+
+    def getAction(self, state: list, possible_actions: list, q_table: dict = None) -> str:
+        if random.random() < self.epsilon:
+            return random.choice(possible_actions)
+        state = state_to_tuple(state)
+        q_values = {action: self.q_table[str(state)].get(action, 0) for action in possible_actions}
+
+        min_q = min(q_values.values())   # this shifts values to [0:max_value]
+        shifted_q = {a: q - min_q for a, q in q_values.items()}
+        total = sum(shifted_q.values())
+
+        if total == 0: # if all values are the same
+            probabilities = [1.0 / len(possible_actions)] * len(possible_actions)
+        else:
+            probabilities = [q / total for q in shifted_q]
+
+        action = np.random.choice(possible_actions, p=probabilities)
+        return action
+    
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+    
+    def load_dict(self,filename = "a"):
+        pass
+
+
 class LearnedMiniMaxPolicy(Policy):
     def __init__(self, environment, agent_idx, explore, pi=None) -> None:
 
@@ -201,6 +236,7 @@ class LearnedMiniMaxPolicy(Policy):
         self.pi = json.load(f)
         return
     
+
 
 class JAL_AM_Policy(Policy):
     """

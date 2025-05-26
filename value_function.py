@@ -56,7 +56,7 @@ class Value_Function():
 
 class Q_Function(Value_Function):
 
-    def __init__(self, policy: Policy, Q = None, start_value: int = 0.0, learning_rate: float = 1, discount_factor: float = 0.9, decay: float = 0.9999):
+    def __init__(self, policy: Policy, Q = None, start_value: int = 0.0, learning_rate: float = 0.1, discount_factor: float = 0.9, decay: float = 0.9999):
         """
         Initializes the value function with a default value.
         """
@@ -108,8 +108,10 @@ class Q_Function(Value_Function):
         #print("\n")
         self.Q[str(state)][action] = (1 - self.learning_rate) * self.Q[str(state)].get(action,self.start_value) +\
                                  self.learning_rate * (reward + self.discount_factor * self.getValue(future_state))
-
-        self.learning_rate = self.learning_rate * self.discount_factor
+        #if(self.getValue(future_state) != 0):
+            #print(future_state)
+            #print(state)
+            #print(self.Q[str(state)])
 
 
     def save_dict(self, filename="q_table"):
@@ -119,7 +121,6 @@ class Q_Function(Value_Function):
         json.dump(self.Q, out_file, indent = 4)
 
     def load_dict(self, filename="q_table"):
-        #print("loaded dict")
         if not filename.endswith(".json"):
             filename = filename + ".json"
         if not os.path.exists(filename):
@@ -134,7 +135,6 @@ class Q_Function(Value_Function):
         
         self.Q = defaultdict(lambda: defaultdict(lambda: self.start_value), l)
         self.policy.q_table = self.Q
-        #print(self.Q["training_episodes"])
         
      
 
@@ -386,8 +386,8 @@ class Mock_Value_Function(Value_Function):
     """
     A mock value function for testing purposes.
     """
-    def __init__(self, agent, env) -> None:
-        self.policy = MockPolicy(agent, env)
+    def __init__(self, agent, policy) -> None:
+        self.policy = policy
         self.Q = None
 
     def getAction(self, state: list, possible_actions: list) -> str:
