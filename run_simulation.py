@@ -178,8 +178,8 @@ def main():
     #train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps)
     env = CatchEnvironment()
     explore = 0
-    A_type = "mock"
-    B_type = "handcrafted"
+    A_type = "handcrafted"
+    B_type = "mock"
     timesteps = 100000    
     test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=True, mac=False)
 

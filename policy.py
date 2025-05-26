@@ -375,14 +375,28 @@ class HandcraftedPolicy(Policy):
                 dist_x = abs(opponent_pos[0] - agent_pos[0])
                 dist_y = abs(opponent_pos[1] - agent_pos[1])
                 if dist_x == dist_y: # if we are closer in x direction
+                    area_x = 0
+                    area_y = 0
                     if opponent_pos[0] > agent_pos[0]: # if opponent is to the right
+                        area_x = 4 - opponent_pos[0]
                         possibilities.append("move_right")
                     elif opponent_pos[0] < agent_pos[0]: # if opponent is to the left
+                        area_x = opponent_pos[0]
                         possibilities.append("move_left")
                     if opponent_pos[1] > agent_pos[1]:
+                        area_y = 3 - opponent_pos[1]
                         possibilities.append("move_up")
                     elif opponent_pos[1] < agent_pos[1]:
+                        area_y = opponent_pos[1]
                         possibilities.append("move_down")
+                    if area_x < area_y:   ## make this move 5 times as likely, this is to prevent back and forth movement, how should it be?
+                        possibilities.append(possibilities[1])
+                        possibilities.append(possibilities[1])
+                        possibilities.append(possibilities[1])
+                    elif area_x > area_y:
+                        possibilities.append(possibilities[0])
+                        possibilities.append(possibilities[0])
+                        possibilities.append(possibilities[0])
                 elif dist_x > dist_y: # if we are closer in y direction
                     if opponent_pos[0] > agent_pos[0]: # if opponent is to the right
                         possibilities.append("move_right")
