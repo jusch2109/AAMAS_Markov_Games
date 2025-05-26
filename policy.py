@@ -48,11 +48,18 @@ class GreedyPolicy(Policy):
 
     def getAction(self, state: list, possible_actions: list,q_table: dict = None) -> str:
         state = state_to_tuple(state)
-        q_values = {action: self.q_table[str(state)][action] for action in possible_actions}
+        ## this kind of has a problem that it assumes starting value has to be 0. since it is always 0 its fine
+        q_values = {action: self.q_table[str(state)].get(action,0) for action in possible_actions}
+
         max_value = max(q_values.values())
         best_actions = [a for a, v in q_values.items() if v == max_value]
         return random.choice(best_actions)
     
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+    
+    def load_dict(self,filename = "a"):
+        pass
 
 class EpsilonGreedyPolicy(Policy):
     """
@@ -74,7 +81,11 @@ class EpsilonGreedyPolicy(Policy):
         best_actions = [a for a, v in q_values.items() if v == max_value]
         return random.choice(best_actions)
     
-    
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+        
+    def load_dict(self,filename = "a"):
+        pass
 
 class LearnedMiniMaxPolicy(Policy):
     def __init__(self, environment, agent_idx, explore, pi=None) -> None:
