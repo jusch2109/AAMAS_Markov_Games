@@ -1,10 +1,9 @@
 from simulation import *
 from environment import SoccerEnvironment
 from policy import RandomPolicy
-from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function
-from policy import EpsilonGreedyPolicy, GreedyPolicy, MockPolicy, QPolicy
+from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function, Handcrafted_Value_Function
+from policy import EpsilonGreedyPolicy, GreedyPolicy, MockPolicy, QPolicy, LearnedMiniMaxPolicy, HandcraftedPolicy
 from agent import Agent
-from policy import LearnedMiniMaxPolicy
 from value_function import MinimaxQ_Function
 
 def get_policy(type,id, env,explore,load_dicts=False):
@@ -15,6 +14,7 @@ def get_policy(type,id, env,explore,load_dicts=False):
         env_type = "catch"
     else:
         env_type = "soccer"
+
     if type == "random":
         p = RandomPolicy(id)
     elif type == "greedy":
@@ -29,7 +29,11 @@ def get_policy(type,id, env,explore,load_dicts=False):
         p = QPolicy({}, id, explore)
         if load_dicts:
             p.load_dict(f"{id}_{env_type}_pi_q.json")
-            
+    elif type == "handcrafted":
+        is_soccer = True
+        if env_type == "catch":
+            is_soccer = False
+        p = HandcraftedPolicy(id, is_soccer=is_soccer)
     elif type == "minimax":
         p = LearnedMiniMaxPolicy(env, id, explore)
         if load_dicts:
@@ -47,15 +51,24 @@ def get_value_function(type, id, policy,learning_rate,decay,env, start_value = N
         env_type = "catch"
     else:
         env_type = "soccer"
+
     if start_value is None:
         if isinstance(policy, LearnedMiniMaxPolicy):
             start_value = 1
         else:
             start_value = 0
+
     if type == "random":
         value_Function_B = RandomPolicy_Value_Function(id)
         if load_dicts:
             print("Random_Function does not load dict.")
+    elif type == "handcrafted":
+        is_soccer = True
+        if env_type == "catch":
+            is_soccer = False
+        value_Function_B = Handcrafted_Value_Function(id, is_soccer=is_soccer)
+        if load_dicts:
+            print("Handcrafted_Value_Function does not load dict.")
     elif type == "mock":
         value_Function_B = Mock_Value_Function(id, policy)
         if load_dicts:
@@ -153,23 +166,22 @@ def test(A_type, B_type, env,explore_decay,explore, learning_rate, decay,timeste
 
 
 def main():
-    types = ["random", "greedy", "epsilon_greedy", "q", "minimax", "mock"]
+    types = ["random", "greedy", "epsilon_greedy", "q", "minimax", "mock", "handcrafted"]
     learning_rate = 1
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
-    
     A_type = "minimax"
     B_type = "minimax"
     env = SoccerEnvironment()
     timesteps = 1000000    
-    train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps)
-    env = SoccerEnvironment()
+    #train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps)
+    env = CatchEnvironment()
     explore = 0
-    A_type = "minimax"
-    B_type = "random"
+    A_type = "mock"
+    B_type = "handcrafted"
     timesteps = 100000    
-    test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps)
+    test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=True, mac=False)
 
 # Using the special variable 
 # __name__

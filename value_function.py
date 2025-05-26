@@ -382,6 +382,44 @@ class RandomPolicy_Value_Function(Value_Function):
     def load_dict(self, filename):
         pass
 
+
+class Handcrafted_Value_Function(Value_Function):
+    """
+    A Handcrafted_Value_Function policy that todo.
+    """
+    def __init__(self, agent:int, is_soccer) -> None:
+        self.policy = HandcraftedPolicy(agent,is_soccer)
+        self.Q = None
+
+    def getAction(self, state: list, possible_actions: list) -> str:
+        """
+        Returns an action according to the policy based on the current state
+        """
+        state = state_to_tuple(state)
+        return self.policy.getAction(state, possible_actions, self.Q)
+
+    def getValue(self, state: list) -> float:
+        """
+        Returns the state-value of a given state.
+        """
+        return 0.0
+    def getQValue(self, state: list, action: str) -> float:
+        """
+        returns the state-action-value or Q-Value of a given state-action pair.
+        """
+        return 0.0
+    def updateQValue(self, state: list, future_state: list, action: str, action_opponent: str, possible_actions: list, possible_opponent_actions: list, reward: int):
+        """
+        Updates the Q-value of a given state-action pair.
+        """
+        pass
+
+    def save_dict(self, filename):
+        pass
+
+    def load_dict(self, filename):
+        pass
+
 class Mock_Value_Function(Value_Function):
     """
     A mock value function for testing purposes.

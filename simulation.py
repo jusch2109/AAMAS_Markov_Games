@@ -72,7 +72,8 @@ class SoccerSimulation():
             else:
                 rewardB, next_state = self.environment.doAction(actionB, 1)
                 rewardA, next_state = self.environment.doAction(actionA, 0)
-            
+            self.environment.mock_actions = ["", ""]  # reset mock actions
+
             # Update Q-values    TODO: figure out if previous state should be the state before actions or the state before the actual action of the agent
             if self.training:
                 self.agentA.updateQValue(previous_state, 
@@ -174,6 +175,7 @@ class CatchSimulation():
             actionB = self.agentB.getAction(self.state, self.environment.getPossibleActions(self.state, self.agentB.agent_index))
         
             reward, self.state = self.environment.doAction(self.agentA.agent_index, actionA, self.agentB.agent_index, actionB)
+            self.environment.mock_actions = ["", ""]  # reset mock actions
             rewardA = reward[0]
             rewardB = reward[1]
 

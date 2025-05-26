@@ -79,6 +79,8 @@ class SoccerEnvironment:
     pos_old = self.state[idx]
     
     if action not in self.getPossibleActions(self.state, agent):
+        print(self.state)
+        print(action)
         raise ValueError("Invalid action for the given state")
 
     if action == 'move_right':
