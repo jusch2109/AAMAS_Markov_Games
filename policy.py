@@ -168,13 +168,13 @@ class LearnedMiniMaxPolicy(Policy):
             method="highs"
         )
 
-        if not res.success:
-            self.pi[str(state)] = {a: 1 / len(possible_actions) for a in possible_actions}
-            return 0.0
 
         if res.success:
             pi_values = res.x[:num_actions]
+            # solve numerical issues
             pi_values = np.clip(pi_values, 0, 1)
+            pi_values /= np.sum(pi_values)  
+            
             self.pi[str(state)] = {a: pi_values[i] for i, a in enumerate(possible_actions)}
             return res.x[-1]
         else:
