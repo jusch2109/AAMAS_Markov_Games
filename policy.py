@@ -4,6 +4,7 @@ import random
 import numpy as np
 import json
 import os
+from environment import SoccerEnvironment, CatchEnvironment
 
 def state_to_tuple(state: list) -> tuple:
     """
@@ -137,9 +138,14 @@ class LearnedMiniMaxPolicy(Policy):
             # Assuming the environment has a method to get all possible actions
             # for each state and agent
             
-            for a in range(5):
+            if type(environment) == SoccerEnvironment:
+                len_grid = 5
+            else:
+                len_grid = 4
+
+            for a in range(len_grid):
                 for b in range(4):
-                    for c in range(5):
+                    for c in range(len_grid):
                         for d in range(4):
                             for e in [0, 1]:
                                 state = ((a, b), (c, d), e)
