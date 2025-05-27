@@ -35,6 +35,9 @@ class SoccerSimulation():
         else:
             self.gui = None
 
+        self.percentage_won = 0
+        self.games_won = 0
+
     def run(self, num_episodes: int = 50000):
         """
         Runs the simulation for a given number of episodes.
@@ -106,20 +109,20 @@ class SoccerSimulation():
             self.state = self.environment.getCurrentState()
 
         
-            if self.training:
-                if self.agentA.value_function.Q is not None:
-                    self.agentA.value_function.Q["training_episodes"] += 1
-                if self.agentB.value_function.Q is not None:
-                    self.agentB.value_function.Q["training_episodes"] += 1
+        #    if self.training:
+        #        if self.agentA.value_function.Q is not None:
+        #            self.agentA.value_function.Q["training_episodes"] += 1
+        #       if self.agentB.value_function.Q is not None:
+        #            self.agentB.value_function.Q["training_episodes"] += 1
                         # Update exploration decay
-                if type(self.agentA.value_function.policy) == EpsilonGreedyPolicy:
-                    self.agentA.value_function.policy.epsilon *= self.explore_decay
-                if type(self.agentB.value_function.policy) == EpsilonGreedyPolicy:
-                    self.agentB.value_function.policy.epsilon *= self.explore_decay
-                if type(self.agentA.value_function.policy) == LearnedMiniMaxPolicy:
-                    self.agentA.value_function.policy.explore *= self.explore_decay
-                if type(self.agentB.value_function.policy) == LearnedMiniMaxPolicy:
-                    self.agentB.value_function.policy.explore *= self.explore_decay
+        #        if type(self.agentA.value_function.policy) == EpsilonGreedyPolicy:
+        #            self.agentA.value_function.policy.epsilon *= self.explore_decay
+        #        if type(self.agentB.value_function.policy) == EpsilonGreedyPolicy:
+         #           self.agentB.value_function.policy.epsilon *= self.explore_decay
+         #       if type(self.agentA.value_function.policy) == LearnedMiniMaxPolicy:
+        #            self.agentA.value_function.policy.explore *= self.explore_decay
+        #        if type(self.agentB.value_function.policy) == LearnedMiniMaxPolicy:
+         #           self.agentB.value_function.policy.explore *= self.explore_decay
 
         print("A wins:", A_wins)
         print("B wins:", B_wins)
@@ -127,6 +130,12 @@ class SoccerSimulation():
             print("No wins")
         else:
             print("A winrate: ", A_wins/(B_wins+A_wins))
+
+        self.games_won = A_wins
+        self.percentage_won = A_wins/(A_wins + B_wins)
+
+    def return_wins(self):
+        return self.percentage_won, self.games_won
 
 
 class CatchSimulation():
