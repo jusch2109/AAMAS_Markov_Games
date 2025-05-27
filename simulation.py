@@ -75,7 +75,8 @@ class SoccerSimulation():
             else:
                 rewardB, next_state = self.environment.doAction(actionB, 1)
                 rewardA, next_state = self.environment.doAction(actionA, 0)
-            
+            self.environment.mock_actions = ["", ""]  # reset mock actions
+
             # Update Q-values    TODO: figure out if previous state should be the state before actions or the state before the actual action of the agent
             if self.training:
                 self.agentA.updateQValue(previous_state, 
@@ -109,8 +110,10 @@ class SoccerSimulation():
 
         
             if self.training:
-                #self.agentA.value_function.Q["training_episodes"] += 1
-                #self.agentB.value_function.Q["training_episodes"] += 1
+                if self.agentA.value_function.Q is not None:
+                    self.agentA.value_function.Q["training_episodes"] += 1
+                if self.agentB.value_function.Q is not None:
+                    self.agentB.value_function.Q["training_episodes"] += 1
                         # Update exploration decay
                 if type(self.agentA.value_function.policy) == EpsilonGreedyPolicy:
                     self.agentA.value_function.policy.epsilon *= self.explore_decay
@@ -121,11 +124,12 @@ class SoccerSimulation():
                 if type(self.agentB.value_function.policy) == LearnedMiniMaxPolicy:
                     self.agentB.value_function.policy.explore *= self.explore_decay
 
-        if self.training and self.save_and_load:
-            self.agentA.value_function.save_dict()
-            self.agentB.value_function.save_dict()
         print("A wins:", A_wins)
         print("B wins:", B_wins)
+        if B_wins + A_wins == 0:
+            print("No wins")
+        else:
+            print("A winrate: ", A_wins/(B_wins+A_wins))
 
         self.games_won = A_wins
         self.percentage_won = A_wins/(A_wins + B_wins)
@@ -180,6 +184,7 @@ class CatchSimulation():
             actionB = self.agentB.getAction(self.state, self.environment.getPossibleActions(self.state, self.agentB.agent_index))
         
             reward, self.state = self.environment.doAction(self.agentA.agent_index, actionA, self.agentB.agent_index, actionB)
+            self.environment.mock_actions = ["", ""]  # reset mock actions
             rewardA = reward[0]
             rewardB = reward[1]
 
@@ -210,6 +215,10 @@ class CatchSimulation():
                                         rewardB)
                 
                
+                if self.agentA.value_function.Q is not None:
+                    self.agentA.value_function.Q["training_episodes"] += 1
+                if self.agentB.value_function.Q is not None:
+                    self.agentB.value_function.Q["training_episodes"] += 1
                 # Update exploration decay
                 if type(self.agentA.value_function.policy) == EpsilonGreedyPolicy:
                     self.agentA.value_function.policy.epsilon *= self.explore_decay
@@ -219,6 +228,11 @@ class CatchSimulation():
                     self.agentA.value_function.policy.explore *= self.explore_decay
                 if type(self.agentB.value_function.policy) == LearnedMiniMaxPolicy:
                     self.agentB.value_function.policy.explore *= self.explore_decay
-
-        print("Steps A wins:", sum(steps_A_wins)/len(steps_A_wins))
-        print("Steps B wins:", sum(steps_B_wins)/len(steps_B_wins))
+        if len(steps_A_wins) == 0:
+            print("Steps A wins: infinite")
+        else:
+            print("Steps A wins:", sum(steps_A_wins)/len(steps_A_wins))
+        if len(steps_B_wins) == 0:
+            print("Steps B wins: infinite")
+        else:
+            print("Steps B wins:", sum(steps_B_wins)/len(steps_B_wins))

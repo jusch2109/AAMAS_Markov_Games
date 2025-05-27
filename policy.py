@@ -48,11 +48,18 @@ class GreedyPolicy(Policy):
 
     def getAction(self, state: list, possible_actions: list,q_table: dict = None) -> str:
         state = state_to_tuple(state)
-        q_values = {action: self.q_table[str(state)][action] for action in possible_actions}
+        ## this kind of has a problem that it assumes starting value has to be 0. since it is always 0 its fine
+        q_values = {action: self.q_table[str(state)].get(action,0) for action in possible_actions}
+
         max_value = max(q_values.values())
         best_actions = [a for a, v in q_values.items() if v == max_value]
         return random.choice(best_actions)
     
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+    
+    def load_dict(self,filename = "a"):
+        pass
 
 class EpsilonGreedyPolicy(Policy):
     """
@@ -74,7 +81,46 @@ class EpsilonGreedyPolicy(Policy):
         best_actions = [a for a, v in q_values.items() if v == max_value]
         return random.choice(best_actions)
     
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+        
+    def load_dict(self,filename = "a"):
+        pass
+
+
+class QPolicy(Policy):
+    """
+    Returns the action with the highest Q-value for the current state.
+    """
+    def __init__(self, q_table, agent, epsilon = 0) -> None:
+        self.epsilon = epsilon
+        self.q_table = q_table
+        self.agent = agent
+
+    def getAction(self, state: list, possible_actions: list, q_table: dict = None) -> str:
+        if random.random() < self.epsilon:
+            return random.choice(possible_actions)
+        state = state_to_tuple(state)
+        q_values = {action: self.q_table[str(state)].get(action, 0) for action in possible_actions}
+
+        min_q = min(q_values.values())   # this shifts values to [0:max_value]
+        shifted_q = {a: q - min_q for a, q in q_values.items()}
+        total = sum(shifted_q.values())
+
+        if total == 0: # if all values are the same
+            probabilities = [1.0 / len(possible_actions)] * len(possible_actions)
+        else:
+            probabilities = [q / total for q in shifted_q]
+
+        action = np.random.choice(possible_actions, p=probabilities)
+        return action
     
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+    
+    def load_dict(self,filename = "a"):
+        pass
+
 
 class LearnedMiniMaxPolicy(Policy):
     def __init__(self, environment, agent_idx, explore, pi=None) -> None:
@@ -157,13 +203,13 @@ class LearnedMiniMaxPolicy(Policy):
             method="highs"
         )
 
-        if not res.success:
-            self.pi[str(state)] = {a: 1 / len(possible_actions) for a in possible_actions}
-            return 0.0
 
         if res.success:
             pi_values = res.x[:num_actions]
+            # solve numerical issues
             pi_values = np.clip(pi_values, 0, 1)
+            pi_values /= np.sum(pi_values)  
+            
             self.pi[str(state)] = {a: pi_values[i] for i, a in enumerate(possible_actions)}
             return res.x[-1]
         else:
@@ -190,6 +236,7 @@ class LearnedMiniMaxPolicy(Policy):
         self.pi = json.load(f)
         return
     
+
 
 class JAL_AM_Policy(Policy):
     """
@@ -234,3 +281,152 @@ class MockPolicy(Policy):
     
     def update(self):
         pass
+
+class HandcraftedPolicy(Policy):
+    """
+    A policy that uses handcrafted rules to determine the action.
+    """
+
+    def __init__(self, agent,is_soccer) -> None:
+        self.agent = agent
+        self.is_soccer = is_soccer
+        self.finta = None
+
+    def getAction(self, state: list, possible_actions: list,q_table: dict = None) -> str:
+        """
+        Returns an action based on handcrafted rules.
+        """
+        if self.is_soccer:
+
+            if state[2] == self.agent:
+                # if we are attacking
+                if self.agent == 1:
+                    goals = [[5,1],[5,2]]
+                else:
+                    goals = [[-1,1],[-1,2]]
+
+                if abs(state[self.agent][0] - state[1-self.agent][0]) + abs(state[self.agent][1] - state[1-self.agent][1]) > 2: # if distance is greater than 2 its safe to move to objective
+                    self.finta = None
+                    #print("hes far")
+                    return "move_right" if state[self.agent][0] < goals[0][0] else "move_left"
+                if state[1-self.agent][1] == state[self.agent][1]:  # if we are in the same row
+                    if abs(state[1-self.agent][0] - goals[0][0]) <  abs(state[self.agent][0] - goals[0][0]):  ## if he is closer to the goal
+                        #print("he is closer to the goal")
+                        if self.finta is None:
+                            self.finta = state[self.agent][1]
+                            if self.finta == 1:
+                                return "move_up"
+                            else:
+                                return "move_down"
+                        else:
+                            ## if we tried to trick him and he moved with us stay so he moves away
+                            self.finta = None
+                            return "stay"
+                    else:
+                        # if we are closer to the goal we just want to move to the goal
+                        #print("we are closer to the goal")
+                        self.finta = None
+                        return "move_right" if state[self.agent][0] < goals[0][0] else "move_left"
+                else: # we are close but not on the same row, but maybe well just try to move to the goal
+                    self.finta = None
+                    #print("we are close but not on the same row, but maybe well just try to move to the goal")
+                    return "move_right" if state[self.agent][0] < goals[0][0] else "move_left"
+            else:
+                # if we are defending:
+
+                # if we are on the same row we wanna be 1 square between them and the goal
+                if state[1-self.agent][1] == state[self.agent][1]:
+                    if self.agent == 1:
+                        goal = state[1-self.agent][0] - 1
+                    else:
+                        goal = state[1-self.agent][0] + 1
+                    if state[self.agent][0] < goal:
+                        return "move_right"
+                    elif state[self.agent][0] > goal:
+                        return "move_left"
+                    else:
+                        return "stay"
+                else:
+                    # if he is in the sides we just want to be on "top" of him
+                    if state[1-self.agent][1] > 2 or state[1-self.agent][1] < 1:
+                        goal = state[1-self.agent][0]
+                        if state[self.agent][0] < goal:
+                            return "move_right"
+                        elif state[self.agent][0] > goal:
+                            return "move_left"
+                        else:
+                            return "stay"
+                    else:
+                        # if he is in the middle we want to be on the same row as him
+                        if state[self.agent][1] < state[1-self.agent][1]:
+                            return "move_up"
+                        elif state[self.agent][1] > state[1-self.agent][1]:
+                            return "move_down"
+                        else:
+                            return "stay"
+        else:
+            agent_pos = state[self.agent]
+            opponent_pos = state[1 - self.agent]
+                
+            actions = possible_actions
+            possibilities = []
+            if state[2] == self.agent: # if we are catching
+
+                dist_x = abs(opponent_pos[0] - agent_pos[0])
+                dist_y = abs(opponent_pos[1] - agent_pos[1])
+                if dist_x == dist_y: # if we are closer in x direction
+                    area_x = 0
+                    area_y = 0
+                    if opponent_pos[0] > agent_pos[0]: # if opponent is to the right
+                        area_x = 4 - opponent_pos[0]
+                        possibilities.append("move_right")
+                    elif opponent_pos[0] < agent_pos[0]: # if opponent is to the left
+                        area_x = opponent_pos[0]
+                        possibilities.append("move_left")
+                    if opponent_pos[1] > agent_pos[1]:
+                        area_y = 3 - opponent_pos[1]
+                        possibilities.append("move_up")
+                    elif opponent_pos[1] < agent_pos[1]:
+                        area_y = opponent_pos[1]
+                        possibilities.append("move_down")
+                    if area_x < area_y:   ## make this move 5 times as likely, this is to prevent back and forth movement, how should it be?
+                        possibilities.append(possibilities[1])
+                        possibilities.append(possibilities[1])
+                        possibilities.append(possibilities[1])
+                    elif area_x > area_y:
+                        possibilities.append(possibilities[0])
+                        possibilities.append(possibilities[0])
+                        possibilities.append(possibilities[0])
+                elif dist_x > dist_y: # if we are closer in y direction
+                    if opponent_pos[0] > agent_pos[0]: # if opponent is to the right
+                        possibilities.append("move_right")
+                    elif opponent_pos[0] < agent_pos[0]: # if opponent is to the left
+                        possibilities.append("move_left")
+                else:
+                    if opponent_pos[1] > agent_pos[1]:
+                        possibilities.append("move_up")
+                    elif opponent_pos[1] < agent_pos[1]:
+                        possibilities.append("move_down")
+            else: # if we are running away
+                if opponent_pos[0] > agent_pos[0]: # if opponent is to the right
+                    possibilities.append("move_left")
+                elif opponent_pos[0] < agent_pos[0]: # if opponent is to the left
+                    possibilities.append("move_right")
+                if opponent_pos[1] > agent_pos[1]:
+                    possibilities.append("move_down")
+                elif opponent_pos[1] < agent_pos[1]:
+                    possibilities.append("move_up")
+                
+                if opponent_pos[0] == agent_pos[0]:
+                    possibilities.append("move_left")
+                    possibilities.append("move_right")
+                if opponent_pos[1] == agent_pos[1]:
+                    possibilities.append("move_up")
+                    possibilities.append("move_down")
+            actions = [action for action in actions if action in possibilities]
+
+            if actions == []:
+                return "stay"
+            return np.random.choice(actions)
+    
+    
