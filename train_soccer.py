@@ -109,16 +109,14 @@ def training(policy,steps):
         case "JAL_AM_challenger":
             env = SoccerEnvironment()
 
-            #Testtraining against MiniMaxPolicy
+            #Testtraining against Random
 
             policy_A = JAL_AM_Policy(epsilon=0.1, decay=0.9999954) 
             value_Function_A = JAL_AM_Q_Function(policy=policy_A,env=env,agent_idx=0,start_value=0.0,learning_rate=0.1,discount_factor=0.9)
             agent_A = Agent(env, value_Function_A, 0)
 
-            policy_B = LearnedMiniMaxPolicy(env,1, 0)
-            policy_B.load_dict(f"soccer_pi_minimax_MR.json")
-            value_Function_B = MinimaxQ_Function(policy_B, start_value=1)
-            value_Function_B.load_dict(f"soccer_minimax_MR.json")
+            policy_B = RandomPolicy(1)
+            value_Function_B = RandomPolicy_Value_Function(1)
             agent_B = Agent(env, value_Function_B, 1)
 
             SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999954, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(steps)
@@ -154,8 +152,8 @@ Invoke training function for each polity
 """
 Invoke training function for each champion challenger
 """
-#print("Training JAL_AM_challenger:")
-#training("JAL_AM_challenger", steps)
+print("Training JAL_AM_challenger:")
+training("JAL_AM_challenger", steps)
 #print("Training MR_challenger:")
 #training("MR_challenger", steps)
 
