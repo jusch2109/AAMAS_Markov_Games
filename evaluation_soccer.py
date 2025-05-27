@@ -1,7 +1,7 @@
 from simulation import *
 from environment import SoccerEnvironment
 from policy import RandomPolicy
-from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function
+from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function, JAL_AM_Q_Function
 from policy import EpsilonGreedyPolicy, GreedyPolicy, MockPolicy
 from agent import Agent
 from policy import LearnedMiniMaxPolicy
@@ -84,7 +84,26 @@ def evaluation(policy, challenger,steps):
 
         case "JAL_AM_challenger":
 
-            print(f"Agent A: {policy} vs. Agent B: {challenger}")
+            match policy:
+                case "MM" | "MR":
+                    policy_A = LearnedMiniMaxPolicy(env,0, 0)
+                    policy_A.load_dict(f"soccer_pi_minimax_{policy}.json")
+                    value_Function_A = MinimaxQ_Function(policy_A, start_value=1)
+                    value_Function_A.load_dict(f"soccer_minimax_{policy}.json")
+                    agent_A = Agent(env, value_Function_A, 0)
+                
+                case "QQ" | "QR":
+                    policy_A = LearnedMiniMaxPolicy(env,0, 0) # Q learning
+                    policy_A.load_dict(f"soccer_pi_minimax_{policy}.json") # Q learning
+                    value_Function_A = Q_Function(policy_A, start_value=1) # Q learning
+                    value_Function_A.load_dict(f"soccer_minimax_{policy}.json") # Q learning
+                    agent_A = Agent(env, value_Function_A, 0)
+            
+            policy_B = JAL_AM_Policy(env,1, 0)
+            policy_B.load_dict(f"soccer_pi_minimax_JAL_AM_challenger.json")
+            value_Function_B = JAL_AM_Q_Function(policy_A, start_value=1)
+            value_Function_B.load_dict(f"soccer_minimax_JAL_AM_challenger.json")
+            agent_B = Agent(env, value_Function_B, 1)
 
     simulation = SoccerSimulation(env, agent_A, agent_B, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC)
     simulation.run(steps)
