@@ -125,6 +125,7 @@ class Q_Function(Value_Function):
             filename = filename + ".json"
         if not os.path.exists(filename):
             print("File does not exist")
+            print("problems!!!\n\n\nproblems!!!\n\n\n")
             return
         # Opening JSON file
         f = open(filename,)

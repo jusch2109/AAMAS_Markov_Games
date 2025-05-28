@@ -6,7 +6,7 @@ from policy import EpsilonGreedyPolicy, GreedyPolicy, MockPolicy, QPolicy, Learn
 from agent import Agent
 from value_function import MinimaxQ_Function
 
-def get_policy(type,id, env,explore,load_dicts=False):
+def get_policy(type,id, env,explore,load_dicts=False, extra=""):
     """
     Returns a policy of the specified type and id.
     """
@@ -20,7 +20,7 @@ def get_policy(type,id, env,explore,load_dicts=False):
     elif type == "greedy":
         p = GreedyPolicy([], id)
         if load_dicts:
-            p.load_dict(f"{id}_{env_type}_pi_gq.json")
+            p.load_dict(f"{id}_{env_type}_pi_gq{extra}.json")
     elif type == "epsilon_greedy":
         p = EpsilonGreedyPolicy(explore)
         if load_dicts:
@@ -28,7 +28,7 @@ def get_policy(type,id, env,explore,load_dicts=False):
     elif type == "q":
         p = QPolicy({}, id, explore)
         if load_dicts:
-            p.load_dict(f"{id}_{env_type}_pi_q.json")
+            p.load_dict(f"{id}_{env_type}_pi_q{extra}.json")
     elif type == "handcrafted":
         is_soccer = True
         if env_type == "catch":
@@ -37,7 +37,7 @@ def get_policy(type,id, env,explore,load_dicts=False):
     elif type == "minimax":
         p = LearnedMiniMaxPolicy(env, id, explore)
         if load_dicts:
-            p.load_dict(f"{id}_{env_type}_pi_minimax.json")
+            p.load_dict(f"{id}_{env_type}_pi_minimax{extra}.json")
     elif type == "mock":
         p = MockPolicy(id,env)
         if load_dicts:
@@ -46,7 +46,7 @@ def get_policy(type,id, env,explore,load_dicts=False):
         raise ValueError(f"Unknown policy type: {type}")
     return p
 
-def get_value_function(type, id, policy,learning_rate,decay,env, start_value = None, load_dicts=False):
+def get_value_function(type, id, policy,learning_rate,decay,env, start_value = None, load_dicts=False,extra=""):
     if isinstance(env, CatchEnvironment):
         env_type = "catch"
     else:
@@ -77,19 +77,19 @@ def get_value_function(type, id, policy,learning_rate,decay,env, start_value = N
         value_Function_B = Q_Function(policy, start_value=start_value, learning_rate=learning_rate, decay=decay)
         if load_dicts:
             if type == "q":
-                value_Function_B.load_dict(f"{id}_{env_type}_q.json")
+                value_Function_B.load_dict(f"{id}_{env_type}_q{extra}.json")
             else:
-                value_Function_B.load_dict(f"{id}_{env_type}_gq.json")
+                value_Function_B.load_dict(f"{id}_{env_type}_gq{extra}.json")
     elif type == "minimax":
         value_Function_B = MinimaxQ_Function(policy, start_value=start_value, learning_rate=learning_rate, decay=decay)
         if load_dicts:
-            value_Function_B.load_dict(f"{id}_{env_type}_minimax.json")
+            value_Function_B.load_dict(f"{id}_{env_type}_minimax{extra}.json")
     else:
         raise ValueError(f"Unknown value function type: {type}")
     return value_Function_B
 
 
-def save_policies_and_value_functions(agentA, agentB, policyA, policyB, value_Function_A, value_Function_B, env):
+def save_policies_and_value_functions(agentA, agentB, policyA, policyB, value_Function_A, value_Function_B, env, extra=""):
     """
     Saves the policies and value functions of the agents.
     """
@@ -114,22 +114,22 @@ def save_policies_and_value_functions(agentA, agentB, policyA, policyB, value_Fu
     else:
         algoB = "random"
         
-    policyA.save_dict(f"{agentA.agent_index}_{env_type}_pi_{algoA}.json")
-    policyB.save_dict(f"{agentB.agent_index}_{env_type}_pi_{algoB}.json")
+    policyA.save_dict(f"{agentA.agent_index}_{env_type}_pi_{algoA}{extra}.json")
+    policyB.save_dict(f"{agentB.agent_index}_{env_type}_pi_{algoB}{extra}.json")
     
-    value_Function_A.save_dict(f"{agentA.agent_index}_{env_type}_{algoB}.json")
-    value_Function_B.save_dict(f"{agentB.agent_index}_{env_type}_{algoB}.json")
+    value_Function_A.save_dict(f"{agentA.agent_index}_{env_type}_{algoB}{extra}.json")
+    value_Function_B.save_dict(f"{agentB.agent_index}_{env_type}_{algoB}{extra}.json")
     return
 
-def get_agents_policies_value_functions(type1, type2, env, explore, learning_rate, decay, load_dicts=False):
+def get_agents_policies_value_functions(type1, type2, env, explore, learning_rate, decay, load_dicts=False,extra=""):
     """
     Returns an agent of the specified types.
     """
-    policy1 = get_policy(type1, 0, env, explore, load_dicts)
-    policy2 = get_policy(type2, 1, env, explore, load_dicts)
+    policy1 = get_policy(type1, 0, env, explore, load_dicts,extra=extra)
+    policy2 = get_policy(type2, 1, env, explore, load_dicts,extra=extra)
 
-    value_Function1 = get_value_function(type1, 0, policy1, learning_rate, decay, env, load_dicts=load_dicts)
-    value_Function2 = get_value_function(type2, 1, policy2, learning_rate, decay, env, load_dicts=load_dicts)
+    value_Function1 = get_value_function(type1, 0, policy1, learning_rate, decay, env, load_dicts=load_dicts,extra=extra)
+    value_Function2 = get_value_function(type2, 1, policy2, learning_rate, decay, env, load_dicts=load_dicts,extra=extra)
 
     agent1 = Agent(env, value_Function1, 0)
     agent2 = Agent(env, value_Function2, 1)
@@ -138,24 +138,24 @@ def get_agents_policies_value_functions(type1, type2, env, explore, learning_rat
 
 
 
-def train(A_type, B_type,env, explore_decay,explore, learning_rate, decay, timesteps = 1000000, training=True, use_gui=False, mac=False):
+def train(A_type, B_type,env, explore_decay,explore, learning_rate, decay, timesteps = 1000000, training=True, use_gui=False, mac=False, extra=""):
     """
     Runs the simulation for a million timesteps
     """
-    agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B = get_agents_policies_value_functions(A_type, B_type, env,explore, learning_rate, decay,load_dicts=False)
+    agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B = get_agents_policies_value_functions(A_type, B_type, env,explore, learning_rate, decay,load_dicts=False,extra=extra)
     if isinstance(env, CatchEnvironment):
         simulation = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=training, use_gui=use_gui, mac=mac)
     else:
         simulation = SoccerSimulation(env, agentA, agentB, explore_decay=explore_decay, training=training, use_gui=use_gui, mac=mac)
     simulation.run(timesteps)
-    save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env)
+    save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env, extra=extra)
     return
 
-def test(A_type, B_type, env,explore_decay,explore, learning_rate, decay,timesteps=100000, use_gui=False, mac=False):
+def test(A_type, B_type, env,explore_decay,explore, learning_rate, decay,timesteps=100000, use_gui=False, mac=False,extra=""):
     """
     Runs the simulation for 100k timesteps.  explore decay stayed to make the arguments the same, but its always 1.
     """
-    agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B = get_agents_policies_value_functions(A_type, B_type, env,explore, learning_rate, decay, load_dicts=True)
+    agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B = get_agents_policies_value_functions(A_type, B_type, env,explore, learning_rate, decay, load_dicts=True,extra=extra)
     if isinstance(env, CatchEnvironment):
         simulation = CatchSimulation(env, agentA, agentB, explore_decay=1, training=False, use_gui=use_gui, mac=mac)
     else:
@@ -164,8 +164,39 @@ def test(A_type, B_type, env,explore_decay,explore, learning_rate, decay,timeste
     return
 
 
+def train_all():
+    learning_rate = 1
+    explore = 0.2
+    decay = 0.9999954
+    explore_decay = decay
+    timesteps = 1000000  
+
+    for A_type in ["epsilon_greedy", "q", "minimax"]:
+        for B_type in [A_type, "random"]:
+            env = SoccerEnvironment()
+            train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
+            env = CatchEnvironment()
+            train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
+
+def test_trained():
+    learning_rate = 1
+    explore = 0.2
+    decay = 0.9999954
+    explore_decay = decay
+    timesteps = 100000 
+
+    for A_type in ["epsilon_greedy", "q", "minimax"]:
+        for B_type in [A_type, "random"]:
+            env = SoccerEnvironment()
+            test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
+            env = CatchEnvironment()
+            test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
+
 
 def main():
+    train_all()
+
+def _main():
     types = ["random", "greedy", "epsilon_greedy", "q", "minimax", "mock", "handcrafted"]
     learning_rate = 1
     explore = 0.2
@@ -176,20 +207,20 @@ def main():
     A_type = "minimax"
     B_type = "minimax"
     env = SoccerEnvironment()
-    #train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps)
+    #train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra="")
     env = CatchEnvironment()
     #explore = 0
     print("handcrafted vs random catch")
     A_type = "handcrafted"
     B_type = "random"
     timesteps = 100000    
-    test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=False, mac=False)
+    test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=False, mac=False, extra="")
     env = SoccerEnvironment()
     print("handcrafted vs random soccer")
     A_type = "handcrafted"
     B_type = "random"
     timesteps = 100000    
-    test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=False, mac=False)
+    test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=False, mac=False,extra="")
 
 
 # Using the special variable 

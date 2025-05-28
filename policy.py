@@ -28,7 +28,11 @@ class Policy():
         Returns the probability that a specific action is chosen in a specific state by this policy.
         """
         #abstract
-
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+    
+    def load_dict(self,filename = "a"):
+        pass
 class RandomPolicy(Policy):
     """
     Returns a random action among all possible ones with a uniform distribution.
@@ -39,6 +43,11 @@ class RandomPolicy(Policy):
     def getAction(self, state: list, possible_actions: list,q_table: dict = None) -> str:
         return np.random.choice(possible_actions)
     
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+    
+    def load_dict(self,filename = "a"):
+        pass
 class GreedyPolicy(Policy):
     """
     Returns the action with the highest Q-value for the current state.
@@ -102,16 +111,19 @@ class QPolicy(Policy):
         if random.random() < self.epsilon:
             return random.choice(possible_actions)
         state = state_to_tuple(state)
-        q_values = {action: self.q_table[str(state)].get(action, 0) for action in possible_actions}
 
-        min_q = min(q_values.values())   # this shifts values to [0:max_value]
-        shifted_q = {a: q - min_q for a, q in q_values.items()}
-        total = sum(shifted_q.values())
-
-        if total == 0: # if all values are the same
+        if str(state) not in self.q_table:
             probabilities = [1.0 / len(possible_actions)] * len(possible_actions)
         else:
-            probabilities = [q / total for q in shifted_q]
+            q_values = {action: self.q_table[str(state)].get(action, 0) for action in possible_actions}
+            min_q = min(q_values.values())   # this shifts values to [0:max_value]
+            shifted_q = {a: q - min_q for a, q in q_values.items()}
+            total = sum(shifted_q.values())
+
+            if total == 0: # if all values are the same
+                probabilities = [1.0 / len(possible_actions)] * len(possible_actions)
+            else:
+                probabilities = [q / total for q in shifted_q]
 
         action = np.random.choice(possible_actions, p=probabilities)
         return action
@@ -267,7 +279,11 @@ class JAL_AM_Policy(Policy):
         self.epsilon = self.epsilon * self.decay
 
         return random.choice(best_actions)
-
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+    
+    def load_dict(self,filename = "a"):
+        pass
 class MockPolicy(Policy):
     """
     A mock policy that does nothing.
@@ -287,7 +303,11 @@ class MockPolicy(Policy):
     
     def update(self):
         pass
-
+    def save_dict(self, filename="Pi_min_max"):
+        pass
+    
+    def load_dict(self,filename = "a"):
+        pass
 class HandcraftedPolicy(Policy):
     """
     A policy that uses handcrafted rules to determine the action.
@@ -434,5 +454,9 @@ class HandcraftedPolicy(Policy):
             if actions == []:
                 return "stay"
             return np.random.choice(actions)
+
+    def save_dict(self, filename="Pi_min_max"):
+        pass
     
-    
+    def load_dict(self,filename = "a"):
+        pass
