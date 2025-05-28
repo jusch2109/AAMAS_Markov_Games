@@ -21,6 +21,8 @@ def get_policy(type,id, env,explore,load_dicts=False, extra=""):
         p = GreedyPolicy([], id)
         if load_dicts:
             p.load_dict(f"{id}_{env_type}_pi_gq{extra}.json")
+            p.load_dict(f"{id}_{env_type}_pi_random{extra}.json")
+
     elif type == "epsilon_greedy":
         p = EpsilonGreedyPolicy(explore)
         if load_dicts:
@@ -29,6 +31,7 @@ def get_policy(type,id, env,explore,load_dicts=False, extra=""):
         p = QPolicy({}, id, explore)
         if load_dicts:
             p.load_dict(f"{id}_{env_type}_pi_q{extra}.json")
+            p.load_dict(f"{id}_{env_type}_pi_random{extra}.json")
     elif type == "handcrafted":
         is_soccer = True
         if env_type == "catch":
@@ -38,6 +41,7 @@ def get_policy(type,id, env,explore,load_dicts=False, extra=""):
         p = LearnedMiniMaxPolicy(env, id, explore)
         if load_dicts:
             p.load_dict(f"{id}_{env_type}_pi_minimax{extra}.json")
+            p.load_dict(f"{id}_{env_type}_pi_random{extra}.json")
     elif type == "mock":
         p = MockPolicy(id,env)
         if load_dicts:
@@ -78,12 +82,16 @@ def get_value_function(type, id, policy,learning_rate,decay,env, start_value = N
         if load_dicts:
             if type == "q":
                 value_Function_B.load_dict(f"{id}_{env_type}_q{extra}.json")
+                value_Function_B.load_dict(f"{id}_{env_type}_random{extra}.json")
+
             else:
                 value_Function_B.load_dict(f"{id}_{env_type}_gq{extra}.json")
+                value_Function_B.load_dict(f"{id}_{env_type}_random{extra}.json")
     elif type == "minimax":
         value_Function_B = MinimaxQ_Function(policy, start_value=start_value, learning_rate=learning_rate, decay=decay)
         if load_dicts:
             value_Function_B.load_dict(f"{id}_{env_type}_minimax{extra}.json")
+            value_Function_B.load_dict(f"{id}_{env_type}_random{extra}.json")
     else:
         raise ValueError(f"Unknown value function type: {type}")
     return value_Function_B
@@ -173,28 +181,35 @@ def train_all():
 
     for A_type in ["epsilon_greedy", "q", "minimax"]:
         for B_type in [A_type, "random"]:
+            print(f"A: {A_type}, B: {B_type}")
+            print("Soccer:")
             env = SoccerEnvironment()
             train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
+            print("Catch:")
             env = CatchEnvironment()
             train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
 
 def test_trained():
     learning_rate = 1
     explore = 0.2
-    decay = 0.9999954
+    decay = 1
     explore_decay = decay
     timesteps = 100000 
 
     for A_type in ["epsilon_greedy", "q", "minimax"]:
         for B_type in [A_type, "random"]:
+            print(f"A: {A_type}, B: {B_type}")
+            print("Soccer:")
             env = SoccerEnvironment()
             test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
+            print("Catch:")
             env = CatchEnvironment()
             test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
 
 
 def main():
     train_all()
+    test_trained()
 
 def _main():
     types = ["random", "greedy", "epsilon_greedy", "q", "minimax", "mock", "handcrafted"]

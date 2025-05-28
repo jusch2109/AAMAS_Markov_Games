@@ -127,6 +127,7 @@ class Q_Function(Value_Function):
             print("File does not exist")
             print("problems!!!\n\n\nproblems!!!\n\n\n")
             return
+        print("success")
         # Opening JSON file
         f = open(filename,)
         
