@@ -86,7 +86,7 @@ class EpsilonGreedyPolicy(Policy):
             return random.choice(possible_actions)
 
         # Exploitation
-        q_values = {action: q_table[str(state)][action] for action in possible_actions}
+        q_values = {action: q_table[str(state)].get(action, 0) for action in possible_actions}
         max_value = max(q_values.values())
         best_actions = [a for a, v in q_values.items() if v == max_value]
         return random.choice(best_actions)
@@ -115,10 +115,10 @@ class QPolicy(Policy):
         if str(state) not in self.q_table:
             probabilities = [1.0 / len(possible_actions)] * len(possible_actions)
         else:
-            q_values = {action: self.q_table[str(state)].get(action, 0) for action in possible_actions}
-            min_q = min(q_values.values())   # this shifts values to [0:max_value]
-            shifted_q = {a: q - min_q for a, q in q_values.items()}
-            total = sum(shifted_q.values())
+            q_values = [self.q_table[str(state)].get(action, 0) for action in possible_actions]
+            min_q = min(q_values)   # this shifts values to [0:max_value]
+            shifted_q = [q - min_q for q in q_values]
+            total = sum(shifted_q)
 
             if total == 0: # if all values are the same
                 probabilities = [1.0 / len(possible_actions)] * len(possible_actions)
