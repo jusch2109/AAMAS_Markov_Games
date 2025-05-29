@@ -131,8 +131,8 @@ class SoccerSimulation():
         else:
             print("A winrate: ", A_wins/(B_wins+A_wins))
 
-        self.games_won = A_wins
-        self.percentage_won = A_wins/(A_wins + B_wins)
+            self.games_won = A_wins
+            self.percentage_won = A_wins/(A_wins + B_wins)
 
     def return_wins(self):
         return self.percentage_won, self.games_won
@@ -155,7 +155,7 @@ class CatchSimulation():
         
         self.training = training
         self.mac = mac
-        self.cooldown = 2
+        self.cooldown = 0.5
         if use_gui:
             self.gui = CatchGui(environment,mac)
             
@@ -208,8 +208,8 @@ class CatchSimulation():
                                         rewardA)
                 self.agentB.updateQValue(previous_state,
                                         self.state, 
-                                        actionA, 
                                         actionB, 
+                                        actionA, 
                                         self.environment.getPossibleActions(previous_state, self.agentB.agent_index),
                                         self.environment.getPossibleActions(previous_state, self.agentA.agent_index), 
                                         rewardB)
