@@ -79,9 +79,11 @@ def get_value_function(type, id, policy,learning_rate,decay,env, start_value = N
                 value_Function_B.load_dict(os.path.join("models",f"{id}_{env_type}_q{extra}.json"))
             else:
                 ## if we saved it it was an epsilon greedy policy.
-                for index in range(len(extra)):
+
+                last = range(len(extra))
+                for index in last:
                     if extra[index] == "g":
-                        extra[index] = "e"
+                        extra = extra[:index] + "e" + extra[index + 1:]
                 value_Function_B.load_dict(os.path.join("models",f"{id}_{env_type}_gq{extra}.json"))
     elif type == "minimax":
         value_Function_B = MinimaxQ_Function(policy, start_value=start_value, learning_rate=learning_rate, decay=decay)
@@ -93,7 +95,7 @@ def get_value_function(type, id, policy,learning_rate,decay,env, start_value = N
     return value_Function_B
 
 
-def save_policies_and_value_functions(agentA, agentB, policyA, policyB, value_Function_A, value_Function_B, env, extra=""):
+def save_policies_and_value_functions(agentA, agentB, policyA, policyB, value_Function_A, value_Function_B, env, extra=["",""]):
     """
     Saves the policies and value functions of the agents.
     """
@@ -107,9 +109,10 @@ def save_policies_and_value_functions(agentA, agentB, policyA, policyB, value_Fu
         algoA = "q"
     elif isinstance(policyA, EpsilonGreedyPolicy) or isinstance(policyA, GreedyPolicy):
         ## make sure extra saves it as epsilon greedy in both cases
-        for index in range(len(extra)):
+        last = range(len(extra))
+        for index in last:
             if extra[index] == "g":
-                extra[index] = "e"
+                extra = extra[:index] + "e" + extra[index + 1:]
         algoA = "gq"
     else:
         algoA = "random"
@@ -119,29 +122,30 @@ def save_policies_and_value_functions(agentA, agentB, policyA, policyB, value_Fu
         algoB = "q"
     elif isinstance(policyB, EpsilonGreedyPolicy) or isinstance(policyB, GreedyPolicy):
         ## make sure extra saves it as epsilon greedy in both cases
-        for index in range(len(extra)):
+        last = range(len(extra))
+        for index in last:
             if extra[index] == "g":
-                extra[index] = "e"
+                extra = extra[:index] + "e" + extra[index + 1:]
         algoB = "gq"
     else:
         algoB = "random"
         
-    policyA.save_dict(os.path.join("models",f"{agentA.agent_index}_{env_type}_pi_{algoA}{extra}.json"))
-    policyB.save_dict(os.path.join("models",f"{agentB.agent_index}_{env_type}_pi_{algoB}{extra}.json"))
+    policyA.save_dict(os.path.join("models",f"{agentA.agent_index}_{env_type}_pi_{algoA}{extra[0]}.json"))
+    policyB.save_dict(os.path.join("models",f"{agentB.agent_index}_{env_type}_pi_{algoB}{extra[1]}.json"))
     
-    value_Function_A.save_dict(os.path.join("models",f"{agentA.agent_index}_{env_type}_{algoA}{extra}.json"))
-    value_Function_B.save_dict(os.path.join("models",f"{agentB.agent_index}_{env_type}_{algoB}{extra}.json"))
+    value_Function_A.save_dict(os.path.join("models",f"{agentA.agent_index}_{env_type}_{algoA}{extra[0]}.json"))
+    value_Function_B.save_dict(os.path.join("models",f"{agentB.agent_index}_{env_type}_{algoB}{extra[1]}.json"))
     return
 
-def get_agents_policies_value_functions(type1, type2, env, explore, learning_rate, decay, load_dicts=False,extra=""):
+def get_agents_policies_value_functions(type1, type2, env, explore, learning_rate, decay, load_dicts=False,extra=["",""]):
     """
     Returns an agent of the specified types.
     """
-    policy1 = get_policy(type1, 0, env, explore, load_dicts,extra=extra)
-    policy2 = get_policy(type2, 1, env, explore, load_dicts,extra=extra)
+    policy1 = get_policy(type1, 0, env, explore, load_dicts,extra=extra[0])
+    policy2 = get_policy(type2, 1, env, explore, load_dicts,extra=extra[1])
 
-    value_Function1 = get_value_function(type1, 0, policy1, learning_rate, decay, env, load_dicts=load_dicts,extra=extra)
-    value_Function2 = get_value_function(type2, 1, policy2, learning_rate, decay, env, load_dicts=load_dicts,extra=extra)
+    value_Function1 = get_value_function(type1, 0, policy1, learning_rate, decay, env, load_dicts=load_dicts,extra=extra[0])
+    value_Function2 = get_value_function(type2, 1, policy2, learning_rate, decay, env, load_dicts=load_dicts,extra=extra[1])
 
     agent1 = Agent(env, value_Function1, 0)
     agent2 = Agent(env, value_Function2, 1)
@@ -159,9 +163,9 @@ def train(A_type, B_type,env, explore_decay,explore, learning_rate, decay, times
         simulation = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=training, use_gui=use_gui, mac=mac)
     else:
         simulation = SoccerSimulation(env, agentA, agentB, explore_decay=explore_decay, training=training, use_gui=use_gui, mac=mac)
-    simulation.run(timesteps)
+    r = simulation.run(timesteps)
     save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env, extra=extra)
-    return
+    return r
 
 def test(A_type, B_type, env,explore_decay,explore, learning_rate, decay,timesteps=100000, use_gui=False, mac=False,extra=""):
     """
@@ -172,8 +176,8 @@ def test(A_type, B_type, env,explore_decay,explore, learning_rate, decay,timeste
         simulation = CatchSimulation(env, agentA, agentB, explore_decay=1, training=False, use_gui=use_gui, mac=mac)
     else:
         simulation = SoccerSimulation(env, agentA, agentB, explore_decay=1, training=False, use_gui=use_gui, mac=mac)
-    simulation.run(timesteps)
-    return
+    r = simulation.run(timesteps)
+    return r
 
 
 def train_all():
@@ -183,33 +187,56 @@ def train_all():
     explore_decay = decay
     timesteps = 1000000  
 
+    soccer_results = []
+    catch_results = []
+
     for A_type in ["epsilon_greedy", "q","minimax"]:
         for B_type in [A_type, "random"]:
             print(f"A: {A_type}, B: {B_type}")
             print("Soccer:")
             env = SoccerEnvironment()
-            train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
+            soccer_results[A_type + "_" + B_type] = train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=[str(A_type[0]+B_type[0]),str(A_type[0]+B_type[0])])
             print("Catch:")
             env = CatchEnvironment()
-            train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
-            print("\n")
-        
+            catch_results[A_type + "_" + B_type] = train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=[str(A_type[0]+B_type[0]),str(A_type[0]+B_type[0])])
+            print("\n\n")
+    
+    print("Soccer Results:")
+    print(soccer_results)
+    print("Catch Results:")
+    print(catch_results)
+    return
 def test_trained():
     learning_rate = 1
     explore = 0
     decay = 1
     explore_decay = decay
     timesteps = 100000 
+    
+    soccer_results = {}
+    catch_results = {}
 
-    for A_type in ["epsilon_greedy", "q", "minimax"]:
-        for B_type in [A_type, "random"]:
+    for A_type in ["random", "greedy", "epsilon_greedy", "q", "minimax", "handcrafted"]:
+        for B_type in ["random", "greedy", "epsilon_greedy", "q", "minimax", "handcrafted"]:
+            extra = [str(A_type[0]+B_type[0]), str(A_type[0]+B_type[0])]
+            if A_type in ["random","handcrafted"] and B_type in ["greedy", "epsilon_greedy", "q", "minimax"]:
+                continue
+            if A_type != B_type and B_type in ["greedy", "epsilon_greedy", "q", "minimax", "handcrafted"]:
+                ## this is to make them use the version trained against themselfs, we can also replace the second char of each of the item's list to r to make it the version trained against random
+                extra = [str(A_type[0]+A_type[0]), str(B_type[0] + B_type[0])]
             print(f"A: {A_type}, B: {B_type}")
             print("Soccer:")
             env = SoccerEnvironment()
-            test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
+            
+            soccer_results[A_type + "_" + B_type] = test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=extra)
             print("Catch:")
             env = CatchEnvironment()
-            test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]))
+            catch_results[A_type + "_" + B_type] = test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=extra)
+
+        print("Soccer Results:")
+    print(soccer_results)
+    print("Catch Results:")
+    print(catch_results)
 
 
 def train_test_specific(A_type, B_type, env):

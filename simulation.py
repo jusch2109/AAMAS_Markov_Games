@@ -123,17 +123,19 @@ class SoccerSimulation():
         #            self.agentA.value_function.policy.explore *= self.explore_decay
         #        if type(self.agentB.value_function.policy) == LearnedMiniMaxPolicy:
          #           self.agentB.value_function.policy.explore *= self.explore_decay
-
+        returner = []
         print("A wins:", A_wins)
         print("B wins:", B_wins)
         if B_wins + A_wins == 0:
+            returner.append(-1)
             print("No wins")
         else:
             print("A winrate: ", A_wins/(B_wins+A_wins))
-
             self.games_won = A_wins
             self.percentage_won = A_wins/(A_wins + B_wins)
-
+            returner.append(A_wins/(B_wins+A_wins))
+        return returner
+    
     def return_wins(self):
         return self.percentage_won, self.games_won
 
@@ -228,11 +230,17 @@ class CatchSimulation():
                     self.agentA.value_function.policy.explore *= self.explore_decay
                 if type(self.agentB.value_function.policy) == LearnedMiniMaxPolicy:
                     self.agentB.value_function.policy.explore *= self.explore_decay
+        returner = []
         if len(steps_A_wins) == 0:
+            returner.append(float("inf"))
             print("Steps A wins: infinite")
         else:
+            returner.append(sum(steps_A_wins)/len(steps_A_wins))
             print("Steps A wins:", sum(steps_A_wins)/len(steps_A_wins))
         if len(steps_B_wins) == 0:
+            returner.append(float("inf"))
             print("Steps B wins: infinite")
         else:
+            returner.append(sum(steps_B_wins)/len(steps_B_wins))
             print("Steps B wins:", sum(steps_B_wins)/len(steps_B_wins))
+        return returner
