@@ -32,10 +32,9 @@ def evaluation(policy, challenger,steps):
                     agent_A = Agent(env, value_Function_A, 0)
                 
                 case "QQ" | "QR":
-                    policy_A = LearnedMiniMaxPolicy(env,0, 0) # Q learning
-                    policy_A.load_dict(f"soccer_pi_minimax_{policy}.json") # Q learning
-                    value_Function_A = Q_Function(policy_A, start_value=1) # Q learning
-                    value_Function_A.load_dict(f"soccer_minimax_{policy}.json") # Q learning
+                    policy_A = QPolicy({},agent = 0, epsilon=0.2)
+                    value_Function_A = Q_Function(policy_A, start_value=1)
+                    value_Function_A.load_dict(f"soccer_{policy}")
                     agent_A = Agent(env, value_Function_A, 0)
 
             policy_B = RandomPolicy(1)
@@ -49,38 +48,33 @@ def evaluation(policy, challenger,steps):
 
             # similar to random 
 
-        case "MR_challenger":
+        case "MR_challenger" | "MM_challenger":
+
             policy_A = LearnedMiniMaxPolicy(env,0, 0)
-            policy_A.load_dict(f"soccer_pi_minimax_MR.json")
+            policy_A.load_dict(f"soccer_pi_minimax_{policy}.json")
             value_Function_A = MinimaxQ_Function(policy_A, start_value=1)
-            value_Function_A.load_dict(f"soccer_minimax_MR.json")
+            value_Function_A.load_dict(f"soccer_minimax_{policy}.json")
             agent_A = Agent(env, value_Function_A, 0)
 
             policy_B = LearnedMiniMaxPolicy(env,1, 0)
-            policy_B.load_dict(f"soccer_pi_minimax_MR_challenger.json")
+            policy_B.load_dict(f"soccer_pi_minimax_{challenger}.json")
             value_Function_B = MinimaxQ_Function(policy_A, start_value=1)
-            value_Function_B.load_dict(f"soccer_minimax_MR_challenger.json")
+            value_Function_B.load_dict(f"soccer_minimax_{challenger}.json")
             agent_B = Agent(env, value_Function_B, 1)
 
-        case "MM_challenger":
-            policy_A = LearnedMiniMaxPolicy(env,0, 0)
-            policy_A.load_dict(f"soccer_pi_minimax_MM.json")
-            value_Function_A = MinimaxQ_Function(policy_A, start_value=1)
-            value_Function_A.load_dict(f"soccer_minimax_MM.json")
+        case "QR_challenger" | "QQ_challenger":
+
+            print(f"Agent A: {policy} vs. Agent B: {challenger}")
+
+            policy_A = QPolicy({},agent = 0)
+            value_Function_A = Q_Function(policy_A, start_value=1)
+            value_Function_A.load_dict(f"soccer_{policy}")
             agent_A = Agent(env, value_Function_A, 0)
 
-            policy_B = LearnedMiniMaxPolicy(env,1, 0)
-            policy_B.load_dict(f"soccer_pi_minimax_MM_challenger.json")
-            value_Function_B = MinimaxQ_Function(policy_A, start_value=1)
-            value_Function_B.load_dict(f"soccer_minimax_MM_challenger.json")
+            policy_B = QPolicy({},agent = 1)
+            value_Function_B = Q_Function(policy_B, start_value=1)
+            value_Function_B.load_dict(f"soccer_{challenger}")
             agent_B = Agent(env, value_Function_B, 1)
-
-        case "QR_challenger":
-
-            print(f"Agent A: {policy} vs. Agent B: {challenger}")
-        case "QQ_challenger":
-
-            print(f"Agent A: {policy} vs. Agent B: {challenger}")
 
         case "JAL_AM_challenger":
 
@@ -93,7 +87,7 @@ def evaluation(policy, challenger,steps):
                     agent_A = Agent(env, value_Function_A, 0)
                 
                 case "QQ" | "QR":
-                    policy_A = LearnedMiniMaxPolicy(env,0, 0) # Q learning
+                    policy_A = LearnedMiniMaxPolicy(env,0, 0.2) # Q learning
                     policy_A.load_dict(f"soccer_pi_minimax_{policy}.json") # Q learning
                     value_Function_A = Q_Function(policy_A, start_value=1) # Q learning
                     value_Function_A.load_dict(f"soccer_minimax_{policy}.json") # Q learning
@@ -105,23 +99,20 @@ def evaluation(policy, challenger,steps):
             value_Function_B.load_dict(f"soccer_minimax_JAL_AM_challenger.json")
             agent_B = Agent(env, value_Function_B, 1)
 
-    simulation = SoccerSimulation(env, agent_A, agent_B, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC)
+    simulation = SoccerSimulation(env, agent_A, agent_B, explore_decay=1, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC)
     simulation.run(steps)
-    percentage_won, games_won = simulation.return_wins()
-
-    return percentage_won, games_won
 
 
 """
 Invoking the evaluation function
 """
-print("Challenger: Random")
-evaluation_random = []
-evaluation_random.append(evaluation("MR","random",100000))
+#print("Challenger: Random")
+#evaluation_random = []
+#evaluation_random.append(evaluation("MR","random",100000))
 #evaluation_random.append(evaluation("MM","random",100000))
 #evaluation_random.append(evaluation("QR","random",100000))
 #evaluation_random.append(evaluation("QQ","random",100000))
-print(evaluation_random)
+#print(evaluation_random)
 
 #print("Challenger: Handbuild")
 #evaluation_handbuild = []
@@ -141,10 +132,10 @@ print(evaluation_random)
 #evaluation_mm.append(evaluation("MM","MM_challenger",100000))
 #print(evaluation_random)
 
-#print("Challenger: QR_challenger")
-#evaluation_qr = []
-#evaluation_qr.append(evaluation("QR","QR_challenger",100000))
-#print(evaluation_qr)
+print("Challenger: QR_challenger")
+evaluation_qr = []
+evaluation_qr.append(evaluation("QR","QR_challenger",100000))
+print(evaluation_qr)
 
 #print("Challenger: QQ_challenger")
 #evaluation_qq = []

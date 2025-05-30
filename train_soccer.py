@@ -48,7 +48,7 @@ def training(policy,steps):
             #Q trained against random
             env = SoccerEnvironment()
 
-            policy_A = QPolicy(q_table=defaultdict(lambda: defaultdict(float)),agent = 0)
+            policy_A = QPolicy({},agent = 0,epsilon=0.2)
             value_Function_A = Q_Function(policy_A, start_value=1)
             agent_A = Agent(env, value_Function_A, 0)
 
@@ -62,11 +62,11 @@ def training(policy,steps):
             #Q trained against Q
             env = SoccerEnvironment()
 
-            policy_A = QPolicy(q_table=defaultdict(lambda: defaultdict(float)),agent = 0, epsilon=0.2)
+            policy_A = QPolicy({},agent = 0, epsilon=0.2)
             value_Function_A = Q_Function(policy_A, start_value=1)
             agent_A = Agent(env, value_Function_A, 0)
 
-            policy_B = QPolicy(q_table=defaultdict(lambda: defaultdict(float)),agent = 1, epsilon=0.2)
+            policy_B = QPolicy({},agent = 1, epsilon=0.2)
             value_Function_B = Q_Function(policy_B, start_value=1)
             agent_B = Agent(env, value_Function_B, 1)
 
@@ -76,7 +76,7 @@ def training(policy,steps):
             env = SoccerEnvironment()
 
             # agent A follows the QR policy
-            policy_A = QPolicy(q_table=defaultdict(lambda: defaultdict(float)),agent = 0, epsilon=0.2)
+            policy_A = QPolicy({},agent = 0, epsilon=0.2)
             value_Function_A = Q_Function(policy_A, start_value=1)
             agent_A = Agent(env, value_Function_A, 0)
 
@@ -93,7 +93,7 @@ def training(policy,steps):
             env = SoccerEnvironment()
 
             # agent A follows the QR policy
-            policy_A = QPolicy(q_table=defaultdict(lambda: defaultdict(float)),agent = 0)
+            policy_A = QPolicy({},agent = 0)
             value_Function_A = Q_Function(policy_A, start_value=1)
             agent_A = Agent(env, value_Function_A, 0)
 
@@ -102,6 +102,38 @@ def training(policy,steps):
             policy_B.load_dict(f"soccer_pi_minimax_MM.json")
             value_Function_B = MinimaxQ_Function(policy_B, start_value=1)
             value_Function_B.load_dict(f"soccer_minimax_MM.json")
+            agent_B = Agent(env, value_Function_B, 1)
+
+            SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999954, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(steps)
+
+        case "QR_challenger":
+            env = SoccerEnvironment()
+
+            # agent A follows the QR policy
+            policy_A = QPolicy({},agent = 0,epsilon=0.2)
+            value_Function_A = Q_Function(policy_A, start_value=1)
+            agent_A = Agent(env, value_Function_A, 0)
+
+            # agent B has fixed QR policy
+            policy_B = QPolicy({},agent = 1)
+            value_Function_B = Q_Function(policy_B, start_value=1)
+            value_Function_B.load_dict(f"soccer_QR")
+            agent_B = Agent(env, value_Function_B, 1)
+
+            SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999954, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(steps)
+
+        case "QQ_challenger":
+            env = SoccerEnvironment()
+
+            # agent A follows the QR policy
+            policy_A = QPolicy({},agent = 0,epsilon=0.2) #q_table=defaultdict(lambda: defaultdict(float))
+            value_Function_A = Q_Function(policy_A, start_value=1)
+            agent_A = Agent(env, value_Function_A, 0)
+
+            # agent B has fixed QQ policy
+            policy_B = QPolicy({},agent = 1)
+            value_Function_B = Q_Function(policy_B, start_value=1)
+            value_Function_B.load_dict(f"soccer_QQ")
             agent_B = Agent(env, value_Function_B, 1)
 
             SoccerSimulation(env, agent_A, agent_B, explore_decay=0.9999954, training=TRAINING, use_gui=USE_GUI, mac=IS_MAC).run(steps)
@@ -132,7 +164,7 @@ Set Variables for training
 """
 explore = 0.2
 decy = 0.9999954
-steps = 10000 #10**6
+steps = 500 #10**6
 
 """
 Invoke training function for each polity
@@ -145,8 +177,6 @@ Invoke training function for each polity
 #training("QR", steps)
 #print("Training QQ:")
 #training("QQ", steps)
-#print("Training QQ:")
-#training("QQ", steps)
 
 
 """
@@ -156,4 +186,8 @@ print("Training JAL_AM_challenger:")
 training("JAL_AM_challenger", steps)
 #print("Training MR_challenger:")
 #training("MR_challenger", steps)
+#print("Training QR_challenger:")
+#training("QR_challenger", steps)
+#print("Training QQ_challenger:")
+#training("QQ_challenger", steps)
 

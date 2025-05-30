@@ -35,9 +35,6 @@ class SoccerSimulation():
         else:
             self.gui = None
 
-        self.percentage_won = 0
-        self.games_won = 0
-
     def run(self, num_episodes: int = 50000):
         """
         Runs the simulation for a given number of episodes.
@@ -130,12 +127,6 @@ class SoccerSimulation():
             print("No wins")
         else:
             print("A winrate: ", A_wins/(B_wins+A_wins))
-
-        self.games_won = A_wins
-        self.percentage_won = A_wins/(A_wins + B_wins)
-
-    def return_wins(self):
-        return self.percentage_won, self.games_won
 
 
 class CatchSimulation():
