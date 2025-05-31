@@ -1,0 +1,4922 @@
+{
+    "((0, 0), (0, 0), 0)": {
+        "stay": 0.3333333333333333,
+        "move_right": 0.3333333333333333,
+        "move_up": 0.3333333333333333
+    },
+    "((0, 0), (0, 0), 1)": {
+        "stay": 0.3333333333333333,
+        "move_right": 0.3333333333333333,
+        "move_up": 0.3333333333333333
+    },
+    "((0, 0), (0, 1), 0)": {
+        "stay": 0.06532659331321652,
+        "move_right": 0.9346734066867834,
+        "move_up": 0.0
+    },
+    "((0, 0), (0, 1), 1)": {
+        "stay": 0.12064105205733003,
+        "move_right": 0.29953915174608536,
+        "move_up": 0.5798197961965846
+    },
+    "((0, 0), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.8822997263220441,
+        "move_up": 0.11770027367795588
+    },
+    "((0, 0), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.9996653006207378,
+        "move_up": 0.0003346993792622185
+    },
+    "((0, 0), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (1, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (1, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.7555821797845479,
+        "move_up": 0.2444178202154521
+    },
+    "((0, 0), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (2, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (2, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (3, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (3, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (4, 2), 0)": {
+        "stay": 0.6007980346564442,
+        "move_right": 0.0,
+        "move_up": 0.3992019653435558
+    },
+    "((0, 0), (4, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0
+    },
+    "((0, 0), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 0), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0
+    },
+    "((0, 1), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (0, 0), 1)": {
+        "stay": 0.8628151992979455,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.13718480070205452
+    },
+    "((0, 1), (0, 1), 0)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((0, 1), (0, 1), 1)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_up": 0.25,
+        "move_down": 0.25
+    },
+    "((0, 1), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (0, 3), 1)": {
+        "stay": 0.17017411950037353,
+        "move_right": 0.0,
+        "move_up": 0.0021448386696815147,
+        "move_down": 0.827681041829945
+    },
+    "((0, 1), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 0.9981117437847755,
+        "move_down": 0.0018882562152244663
+    },
+    "((0, 1), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (1, 1), 1)": {
+        "stay": 0.3951711437465634,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.6048288562534365
+    },
+    "((0, 1), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0017740337945061357,
+        "move_up": 0.9982259662054939,
+        "move_down": 0.0
+    },
+    "((0, 1), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (1, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (2, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (2, 1), 1)": {
+        "stay": 0.6475288580518087,
+        "move_right": 0.0035958966040754202,
+        "move_up": 0.07256900770241788,
+        "move_down": 0.2763062376416979
+    },
+    "((0, 1), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 1), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (2, 3), 1)": {
+        "stay": 0.7061479357273317,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.2938520642726683
+    },
+    "((0, 1), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 1), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 1), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (4, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 1), (4, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (0, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 2), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (0, 1), 1)": {
+        "stay": 0.8237743677718417,
+        "move_right": 0.1762256322281584,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (0, 2), 0)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((0, 2), (0, 2), 1)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_up": 0.25,
+        "move_down": 0.25
+    },
+    "((0, 2), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.7362311732305519,
+        "move_up": 0.0,
+        "move_down": 0.26376882676944813
+    },
+    "((0, 2), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (1, 1), 1)": {
+        "stay": 0.9995680274274179,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.00043197257258212237
+    },
+    "((0, 2), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 2), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0051460332075276005,
+        "move_up": 0.9948539667924724,
+        "move_down": 0.0
+    },
+    "((0, 2), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (2, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.42927200605670984,
+        "move_up": 0.0,
+        "move_down": 0.5707279939432901
+    },
+    "((0, 2), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.9361480540751637,
+        "move_up": 0.06385194592483634,
+        "move_down": 0.0
+    },
+    "((0, 2), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 2), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 2), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 2), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (0, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.8768772432611042,
+        "move_down": 0.12312275673889583
+    },
+    "((0, 3), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (0, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (0, 2), 0)": {
+        "stay": 0.049287512431762485,
+        "move_right": 0.9507124875682376,
+        "move_down": 0.0
+    },
+    "((0, 3), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (0, 3), 0)": {
+        "stay": 0.3333333333333333,
+        "move_right": 0.3333333333333333,
+        "move_down": 0.3333333333333333
+    },
+    "((0, 3), (0, 3), 1)": {
+        "stay": 0.3333333333333333,
+        "move_right": 0.3333333333333333,
+        "move_down": 0.3333333333333333
+    },
+    "((0, 3), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (2, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.00014809640001907495,
+        "move_down": 0.9998519035999809
+    },
+    "((0, 3), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (3, 3), 1)": {
+        "stay": 0.9540238171936108,
+        "move_right": 0.0,
+        "move_down": 0.045976182806389106
+    },
+    "((0, 3), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (4, 2), 0)": {
+        "stay": 0.529267152275467,
+        "move_right": 0.0,
+        "move_down": 0.47073284772453305
+    },
+    "((0, 3), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((0, 3), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_down": 1.0
+    },
+    "((0, 3), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 0), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (0, 0), 1)": {
+        "stay": 0.42744624442640144,
+        "move_right": 0.5725537555735986,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.2568426820121317,
+        "move_up": 0.7431573179878683
+    },
+    "((1, 0), (0, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.14102398928660542,
+        "move_left": 0.8589760107133946,
+        "move_up": 0.0
+    },
+    "((1, 0), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (1, 0), 0)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25
+    },
+    "((1, 0), (1, 0), 1)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25
+    },
+    "((1, 0), (1, 1), 0)": {
+        "stay": 0.9157275595831836,
+        "move_right": 0.0,
+        "move_left": 0.08427244041681636,
+        "move_up": 0.0
+    },
+    "((1, 0), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.013523864903542526,
+        "move_left": 0.9864761350964575,
+        "move_up": 0.0
+    },
+    "((1, 0), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (1, 3), 1)": {
+        "stay": 0.6761399331593644,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.3238600668406356
+    },
+    "((1, 0), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (2, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (2, 1), 1)": {
+        "stay": 0.2739514098323389,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.7260485901676611
+    },
+    "((1, 0), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.8727816221691636,
+        "move_left": 0.0,
+        "move_up": 0.12721837783083645
+    },
+    "((1, 0), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (4, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 0), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.30585337775954574,
+        "move_up": 0.6941466222404542
+    },
+    "((1, 0), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((1, 0), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((1, 1), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (0, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 1), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.29486858681657424,
+        "move_up": 0.7051314131834258,
+        "move_down": 0.0
+    },
+    "((1, 1), (0, 1), 1)": {
+        "stay": 0.3479986729652007,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.6520013270347993
+    },
+    "((1, 1), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (0, 2), 1)": {
+        "stay": 0.9989995393207205,
+        "move_right": 0.0,
+        "move_left": 0.001000460679279453,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (0, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.7379776050820743,
+        "move_left": 0.2620223949179256,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (1, 1), 0)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((1, 1), (1, 1), 1)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((1, 1), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.6622440470056591,
+        "move_up": 0.001056316352015363,
+        "move_down": 0.33669963664232555
+    },
+    "((1, 1), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0016329390833857982,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.9983670609166142
+    },
+    "((1, 1), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.9057009221762149,
+        "move_up": 0.0,
+        "move_down": 0.09429907782378509
+    },
+    "((1, 1), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.9968405812714148,
+        "move_up": 0.0031594187285852154,
+        "move_down": 0.0
+    },
+    "((1, 1), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 1), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 1), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.9771861319152271,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.022813868084772912
+    },
+    "((1, 1), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (3, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 1), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (4, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 6.99914978149474e-05,
+        "move_up": 0.999930008502185,
+        "move_down": 0.0
+    },
+    "((1, 1), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 1), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 2), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (0, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.5121138902312279,
+        "move_up": 0.0,
+        "move_down": 0.4878861097687721
+    },
+    "((1, 2), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (0, 1), 1)": {
+        "stay": 0.3439331193472657,
+        "move_right": 0.0,
+        "move_left": 0.6560668806527343,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.23335407742540737,
+        "move_up": 0.0,
+        "move_down": 0.7666459225745926
+    },
+    "((1, 2), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (0, 3), 1)": {
+        "stay": 0.992487623830666,
+        "move_right": 0.0,
+        "move_left": 0.0075123761693339786,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 2), (1, 2), 0)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((1, 2), (1, 2), 1)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((1, 2), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (2, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 2), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.009362556913069673,
+        "move_left": 0.0,
+        "move_up": 0.9906374430869304,
+        "move_down": 0.0
+    },
+    "((1, 2), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (3, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (3, 2), 1)": {
+        "stay": 0.4834104515140365,
+        "move_right": 0.01771791888964898,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.49887162959631454
+    },
+    "((1, 2), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (4, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 2), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (0, 0), 1)": {
+        "stay": 0.06052805477331125,
+        "move_right": 0.0,
+        "move_left": 0.4519611764805563,
+        "move_down": 0.4875107687461325
+    },
+    "((1, 3), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (0, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.04733321931243709,
+        "move_down": 0.9526667806875629
+    },
+    "((1, 3), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.2790023739585439,
+        "move_down": 0.7209976260414561
+    },
+    "((1, 3), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.7246793839118244,
+        "move_left": 0.2753206160881756,
+        "move_down": 0.0
+    },
+    "((1, 3), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (1, 2), 0)": {
+        "stay": 0.8871639925869751,
+        "move_right": 0.0,
+        "move_left": 0.11283600741302491,
+        "move_down": 0.0
+    },
+    "((1, 3), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (1, 3), 0)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_down": 0.25
+    },
+    "((1, 3), (1, 3), 1)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_down": 0.25
+    },
+    "((1, 3), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.05474585077861651,
+        "move_down": 0.9452541492213835
+    },
+    "((1, 3), (2, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (3, 3), 1)": {
+        "stay": 0.2196808868237681,
+        "move_right": 0.018259951634460037,
+        "move_left": 0.0,
+        "move_down": 0.7620591615417719
+    },
+    "((1, 3), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.5401115412236761,
+        "move_down": 0.45988845877632395
+    },
+    "((1, 3), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (4, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((1, 3), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((1, 3), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.37604578573475866,
+        "move_left": 0.6239542142652413,
+        "move_down": 0.0
+    },
+    "((1, 3), (4, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 0), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.8054060290485581,
+        "move_up": 0.19459397095144187
+    },
+    "((2, 0), (0, 0), 1)": {
+        "stay": 0.9984195231695475,
+        "move_right": 0.0,
+        "move_left": 0.0015804768304524804,
+        "move_up": 0.0
+    },
+    "((2, 0), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (0, 1), 1)": {
+        "stay": 0.3659604687636707,
+        "move_right": 0.08211685410969105,
+        "move_left": 0.0,
+        "move_up": 0.5519226771266382
+    },
+    "((2, 0), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (0, 2), 1)": {
+        "stay": 0.04099470295106078,
+        "move_right": 0.0,
+        "move_left": 0.9590052970489392,
+        "move_up": 0.0
+    },
+    "((2, 0), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.14192570706510443,
+        "move_up": 0.8580742929348956
+    },
+    "((2, 0), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (1, 2), 1)": {
+        "stay": 0.44806409630389765,
+        "move_right": 0.5519359036961023,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (2, 0), 0)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25
+    },
+    "((2, 0), (2, 0), 1)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25
+    },
+    "((2, 0), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (2, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (3, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (3, 1), 1)": {
+        "stay": 0.12516898907783774,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.8748310109221622
+    },
+    "((2, 0), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.2506758151790822,
+        "move_up": 0.7493241848209178
+    },
+    "((2, 0), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (4, 0), 1)": {
+        "stay": 0.06181624648892459,
+        "move_right": 0.9381837535110754,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((2, 0), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((2, 0), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((2, 1), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (0, 0), 1)": {
+        "stay": 0.30762131865389397,
+        "move_right": 0.0,
+        "move_left": 0.692378681346106,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.5158382718453709,
+        "move_up": 0.4841617281546291,
+        "move_down": 0.0
+    },
+    "((2, 1), (0, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.18444037962068305,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.815559620379317
+    },
+    "((2, 1), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.1048404472320218,
+        "move_up": 0.8951595527679782,
+        "move_down": 0.0
+    },
+    "((2, 1), (1, 1), 1)": {
+        "stay": 0.5761388346109872,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.4238611653890128
+    },
+    "((2, 1), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.07794116833890519,
+        "move_left": 0.9220588316610948,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.06918578749186209,
+        "move_left": 0.9308142125081379,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (2, 1), 0)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((2, 1), (2, 1), 1)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((2, 1), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (2, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0021639903745260813,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.9978360096254739
+    },
+    "((2, 1), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (3, 1), 1)": {
+        "stay": 0.7719378308084596,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.05205540975460602,
+        "move_down": 0.17600675943693442
+    },
+    "((2, 1), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (3, 2), 1)": {
+        "stay": 0.20270434334647267,
+        "move_right": 0.0074562563125371295,
+        "move_left": 0.0,
+        "move_up": 0.7898394003409902,
+        "move_down": 0.0
+    },
+    "((2, 1), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 1), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.8870002247128645,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.1129997752871354
+    },
+    "((2, 1), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (4, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 1), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (0, 0), 1)": {
+        "stay": 0.1191288232718164,
+        "move_right": 0.0,
+        "move_left": 0.5446527527343101,
+        "move_up": 0.0,
+        "move_down": 0.3362184239938734
+    },
+    "((2, 2), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (0, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.4373747579778451,
+        "move_up": 0.0,
+        "move_down": 0.5626252420221549
+    },
+    "((2, 2), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (0, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (1, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.1314345272270101,
+        "move_left": 0.8685654727729899,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.11876236447662947,
+        "move_up": 0.0,
+        "move_down": 0.8812376355233705
+    },
+    "((2, 2), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.6758759564682258,
+        "move_up": 0.0,
+        "move_down": 0.32412404353177415
+    },
+    "((2, 2), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (2, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (2, 2), 0)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((2, 2), (2, 2), 1)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((2, 2), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (2, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 2), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (3, 1), 1)": {
+        "stay": 0.38853480165976406,
+        "move_right": 0.0,
+        "move_left": 0.591425323298963,
+        "move_up": 0.0,
+        "move_down": 0.02003987504127294
+    },
+    "((2, 2), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.42792156907865564,
+        "move_up": 0.0,
+        "move_down": 0.5720784309213444
+    },
+    "((2, 2), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.014552298088469251,
+        "move_left": 0.0,
+        "move_up": 0.9854477019115307,
+        "move_down": 0.0
+    },
+    "((2, 2), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (4, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.06456033957333307,
+        "move_down": 0.9354396604266669
+    },
+    "((2, 2), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (4, 2), 1)": {
+        "stay": 0.230262009401825,
+        "move_right": 0.3878803258156686,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.3818576647825064
+    },
+    "((2, 2), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 2), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (0, 0), 1)": {
+        "stay": 0.8674650083708894,
+        "move_right": 0.13253499162911062,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (0, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.6106611301151754,
+        "move_down": 0.3893388698848246
+    },
+    "((2, 3), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.7493092447644011,
+        "move_down": 0.2506907552355989
+    },
+    "((2, 3), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.37359467923516326,
+        "move_left": 0.0,
+        "move_down": 0.6264053207648368
+    },
+    "((2, 3), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (1, 1), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.7610906570129186,
+        "move_down": 0.23890934298708144
+    },
+    "((2, 3), (1, 2), 1)": {
+        "stay": 0.46911063803699,
+        "move_right": 0.53088936196301,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (1, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (2, 1), 1)": {
+        "stay": 0.3756561776264036,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.6243438223735964
+    },
+    "((2, 3), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (2, 2), 1)": {
+        "stay": 0.9943182497088208,
+        "move_right": 0.0,
+        "move_left": 0.00568175029117928,
+        "move_down": 0.0
+    },
+    "((2, 3), (2, 3), 0)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_down": 0.25
+    },
+    "((2, 3), (2, 3), 1)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_down": 0.25
+    },
+    "((2, 3), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (3, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (4, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((2, 3), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((2, 3), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 0), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.24964319973900784,
+        "move_left": 0.0,
+        "move_up": 0.7503568002609922
+    },
+    "((3, 0), (0, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.33833149095443793,
+        "move_left": 0.6616685090455621,
+        "move_up": 0.0
+    },
+    "((3, 0), (0, 1), 0)": {
+        "stay": 0.47373700426104703,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.526262995738953
+    },
+    "((3, 0), (0, 1), 1)": {
+        "stay": 0.3168438510853104,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.6831561489146896
+    },
+    "((3, 0), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.26780970417593264,
+        "move_left": 0.0,
+        "move_up": 0.7321902958240674
+    },
+    "((3, 0), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((3, 0), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.7921050919596752,
+        "move_up": 0.20789490804032484
+    },
+    "((3, 0), (1, 0), 1)": {
+        "stay": 0.842072973186658,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.15792702681334203
+    },
+    "((3, 0), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.8175402718535033,
+        "move_up": 0.1824597281464967
+    },
+    "((3, 0), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (1, 2), 1)": {
+        "stay": 0.15971588011607413,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.8402841198839259
+    },
+    "((3, 0), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((3, 0), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (2, 0), 0)": {
+        "stay": 0.815172590169521,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.18482740983047896
+    },
+    "((3, 0), (2, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.7994432897300876,
+        "move_up": 0.2005567102699124
+    },
+    "((3, 0), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((3, 0), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (2, 3), 1)": {
+        "stay": 0.5343163508933482,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.4656836491066519
+    },
+    "((3, 0), (3, 0), 0)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25
+    },
+    "((3, 0), (3, 0), 1)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25
+    },
+    "((3, 0), (3, 1), 0)": {
+        "stay": 0.21272683241119666,
+        "move_right": 0.7872731675888034,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (3, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((3, 0), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (4, 0), 1)": {
+        "stay": 0.9613460557478541,
+        "move_right": 0.038653944252145814,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (4, 1), 1)": {
+        "stay": 0.425816764942584,
+        "move_right": 0.047473487611477294,
+        "move_left": 0.0,
+        "move_up": 0.5267097474459387
+    },
+    "((3, 0), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.013876669636754602,
+        "move_up": 0.9861233303632454
+    },
+    "((3, 0), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((3, 0), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((3, 0), (4, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((3, 1), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (0, 0), 1)": {
+        "stay": 0.10395275328133641,
+        "move_right": 0.0,
+        "move_left": 0.3404503640932404,
+        "move_up": 0.0,
+        "move_down": 0.5555968826254232
+    },
+    "((3, 1), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (0, 1), 1)": {
+        "stay": 0.10614182577184639,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.018866976979261797,
+        "move_down": 0.8749911972488918
+    },
+    "((3, 1), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.9915365721433598,
+        "move_up": 0.008463427856640232,
+        "move_down": 0.0
+    },
+    "((3, 1), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.6466843270075812,
+        "move_left": 0.35331567299241884,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.5149960693264417,
+        "move_up": 0.4850039306735583,
+        "move_down": 0.0
+    },
+    "((3, 1), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (2, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.13444609578604239,
+        "move_up": 0.8655539042139576,
+        "move_down": 0.0
+    },
+    "((3, 1), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.2839806732739421,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.716019326726058
+    },
+    "((3, 1), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (3, 1), 0)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((3, 1), (3, 1), 1)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((3, 1), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 1), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 1), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.2470925693907282,
+        "move_up": 0.0,
+        "move_down": 0.7529074306092718
+    },
+    "((3, 1), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (4, 2), 1)": {
+        "stay": 0.13681841606825754,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.6102373878584699,
+        "move_down": 0.25294419607327256
+    },
+    "((3, 1), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 1), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (0, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.9695210879185547,
+        "move_left": 0.030478912081445292,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (0, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 2), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.25147270843269376,
+        "move_up": 0.7485272915673062,
+        "move_down": 0.0
+    },
+    "((3, 2), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (1, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (1, 1), 1)": {
+        "stay": 0.04810483872936816,
+        "move_right": 0.0,
+        "move_left": 0.4739895313778607,
+        "move_up": 0.0,
+        "move_down": 0.47790562989277113
+    },
+    "((3, 2), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.564245662788206,
+        "move_up": 0.0,
+        "move_down": 0.435754337211794
+    },
+    "((3, 2), (1, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 2), (1, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.06332679007648156,
+        "move_up": 0.0,
+        "move_down": 0.9366732099235184
+    },
+    "((3, 2), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.5627047153171989,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.43729528468280104
+    },
+    "((3, 2), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.997212292916088,
+        "move_left": 0.002787707083911917,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 2), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (3, 2), 0)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((3, 2), (3, 2), 1)": {
+        "stay": 0.2,
+        "move_right": 0.2,
+        "move_left": 0.2,
+        "move_up": 0.2,
+        "move_down": 0.2
+    },
+    "((3, 2), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 2), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 2), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 2), (4, 3), 1)": {
+        "stay": 0.7432510269898089,
+        "move_right": 0.05726783103075617,
+        "move_left": 0.0,
+        "move_up": 0.1994811419794349,
+        "move_down": 0.0
+    },
+    "((3, 3), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 3), (0, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.35457658163592964,
+        "move_left": 0.0,
+        "move_down": 0.6454234183640704
+    },
+    "((3, 3), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 3), (0, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.6730831189500521,
+        "move_left": 0.3269168810499478,
+        "move_down": 0.0
+    },
+    "((3, 3), (0, 2), 0)": {
+        "stay": 0.343035960612329,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.656964039387671
+    },
+    "((3, 3), (0, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.5939948716660751,
+        "move_left": 0.0,
+        "move_down": 0.4060051283339249
+    },
+    "((3, 3), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 3), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (1, 0), 1)": {
+        "stay": 0.7660742708027664,
+        "move_right": 0.0,
+        "move_left": 0.23392572919723367,
+        "move_down": 0.0
+    },
+    "((3, 3), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 3), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.8255624577143515,
+        "move_left": 0.0,
+        "move_down": 0.17443754228564845
+    },
+    "((3, 3), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.5093317150553927,
+        "move_down": 0.4906682849446073
+    },
+    "((3, 3), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 3), (2, 0), 0)": {
+        "stay": 0.17809463840393636,
+        "move_right": 0.0,
+        "move_left": 0.8219053615960636,
+        "move_down": 0.0
+    },
+    "((3, 3), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.7799865949789251,
+        "move_down": 0.22001340502107497
+    },
+    "((3, 3), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.11899097110034844,
+        "move_down": 0.8810090288996516
+    },
+    "((3, 3), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 3), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.1994185062574841,
+        "move_left": 0.0,
+        "move_down": 0.8005814937425159
+    },
+    "((3, 3), (2, 3), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 3), (3, 0), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (3, 3), 0)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_down": 0.25
+    },
+    "((3, 3), (3, 3), 1)": {
+        "stay": 0.25,
+        "move_right": 0.25,
+        "move_left": 0.25,
+        "move_down": 0.25
+    },
+    "((3, 3), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 3), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_right": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.3894683008361173,
+        "move_down": 0.6105316991638827
+    },
+    "((3, 3), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0503676908977152,
+        "move_down": 0.9496323091022848
+    },
+    "((3, 3), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (4, 2), 1)": {
+        "stay": 1.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((3, 3), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((3, 3), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_right": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 0), (0, 0), 0)": {
+        "stay": 0.07257365927129851,
+        "move_left": 0.0,
+        "move_up": 0.9274263407287014
+    },
+    "((4, 0), (0, 0), 1)": {
+        "stay": 0.05367066099982093,
+        "move_left": 0.5888778760645125,
+        "move_up": 0.3574514629356666
+    },
+    "((4, 0), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (0, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.9299089994873808,
+        "move_up": 0.07009100051261918
+    },
+    "((4, 0), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (0, 3), 0)": {
+        "stay": 0.01684535591900571,
+        "move_left": 0.0,
+        "move_up": 0.9831546440809943
+    },
+    "((4, 0), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (1, 0), 0)": {
+        "stay": 0.8509026244040655,
+        "move_left": 0.0,
+        "move_up": 0.1490973755959345
+    },
+    "((4, 0), (1, 0), 1)": {
+        "stay": 0.7085578045994575,
+        "move_left": 0.2914421954005425,
+        "move_up": 0.0
+    },
+    "((4, 0), (1, 1), 0)": {
+        "stay": 0.6225028258675052,
+        "move_left": 0.13291847219417985,
+        "move_up": 0.244578701938315
+    },
+    "((4, 0), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (1, 2), 1)": {
+        "stay": 0.8183463337407324,
+        "move_left": 0.1816536662592676,
+        "move_up": 0.0
+    },
+    "((4, 0), (1, 3), 0)": {
+        "stay": 0.25934328887734115,
+        "move_left": 0.0,
+        "move_up": 0.7406567111226589
+    },
+    "((4, 0), (1, 3), 1)": {
+        "stay": 0.4626463723059942,
+        "move_left": 0.5373536276940059,
+        "move_up": 0.0
+    },
+    "((4, 0), (2, 0), 0)": {
+        "stay": 0.2970890698887562,
+        "move_left": 0.005121289174289112,
+        "move_up": 0.6977896409369546
+    },
+    "((4, 0), (2, 0), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (2, 1), 0)": {
+        "stay": 0.6196416178143628,
+        "move_left": 0.0,
+        "move_up": 0.3803583821856372
+    },
+    "((4, 0), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (2, 3), 0)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (2, 3), 1)": {
+        "stay": 0.3367019250737431,
+        "move_left": 0.0,
+        "move_up": 0.6632980749262569
+    },
+    "((4, 0), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.3656050094162895,
+        "move_up": 0.6343949905837105
+    },
+    "((4, 0), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (4, 0), 0)": {
+        "stay": 0.3333333333333333,
+        "move_left": 0.3333333333333333,
+        "move_up": 0.3333333333333333
+    },
+    "((4, 0), (4, 0), 1)": {
+        "stay": 0.3333333333333333,
+        "move_left": 0.3333333333333333,
+        "move_up": 0.3333333333333333
+    },
+    "((4, 0), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 0), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0
+    },
+    "((4, 0), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0
+    },
+    "((4, 1), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (0, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 0.5348046222543745,
+        "move_up": 0.0,
+        "move_down": 0.4651953777456254
+    },
+    "((4, 1), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (0, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.2907715834897874,
+        "move_down": 0.7092284165102126
+    },
+    "((4, 1), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.5699904975638597,
+        "move_up": 0.4300095024361404,
+        "move_down": 0.0
+    },
+    "((4, 1), (0, 2), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (1, 0), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 0.45838730536304184,
+        "move_up": 0.0,
+        "move_down": 0.5416126946369582
+    },
+    "((4, 1), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.6141202060701987,
+        "move_down": 0.3858797939298014
+    },
+    "((4, 1), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.4617418662803416,
+        "move_up": 0.5382581337196584,
+        "move_down": 0.0
+    },
+    "((4, 1), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 0.048844010241717695,
+        "move_up": 0.9511559897582823,
+        "move_down": 0.0
+    },
+    "((4, 1), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 0.40692829860049795,
+        "move_up": 0.593071701399502,
+        "move_down": 0.0
+    },
+    "((4, 1), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 0.17524492733493469,
+        "move_up": 0.0,
+        "move_down": 0.8247550726650653
+    },
+    "((4, 1), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 0.6255580196549947,
+        "move_up": 0.0,
+        "move_down": 0.3744419803450053
+    },
+    "((4, 1), (2, 3), 1)": {
+        "stay": 0.3025203542459086,
+        "move_left": 0.6974796457540914,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.00724092646666102,
+        "move_down": 0.992759073533339
+    },
+    "((4, 1), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (3, 2), 0)": {
+        "stay": 0.9848335212028192,
+        "move_left": 0.0,
+        "move_up": 0.015166478797180805,
+        "move_down": 0.0
+    },
+    "((4, 1), (3, 2), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (3, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (4, 1), 0)": {
+        "stay": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25,
+        "move_down": 0.25
+    },
+    "((4, 1), (4, 1), 1)": {
+        "stay": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25,
+        "move_down": 0.25
+    },
+    "((4, 1), (4, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (4, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 1), (4, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 2), (0, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (0, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 0.3912607852180023,
+        "move_up": 0.6087392147819977,
+        "move_down": 0.0
+    },
+    "((4, 2), (0, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (0, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.008487026307253207,
+        "move_up": 0.9915129736927468,
+        "move_down": 0.0
+    },
+    "((4, 2), (0, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.32509578581641213,
+        "move_up": 0.19407978557142241,
+        "move_down": 0.4808244286121655
+    },
+    "((4, 2), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 2), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (0, 3), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (1, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (1, 0), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 0.578146347189888,
+        "move_up": 0.0,
+        "move_down": 0.421853652810112
+    },
+    "((4, 2), (1, 1), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (1, 2), 0)": {
+        "stay": 0.14668978917918565,
+        "move_left": 0.8533102108208144,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (1, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (1, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (2, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (2, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.6738001363744213,
+        "move_up": 0.0,
+        "move_down": 0.32619986362557873
+    },
+    "((4, 2), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 2), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.8274936872150991,
+        "move_down": 0.17250631278490097
+    },
+    "((4, 2), (2, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (3, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 2), (3, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (3, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 2), (3, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (3, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (3, 3), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (4, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (4, 1), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (4, 2), 0)": {
+        "stay": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25,
+        "move_down": 0.25
+    },
+    "((4, 2), (4, 2), 1)": {
+        "stay": 0.25,
+        "move_left": 0.25,
+        "move_up": 0.25,
+        "move_down": 0.25
+    },
+    "((4, 2), (4, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 2), (4, 3), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_up": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (0, 0), 0)": {
+        "stay": 0.7124718726165155,
+        "move_left": 0.0,
+        "move_down": 0.28752812738348454
+    },
+    "((4, 3), (0, 0), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (0, 1), 0)": {
+        "stay": 0.5307508112746309,
+        "move_left": 0.0,
+        "move_down": 0.4692491887253692
+    },
+    "((4, 3), (0, 1), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (0, 2), 0)": {
+        "stay": 0.7342145043806456,
+        "move_left": 0.26578549561935444,
+        "move_down": 0.0
+    },
+    "((4, 3), (0, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 0.8828089655334574,
+        "move_down": 0.11719103446654254
+    },
+    "((4, 3), (0, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 3), (0, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 3), (1, 0), 0)": {
+        "stay": 0.3967563004742214,
+        "move_left": 0.0,
+        "move_down": 0.6032436995257786
+    },
+    "((4, 3), (1, 0), 1)": {
+        "stay": 0.581304890462652,
+        "move_left": 0.3706443782398243,
+        "move_down": 0.04805073129752371
+    },
+    "((4, 3), (1, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 0.29407739741862277,
+        "move_down": 0.7059226025813772
+    },
+    "((4, 3), (1, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.2734732000846557,
+        "move_down": 0.7265267999153443
+    },
+    "((4, 3), (1, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 3), (1, 2), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (1, 3), 0)": {
+        "stay": 0.6039090253514252,
+        "move_left": 0.0,
+        "move_down": 0.39609097464857473
+    },
+    "((4, 3), (1, 3), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (2, 0), 0)": {
+        "stay": 0.8598792712146976,
+        "move_left": 0.14012072878530235,
+        "move_down": 0.0
+    },
+    "((4, 3), (2, 0), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (2, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 3), (2, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 3), (2, 2), 0)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 3), (2, 2), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (2, 3), 0)": {
+        "stay": 0.0,
+        "move_left": 0.5657513778517902,
+        "move_down": 0.43424862214820975
+    },
+    "((4, 3), (2, 3), 1)": {
+        "stay": 0.31528461201018276,
+        "move_left": 0.0,
+        "move_down": 0.6847153879898172
+    },
+    "((4, 3), (3, 0), 0)": {
+        "stay": 0.44784521661888976,
+        "move_left": 0.5521547833811102,
+        "move_down": 0.0
+    },
+    "((4, 3), (3, 0), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 3), (3, 1), 0)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (3, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 0.0,
+        "move_down": 1.0
+    },
+    "((4, 3), (3, 2), 0)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (3, 2), 1)": {
+        "stay": 0.6817848902011339,
+        "move_left": 0.31821510979886614,
+        "move_down": 0.0
+    },
+    "((4, 3), (3, 3), 0)": {
+        "stay": 0.5577113886198165,
+        "move_left": 0.0,
+        "move_down": 0.4422886113801835
+    },
+    "((4, 3), (3, 3), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (4, 0), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (4, 0), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (4, 1), 0)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (4, 1), 1)": {
+        "stay": 0.0,
+        "move_left": 1.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (4, 2), 0)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (4, 2), 1)": {
+        "stay": 1.0,
+        "move_left": 0.0,
+        "move_down": 0.0
+    },
+    "((4, 3), (4, 3), 0)": {
+        "stay": 0.3333333333333333,
+        "move_left": 0.3333333333333333,
+        "move_down": 0.3333333333333333
+    },
+    "((4, 3), (4, 3), 1)": {
+        "stay": 0.3333333333333333,
+        "move_left": 0.3333333333333333,
+        "move_down": 0.3333333333333333
+    }
+}
