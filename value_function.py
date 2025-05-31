@@ -198,6 +198,7 @@ class JAL_AM_Q_Function(Value_Function):
         self.learning_rate = learning_rate
         self.policy = policy
         self.discount_factor = discount_factor
+
         
 
     def getAction(self, state:list, possible_actions:list) -> str:
@@ -235,14 +236,9 @@ class JAL_AM_Q_Function(Value_Function):
         self.opponent_model[str(state)][action_opponent] = self.opponent_counter[str(state)][action_opponent] / sum(self.opponent_counter[str(state)].values())
 
 
-
-        # in the winning states AV is not defined, so we need to handle this case
-        av = list(self.AV[str(future_state)].values())
-        av.append(0) if len(av) == 0 else None  # ensure that we have at least one value to avoid errors
-
         # update the action value
         self.Q[str(state)][action][action_opponent] = (1 - self.learning_rate) * self.Q[str(state)][action][action_opponent] +\
-                                 self.learning_rate * (reward + self.discount_factor * (max(av) - self.Q[str(state)][action][action_opponent]))
+                                 self.learning_rate * (reward + self.discount_factor * (max(self.AV[str(future_state)].values()) - self.Q[str(state)][action][action_opponent]))
         
         # update value function
         self.update_AV()

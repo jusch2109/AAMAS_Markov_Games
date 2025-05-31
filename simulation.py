@@ -74,6 +74,10 @@ class SoccerSimulation():
                 rewardA, next_state = self.environment.doAction(actionA, 0)
             self.environment.mock_actions = ["", ""]  # reset mock actions
 
+            if rewardA + rewardB == 1:
+                self.environment.reset()
+                next_state = self.environment.getCurrentState()
+
             # Update Q-values    TODO: figure out if previous state should be the state before actions or the state before the actual action of the agent
             if self.training:
                 self.agentA.updateQValue(previous_state, 
@@ -90,17 +94,12 @@ class SoccerSimulation():
                                                         self.environment.getPossibleActions(previous_state, self.agentB.agent_index), 
                                                         self.environment.getPossibleActions(previous_state, 1 - self.agentB.agent_index), 
                                                         rewardB)
-
-            # Check if the episode is done
-            if next_state[0][0] < 0 or next_state[1][0] > 4:
-                done = True
-                self.environment.reset()
             
-                if next_state[0][0] < 0:
-                    A_wins += 1
-                if next_state[1][0] > 4:
-                    B_wins += 1
-
+            if rewardA == 1:
+                A_wins += 1
+            elif rewardB == 1:
+                B_wins += 1
+  
 
             # Update state
             self.state = self.environment.getCurrentState()
@@ -214,10 +213,6 @@ class CatchSimulation():
                                         rewardB)
                 
                
-                if self.agentA.value_function.Q is not None:
-                    self.agentA.value_function.Q["training_episodes"] += 1
-                if self.agentB.value_function.Q is not None:
-                    self.agentB.value_function.Q["training_episodes"] += 1
                 # Update exploration decay
                 if type(self.agentA.value_function.policy) == EpsilonGreedyPolicy:
                     self.agentA.value_function.policy.epsilon *= self.explore_decay
