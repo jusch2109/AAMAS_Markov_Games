@@ -35,9 +35,6 @@ class SoccerSimulation():
         else:
             self.gui = None
 
-        self.percentage_won = 0
-        self.games_won = 0
-
     def run(self, num_episodes: int = 50000):
         """
         Runs the simulation for a given number of episodes.
