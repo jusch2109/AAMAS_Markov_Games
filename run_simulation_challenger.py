@@ -12,7 +12,7 @@ SOCCER
 """
 
 def s_train_challengerQR():
-    learning_rate = 1
+    learning_rate = 0.1
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
@@ -45,7 +45,7 @@ def s_train_challengerQR():
 
 
 def s_train_challengerQQ():
-    learning_rate = 1
+    learning_rate = 0.1
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
@@ -77,7 +77,7 @@ def s_train_challengerQQ():
     #run_simulation.save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env, extra=["qx", "qx"]) 
 
 def s_train_challengerMR():
-    learning_rate = 1
+    learning_rate = 0.1
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
@@ -111,7 +111,7 @@ def s_train_challengerMR():
     value_Function_A.save_dict(os.path.join("models",f"0_soccer_mrx.json"))
 
 def s_train_challengerMM():
-    learning_rate = 1
+    learning_rate = 0.1
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
@@ -193,7 +193,7 @@ def s_test_challengerQQ():
 
 
 def s_test_challengerMR():
-    decay = 0.9999954
+    decay = 1
     explore_decay = decay
     timesteps = 100000
     env = SoccerEnvironment()
@@ -216,7 +216,7 @@ def s_test_challengerMR():
     r = simulation.run(timesteps)
 
 def s_test_challengerMM():
-    decay = 0.9999954
+    decay = 1
     explore_decay = decay
     timesteps = 100000
     env = SoccerEnvironment()
@@ -243,7 +243,7 @@ CATCH
 """
 
 def c_train_challengerQR():
-    learning_rate = 1
+    learning_rate = 0.1
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
@@ -268,7 +268,7 @@ def c_train_challengerQR():
 
 
 def c_train_challengerQQ():
-    learning_rate = 1
+    learning_rate = 0.1
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
@@ -295,7 +295,7 @@ def c_train_challengerQQ():
 
 
 def c_train_challengerMR():
-    learning_rate = 1
+    learning_rate = 0.1
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
@@ -323,7 +323,7 @@ def c_train_challengerMR():
     value_Function_A.save_dict(os.path.join("models",f"0_catch_mrx.json"))
 
 def c_train_challengerMM():
-    learning_rate = 1
+    learning_rate = 0.1
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
@@ -394,7 +394,7 @@ def c_test_challengerQQ():
 
 
 def c_test_challengerMR():
-    decay = 0.9999954
+    decay = 1
     explore_decay = decay
     timesteps = 100000
     env = CatchEnvironment()
@@ -417,7 +417,7 @@ def c_test_challengerMR():
     rc = simulation_catch.run(timesteps)
 
 def c_test_challengerMM():
-    decay = 0.9999954
+    decay = 1
     explore_decay = decay
     timesteps = 100000
     env = CatchEnvironment()
@@ -439,77 +439,27 @@ def c_test_challengerMM():
     simulation_catch = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=False, use_gui=False, mac=False)
     rc = simulation_catch.run(timesteps)
 
-def s_train_challengerJAL():
-    learning_rate = 1
-    explore = 0.2
-    decay = 0.9999954
-    explore_decay = decay
-    timesteps = 1000000
-    env = SoccerEnvironment()
-
-    #JAL train against qq
-    policy_A = JAL_AM_Policy(epsilon=0.1, decay=0.9999954) 
-    value_Function_A = JAL_AM_Q_Function(policy=policy_A,env=env,agent_idx=0,start_value=0.0,learning_rate=0.1,discount_factor=0.9)
-
-    policy_B = QPolicy({}, 1, 0)
-    value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_soccer_qqq.json"))
-
-    agentA = Agent(env, value_Function_A, 0)
-    agentB = Agent(env, value_Function_B, 1)
-
-    print("Soccer:")
-    simulation = SoccerSimulation(env, agentA, agentB, explore_decay=explore_decay, training=True, use_gui=False, mac=False)
-    r = simulation.run(timesteps)
-
-    value_Function_A.save_dict(os.path.join("models",f"0_soccer_jalqqx.json"))
-
-def s_test_challengerJAL():
-    decay = 1
-    explore_decay = decay
-    timesteps = 100000
-    env = SoccerEnvironment()
-
-    #qq tested against qq challenger
-    policy_A = JAL_AM_Policy(0, decay) 
-    value_Function_A = JAL_AM_Q_Function(policy=policy_A,env=env,agent_idx=0,start_value=0.0,learning_rate=0,discount_factor=1)
-    value_Function_A.load_dict(os.path.join("models",f"0_soccer_jalqqx.json")) 
-
-    policy_B = QPolicy({}, 1, 0)
-    value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_soccer_qqq.json")) 
-
-    agentA = Agent(env, value_Function_A, 0)
-    agentB = Agent(env, value_Function_B, 1)
-
-    print("Soccer QQ:")
-    simulation = SoccerSimulation(env, agentA, agentB, explore_decay=explore_decay, training=False, use_gui=False, mac=False)
-    r = simulation.run(timesteps)
-
 
 def main():
-    #s_train_challengerQR()
-    #s_train_challengerQQ()
     #s_train_challengerMR()
     #s_train_challengerMM()
+    #s_train_challengerQR()
+    #s_train_challengerQQ()
 
-    #s_test_challengerMR()
-    #s_test_challengerMM()
+    s_test_challengerMR()
+    s_test_challengerMM()
     #s_test_challengerQR()
     #s_test_challengerQQ()
 
-    #c_train_challengerQR()
-    #c_train_challengerQQ()
     #c_train_challengerMR()
     #c_train_challengerMM()
+    #c_train_challengerQR()
+    #c_train_challengerQQ()
 
     #c_test_challengerMR()
     #c_test_challengerMM()
     #c_test_challengerQR()
     #c_test_challengerQQ()
-
-    s_train_challengerJAL()
-    #s_test_challengerJAL()
 
 # Using the special variable 
 # __name__
