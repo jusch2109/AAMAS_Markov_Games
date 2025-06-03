@@ -16,18 +16,16 @@ def s_train_challengerQR():
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
-    timesteps = 1000000 
+    timesteps = 1000000
     env = SoccerEnvironment()
-    #env = CatchEnvironment()
 
     #q trained against qr
-    policy_A =  ProbabilisticQPolicy({}, 0, explore)
+    policy_A = EpsilonGreedyPolicy(0.1)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
-    value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqr.json"))
-    policy_B =  ProbabilisticQPolicy({}, 1, 0)
-    value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_soccer_qrq.json")) 
 
+    policy_B = EpsilonGreedyPolicy(0)
+    value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
+    value_Function_B.load_dict(os.path.join("models",f"0_soccer_gqer.json")) 
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
@@ -39,10 +37,6 @@ def s_train_challengerQR():
     policy_A.save_dict(os.path.join("models",f"0_soccer_pi_qrx.json"))
     value_Function_A.save_dict(os.path.join("models",f"0_soccer_qrx.json"))
 
-    #print("Catch:")
-    #simulation_catch = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=True, use_gui=False, mac=False)
-    #rc = simulation_catch.run(timesteps) 
-
 
 def s_train_challengerQQ():
     learning_rate = 0.1
@@ -51,15 +45,14 @@ def s_train_challengerQQ():
     explore_decay = decay
     timesteps = 1000000
     env = SoccerEnvironment()
-    #env = CatchEnvironment()
 
     #q trained against qq 
-    policy_A =  ProbabilisticQPolicy({}, 0, explore)
+    policy_A = EpsilonGreedyPolicy(0.1)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
-    value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqr.json"))
-    policy_B =  ProbabilisticQPolicy({}, 1, 0)
+
+    policy_B =  EpsilonGreedyPolicy(0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_soccer_qqq.json")) 
+    value_Function_B.load_dict(os.path.join("models",f"0_soccer_gqee.json")) 
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
@@ -71,11 +64,6 @@ def s_train_challengerQQ():
     policy_A.save_dict(os.path.join("models",f"0_soccer_pi_qqx.json"))
     value_Function_A.save_dict(os.path.join("models",f"0_soccer_qqx.json"))
     
-    #print("Catch:")
-    #simulation_catch = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=True, use_gui=False, mac=False)
-    #rc = simulation_catch.run(timesteps)
-    #run_simulation.save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env, extra=["qx", "qx"]) 
-
 def s_train_challengerMR():
     learning_rate = 0.1
     explore = 0.2
@@ -83,12 +71,10 @@ def s_train_challengerMR():
     explore_decay = decay
     timesteps = 1000000
     env = SoccerEnvironment()
-    #env = CatchEnvironment()
 
     #q trained against mr
-    policy_A =  ProbabilisticQPolicy({}, 0, explore)
+    policy_A = EpsilonGreedyPolicy(0.1)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
-    value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqr.json"))
 
     policy_B = LearnedMiniMaxPolicy(env, 1, 0)
     policy_B.load_dict(os.path.join("models",f"1_soccer_pi_minimaxrm.json")) 
@@ -102,11 +88,6 @@ def s_train_challengerMR():
     simulation = SoccerSimulation(env, agentA, agentB, explore_decay=explore_decay, training=True, use_gui=False, mac=False)
     r = simulation.run(timesteps)
  
-    #print("Catch:")
-    #simulation_catch = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=True, use_gui=False, mac=False)
-    #rc = simulation_catch.run(timesteps)
-    #run_simulation.save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env, extra=["rx", "rx"])
-
     policy_A.save_dict(os.path.join("models",f"0_soccer_pi_mrx.json"))
     value_Function_A.save_dict(os.path.join("models",f"0_soccer_mrx.json"))
 
@@ -117,12 +98,10 @@ def s_train_challengerMM():
     explore_decay = decay
     timesteps = 1000000
     env = SoccerEnvironment()
-    #env = CatchEnvironment()
 
     #q trained against mm 
-    policy_A =  ProbabilisticQPolicy({}, 0, explore)
+    policy_A = EpsilonGreedyPolicy(0.1)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
-    value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqr.json"))
 
     policy_B = LearnedMiniMaxPolicy(env, 1, 0)
     policy_B.load_dict(os.path.join("models",f"1_soccer_pi_minimaxmm.json")) 
@@ -136,11 +115,6 @@ def s_train_challengerMM():
     simulation = SoccerSimulation(env, agentA, agentB, explore_decay=explore_decay, training=True, use_gui=False, mac=False)
     r = simulation.run(timesteps)
 
-    #print("Catch:")
-    #simulation_catch = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=True, use_gui=False, mac=False)
-    #rc = simulation_catch.run(timesteps)
-    #run_simulation.save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env, extra=["mx", "mx"])
-
     policy_A.save_dict(os.path.join("models",f"0_soccer_pi_mmx.json"))
     value_Function_A.save_dict(os.path.join("models",f"0_soccer_mmx.json"))
 
@@ -149,15 +123,15 @@ def s_test_challengerQR():
     explore_decay = decay
     timesteps = 100000
     env = SoccerEnvironment()
-    #env = CatchEnvironment()
 
     #qr tested against qr challenger
-    policy_A =  ProbabilisticQPolicy({}, 0, 0)
+    policy_A = EpsilonGreedyPolicy(0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_qrx.json")) 
-    policy_B =  ProbabilisticQPolicy({}, 1, 0)
+
+    policy_B = EpsilonGreedyPolicy(0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_soccer_qrq.json")) 
+    value_Function_B.load_dict(os.path.join("models",f"0_soccer_gqer.json")) 
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
@@ -166,10 +140,6 @@ def s_test_challengerQR():
     simulation = SoccerSimulation(env, agentA, agentB, explore_decay=explore_decay, training=False, use_gui=False, mac=False)
     r = simulation.run(timesteps)
 
-    #print("Catch QR:")
-    #simulation_catch = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=False, use_gui=False, mac=False)
-    #rc = simulation_catch.run(timesteps)
-
 def s_test_challengerQQ():
     decay = 1
     explore_decay = decay
@@ -177,12 +147,13 @@ def s_test_challengerQQ():
     env = SoccerEnvironment()
 
     #qq tested against qq challenger
-    policy_A =  ProbabilisticQPolicy({}, 0, 0)
+    policy_A = EpsilonGreedyPolicy(0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqx.json")) 
-    policy_B =  ProbabilisticQPolicy({}, 1, 0)
+
+    policy_B = EpsilonGreedyPolicy(0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_soccer_qqq.json")) 
+    value_Function_B.load_dict(os.path.join("models",f"0_soccer_gqee.json"))  
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
@@ -199,9 +170,9 @@ def s_test_challengerMR():
     env = SoccerEnvironment()
 
     #mr tested against mr challenger
-    policy_A =  ProbabilisticQPolicy({}, 0, 0)
+    policy_A = EpsilonGreedyPolicy(0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
-    value_Function_A.load_dict(os.path.join("models",f"0_soccer_mrx.json"))  
+    value_Function_A.load_dict(os.path.join("models",f"0_soccer_mrx.json")) 
 
     policy_B = LearnedMiniMaxPolicy(env, 1, 0)
     policy_B.load_dict(os.path.join("models",f"1_soccer_pi_minimaxrm.json"))
@@ -222,9 +193,9 @@ def s_test_challengerMM():
     env = SoccerEnvironment()
 
     #mm/mr tested against mm/mr challenger
-    policy_A =  ProbabilisticQPolicy({}, 0, 0)
+    policy_A = EpsilonGreedyPolicy(0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
-    value_Function_A.load_dict(os.path.join("models",f"0_soccer_mmx.json"))  
+    value_Function_A.load_dict(os.path.join("models",f"0_soccer_mmx.json")) 
 
     policy_B = LearnedMiniMaxPolicy(env, 1, 0)
     policy_B.load_dict(os.path.join("models",f"1_soccer_pi_minimaxmm.json")) 
@@ -247,16 +218,16 @@ def c_train_challengerQR():
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
-    timesteps = 1000000 
+    timesteps = 1000000
     env = CatchEnvironment()
 
     #q trained against qr
-    policy_A =  ProbabilisticQPolicy({}, 0, explore)
+    policy_A = EpsilonGreedyPolicy(0.1)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
-    value_Function_A.load_dict(os.path.join("models",f"0_catch_qqr.json"))
-    policy_B =  ProbabilisticQPolicy({}, 1, 0)
+
+    policy_B = EpsilonGreedyPolicy(0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_catch_qrq.json")) 
+    value_Function_B.load_dict(os.path.join("models",f"0_catch_gqer.json"))
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
@@ -276,12 +247,12 @@ def c_train_challengerQQ():
     env = CatchEnvironment()
 
     #q trained against qq 
-    policy_A =  ProbabilisticQPolicy({}, 0, explore)
+    policy_A = EpsilonGreedyPolicy(0.1)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
-    value_Function_A.load_dict(os.path.join("models",f"0_catch_qqr.json"))
-    policy_B =  ProbabilisticQPolicy({}, 1, 0)
+
+    policy_B = EpsilonGreedyPolicy(0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_catch_qqq.json")) 
+    value_Function_B.load_dict(os.path.join("models",f"0_catch_gqee.json"))
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
@@ -303,9 +274,8 @@ def c_train_challengerMR():
     env = CatchEnvironment()
 
     #q trained against mr
-    policy_A =  ProbabilisticQPolicy({}, 0, explore)
+    policy_A = EpsilonGreedyPolicy(0.1)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
-    value_Function_A.load_dict(os.path.join("models",f"0_catch_qqr.json"))
 
     policy_B = LearnedMiniMaxPolicy(env, 1, 0)
     policy_B.load_dict(os.path.join("models",f"1_catch_pi_minimaxrm.json")) 
@@ -331,9 +301,8 @@ def c_train_challengerMM():
     env = CatchEnvironment()
 
     #q trained against mm 
-    policy_A =  ProbabilisticQPolicy({}, 0, explore)
+    policy_A = EpsilonGreedyPolicy(0.1)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
-    value_Function_A.load_dict(os.path.join("models",f"0_catch_qqr.json"))
 
     policy_B = LearnedMiniMaxPolicy(env, 1, 0)
     policy_B.load_dict(os.path.join("models",f"1_catch_pi_minimaxmm.json")) 
@@ -357,12 +326,13 @@ def c_test_challengerQR():
     env = CatchEnvironment()
 
     #qr tested against qr challenger
-    policy_A =  ProbabilisticQPolicy({}, 0, 0)
+    policy_A = EpsilonGreedyPolicy(0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_qrx.json")) 
-    policy_B =  ProbabilisticQPolicy({}, 1, 0)
+
+    policy_B = EpsilonGreedyPolicy(0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_catch_qrq.json")) 
+    value_Function_B.load_dict(os.path.join("models",f"0_catch_gqer.json")) 
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
@@ -378,12 +348,13 @@ def c_test_challengerQQ():
     env = CatchEnvironment()
 
     #qq tested against qq challenger
-    policy_A =  ProbabilisticQPolicy({}, 0, 0)
+    policy_A = EpsilonGreedyPolicy(0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_qqx.json")) 
-    policy_B =  ProbabilisticQPolicy({}, 1, 0)
+
+    policy_B = EpsilonGreedyPolicy(0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_catch_qqq.json")) 
+    value_Function_B.load_dict(os.path.join("models",f"0_catch_gqee.json")) 
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
@@ -400,7 +371,7 @@ def c_test_challengerMR():
     env = CatchEnvironment()
 
     #mr tested against mr challenger
-    policy_A =  ProbabilisticQPolicy({}, 0, 0)
+    policy_A = EpsilonGreedyPolicy(0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_mrx.json"))  
 
@@ -423,7 +394,7 @@ def c_test_challengerMM():
     env = CatchEnvironment()
 
     #mm/mr tested against mm/mr challenger
-    policy_A =  ProbabilisticQPolicy({}, 0, 0)
+    policy_A = EpsilonGreedyPolicy(0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_mmx.json"))  
 
@@ -441,13 +412,13 @@ def c_test_challengerMM():
 
 
 def main():
-    #s_train_challengerMR()
-    #s_train_challengerMM()
-    #s_train_challengerQR()
-    #s_train_challengerQQ()
+    s_train_challengerMR()
+    s_train_challengerMM()
+    s_train_challengerQR()
+    s_train_challengerQQ()
 
-    s_test_challengerMR()
-    s_test_challengerMM()
+    #s_test_challengerMR()
+    #s_test_challengerMM()
     #s_test_challengerQR()
     #s_test_challengerQQ()
 
