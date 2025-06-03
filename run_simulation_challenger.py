@@ -16,18 +16,16 @@ def s_train_challengerQR():
     explore = 0.2
     decay = 0.9999954
     explore_decay = decay
-    timesteps = 1000000 
+    timesteps = 100 
     env = SoccerEnvironment()
-    #env = CatchEnvironment()
 
     #q trained against qr
-    policy_A = QPolicy({}, 0, explore)
+    policy_A = EpsilonGreedyPolicy(0.1)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
-    value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqr.json"))
-    policy_B = QPolicy({}, 1, 0)
-    value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_soccer_qrq.json")) 
 
+    policy_B = EpsilonGreedyPolicy(0)
+    value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
+    value_Function_B.load_dict(os.path.join("models",f"0_soccer_gqer.json")) 
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
@@ -39,9 +37,6 @@ def s_train_challengerQR():
     policy_A.save_dict(os.path.join("models",f"0_soccer_pi_qrx.json"))
     value_Function_A.save_dict(os.path.join("models",f"0_soccer_qrx.json"))
 
-    #print("Catch:")
-    #simulation_catch = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=True, use_gui=False, mac=False)
-    #rc = simulation_catch.run(timesteps) 
 
 
 def s_train_challengerQQ():
@@ -443,11 +438,11 @@ def c_test_challengerMM():
 def main():
     #s_train_challengerMR()
     #s_train_challengerMM()
-    #s_train_challengerQR()
+    s_train_challengerQR()
     #s_train_challengerQQ()
 
-    s_test_challengerMR()
-    s_test_challengerMM()
+    #s_test_challengerMR()
+    #s_test_challengerMM()
     #s_test_challengerQR()
     #s_test_challengerQQ()
 

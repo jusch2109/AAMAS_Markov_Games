@@ -21,9 +21,9 @@ def train_challengerJALQQ():
     #policy_B = RandomPolicy(1)
     #value_Function_B = RandomPolicy_Value_Function(1)
 
-    policy_B = QPolicy({}, 1, explore)
+    policy_B = EpsilonGreedyPolicy(0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
-    value_Function_B.load_dict(os.path.join("models",f"1_soccer_qqq.json"))
+    value_Function_B.load_dict(os.path.join("models",f"0_soccer_gqer.json"))
 
     agentA = Agent(env, value_Function_A, 0)
     agentB = Agent(env, value_Function_B, 1)
