@@ -48,7 +48,7 @@ class RandomPolicy(Policy):
     
     def load_dict(self,filename = "a"):
         pass
-class GreedyPolicy(Policy):
+class QPolicy(Policy):
     """
     Returns the action with the highest Q-value for the current state.
     """
@@ -98,7 +98,7 @@ class EpsilonGreedyPolicy(Policy):
         pass
 
 
-class QPolicy(Policy):
+class ProbabilisticQPolicy(Policy):
     """
     Returns the action with the highest Q-value for the current state.
     """
