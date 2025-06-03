@@ -273,6 +273,7 @@ class JAL_AM_Q_Function(Value_Function):
         # a dictionary
         self.Q = json.load(f_Q)
         self.opponent_model = json.load(f_opponent)
+        self.update_AV()
         return
         
         
