@@ -2,7 +2,7 @@ from simulation import *
 from environment import SoccerEnvironment
 from policy import RandomPolicy
 from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function
-from policy import EpsilonGreedyPolicy, GreedyPolicy, MockPolicy
+from policy import EpsilonGreedyPolicy, QPolicy, MockPolicy
 from agent import Agent
 from policy import LearnedMiniMaxPolicy
 from value_function import MinimaxQ_Function

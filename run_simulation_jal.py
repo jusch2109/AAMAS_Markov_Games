@@ -2,7 +2,7 @@ from simulation import *
 from environment import SoccerEnvironment
 from policy import RandomPolicy
 from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function, Handcrafted_Value_Function, JAL_AM_Q_Function
-from policy import EpsilonGreedyPolicy, GreedyPolicy, MockPolicy, QPolicy, LearnedMiniMaxPolicy, HandcraftedPolicy
+from policy import EpsilonGreedyPolicy, QPolicy, MockPolicy, ProbabilisticQPolicy, LearnedMiniMaxPolicy, HandcraftedPolicy
 from agent import Agent
 from value_function import MinimaxQ_Function
 import run_simulation 
@@ -21,7 +21,7 @@ def train_challengerJALQQ():
     #policy_B = RandomPolicy(1)
     #value_Function_B = RandomPolicy_Value_Function(1)
 
-    policy_B = QPolicy({}, 1, explore)
+    policy_B = ProbabilisticQPolicy({}, 1, explore)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     value_Function_B.load_dict(os.path.join("models",f"1_soccer_qqq.json"))
 
@@ -44,7 +44,7 @@ def test_challengerJALQQ():
     value_Function_A = JAL_AM_Q_Function(policy=policy_A,env=env,agent_idx=0,start_value=0.0,learning_rate=0,discount_factor=1)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_jalqqx.json"))
 
-    #policy_B = QPolicy({}, 1, 0)
+    #policy_B = ProbabilisticQPolicy({}, 1, 0)
     #value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     #value_Function_B.load_dict(os.path.join("models",f"1_soccer_qqq.json"))
 
