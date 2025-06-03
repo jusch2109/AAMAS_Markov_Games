@@ -124,7 +124,7 @@ class Q_Function(Value_Function):
         if not filename.endswith(".json"):
             filename = filename + ".json"
         if not os.path.exists(filename):
-            print("File does not exist")
+            print("File does not exist:", filename)
             print("problems!!!\n\n\nproblems!!!\n\n\n")
             return
         print("success")

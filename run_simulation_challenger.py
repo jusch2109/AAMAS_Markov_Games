@@ -2,7 +2,7 @@ from simulation import *
 from environment import SoccerEnvironment
 from policy import RandomPolicy
 from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function, Handcrafted_Value_Function, JAL_AM_Q_Function
-from policy import EpsilonGreedyPolicy, GreedyPolicy, MockPolicy, QPolicy, LearnedMiniMaxPolicy, HandcraftedPolicy
+from policy import EpsilonGreedyPolicy, QPolicy, MockPolicy, ProbabilisticQPolicy, LearnedMiniMaxPolicy, HandcraftedPolicy
 from agent import Agent
 from value_function import MinimaxQ_Function
 import run_simulation 
@@ -21,10 +21,10 @@ def s_train_challengerQR():
     #env = CatchEnvironment()
 
     #q trained against qr
-    policy_A = QPolicy({}, 0, explore)
+    policy_A =  ProbabilisticQPolicy({}, 0, explore)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqr.json"))
-    policy_B = QPolicy({}, 1, 0)
+    policy_B =  ProbabilisticQPolicy({}, 1, 0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     value_Function_B.load_dict(os.path.join("models",f"1_soccer_qrq.json")) 
 
@@ -54,10 +54,10 @@ def s_train_challengerQQ():
     #env = CatchEnvironment()
 
     #q trained against qq 
-    policy_A = QPolicy({}, 0, explore)
+    policy_A =  ProbabilisticQPolicy({}, 0, explore)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqr.json"))
-    policy_B = QPolicy({}, 1, 0)
+    policy_B =  ProbabilisticQPolicy({}, 1, 0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     value_Function_B.load_dict(os.path.join("models",f"1_soccer_qqq.json")) 
 
@@ -86,7 +86,7 @@ def s_train_challengerMR():
     #env = CatchEnvironment()
 
     #q trained against mr
-    policy_A = QPolicy({}, 0, explore)
+    policy_A =  ProbabilisticQPolicy({}, 0, explore)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqr.json"))
 
@@ -120,7 +120,7 @@ def s_train_challengerMM():
     #env = CatchEnvironment()
 
     #q trained against mm 
-    policy_A = QPolicy({}, 0, explore)
+    policy_A =  ProbabilisticQPolicy({}, 0, explore)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqr.json"))
 
@@ -152,10 +152,10 @@ def s_test_challengerQR():
     #env = CatchEnvironment()
 
     #qr tested against qr challenger
-    policy_A = QPolicy({}, 0, 0)
+    policy_A =  ProbabilisticQPolicy({}, 0, 0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_qrx.json")) 
-    policy_B = QPolicy({}, 1, 0)
+    policy_B =  ProbabilisticQPolicy({}, 1, 0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     value_Function_B.load_dict(os.path.join("models",f"1_soccer_qrq.json")) 
 
@@ -177,10 +177,10 @@ def s_test_challengerQQ():
     env = SoccerEnvironment()
 
     #qq tested against qq challenger
-    policy_A = QPolicy({}, 0, 0)
+    policy_A =  ProbabilisticQPolicy({}, 0, 0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_qqx.json")) 
-    policy_B = QPolicy({}, 1, 0)
+    policy_B =  ProbabilisticQPolicy({}, 1, 0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     value_Function_B.load_dict(os.path.join("models",f"1_soccer_qqq.json")) 
 
@@ -199,7 +199,7 @@ def s_test_challengerMR():
     env = SoccerEnvironment()
 
     #mr tested against mr challenger
-    policy_A = QPolicy({}, 0, 0)
+    policy_A =  ProbabilisticQPolicy({}, 0, 0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_mrx.json"))  
 
@@ -222,7 +222,7 @@ def s_test_challengerMM():
     env = SoccerEnvironment()
 
     #mm/mr tested against mm/mr challenger
-    policy_A = QPolicy({}, 0, 0)
+    policy_A =  ProbabilisticQPolicy({}, 0, 0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_soccer_mmx.json"))  
 
@@ -251,10 +251,10 @@ def c_train_challengerQR():
     env = CatchEnvironment()
 
     #q trained against qr
-    policy_A = QPolicy({}, 0, explore)
+    policy_A =  ProbabilisticQPolicy({}, 0, explore)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_qqr.json"))
-    policy_B = QPolicy({}, 1, 0)
+    policy_B =  ProbabilisticQPolicy({}, 1, 0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     value_Function_B.load_dict(os.path.join("models",f"1_catch_qrq.json")) 
 
@@ -276,10 +276,10 @@ def c_train_challengerQQ():
     env = CatchEnvironment()
 
     #q trained against qq 
-    policy_A = QPolicy({}, 0, explore)
+    policy_A =  ProbabilisticQPolicy({}, 0, explore)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_qqr.json"))
-    policy_B = QPolicy({}, 1, 0)
+    policy_B =  ProbabilisticQPolicy({}, 1, 0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     value_Function_B.load_dict(os.path.join("models",f"1_catch_qqq.json")) 
 
@@ -303,7 +303,7 @@ def c_train_challengerMR():
     env = CatchEnvironment()
 
     #q trained against mr
-    policy_A = QPolicy({}, 0, explore)
+    policy_A =  ProbabilisticQPolicy({}, 0, explore)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_qqr.json"))
 
@@ -331,7 +331,7 @@ def c_train_challengerMM():
     env = CatchEnvironment()
 
     #q trained against mm 
-    policy_A = QPolicy({}, 0, explore)
+    policy_A =  ProbabilisticQPolicy({}, 0, explore)
     value_Function_A = Q_Function(policy_A, learning_rate=learning_rate, decay=decay)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_qqr.json"))
 
@@ -357,10 +357,10 @@ def c_test_challengerQR():
     env = CatchEnvironment()
 
     #qr tested against qr challenger
-    policy_A = QPolicy({}, 0, 0)
+    policy_A =  ProbabilisticQPolicy({}, 0, 0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_qrx.json")) 
-    policy_B = QPolicy({}, 1, 0)
+    policy_B =  ProbabilisticQPolicy({}, 1, 0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     value_Function_B.load_dict(os.path.join("models",f"1_catch_qrq.json")) 
 
@@ -378,10 +378,10 @@ def c_test_challengerQQ():
     env = CatchEnvironment()
 
     #qq tested against qq challenger
-    policy_A = QPolicy({}, 0, 0)
+    policy_A =  ProbabilisticQPolicy({}, 0, 0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_qqx.json")) 
-    policy_B = QPolicy({}, 1, 0)
+    policy_B =  ProbabilisticQPolicy({}, 1, 0)
     value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
     value_Function_B.load_dict(os.path.join("models",f"1_catch_qqq.json")) 
 
@@ -400,7 +400,7 @@ def c_test_challengerMR():
     env = CatchEnvironment()
 
     #mr tested against mr challenger
-    policy_A = QPolicy({}, 0, 0)
+    policy_A =  ProbabilisticQPolicy({}, 0, 0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_mrx.json"))  
 
@@ -423,7 +423,7 @@ def c_test_challengerMM():
     env = CatchEnvironment()
 
     #mm/mr tested against mm/mr challenger
-    policy_A = QPolicy({}, 0, 0)
+    policy_A =  ProbabilisticQPolicy({}, 0, 0)
     value_Function_A = Q_Function(policy_A, learning_rate=0, decay=1)
     value_Function_A.load_dict(os.path.join("models",f"0_catch_mmx.json"))  
 

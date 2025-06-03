@@ -2,9 +2,35 @@ from simulation import *
 from environment import SoccerEnvironment
 from policy import RandomPolicy
 from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function, Handcrafted_Value_Function
-from policy import EpsilonGreedyPolicy, GreedyPolicy, MockPolicy, QPolicy, LearnedMiniMaxPolicy, HandcraftedPolicy
+from policy import EpsilonGreedyPolicy, QPolicy, MockPolicy, ProbabilisticQPolicy, LearnedMiniMaxPolicy, HandcraftedPolicy
 from agent import Agent
 from value_function import MinimaxQ_Function
+
+
+
+def get_old_extra(extra):
+    returner = []
+    for extra_ele in extra:
+        last = range(len(extra_ele))
+        s_returner = ""
+        for index in last:
+            if extra_ele[index] == "p":
+                s_returner += "q"
+            elif extra_ele[index] == "q":
+                s_returner += "g"
+            else:
+                s_returner += extra_ele[index]
+        returner.append(s_returner)
+    return returner
+
+def get_old_type(type):
+    if type == "probabilistic_q":
+        return "q"
+    elif type == "q":
+        return "greedy"
+    else:
+        return type
+
 
 def get_policy(type,id, env,explore,load_dicts=False, extra=""):
     """
@@ -16,28 +42,35 @@ def get_policy(type,id, env,explore,load_dicts=False, extra=""):
         env_type = "soccer"
 
     if type == "random":
+        print("Using RandomPolicy")
         p = RandomPolicy(id)
     elif type == "greedy":
-        p = GreedyPolicy([], id)
+        print("Using QPolicy")
+        p = QPolicy([], id)
         if load_dicts:
             p.load_dict(os.path.join("models",f"{id}_{env_type}_pi_gq{extra}.json"))
 
     elif type == "epsilon_greedy":
+        print("Using EpsilonGreedyPolicy")
         p = EpsilonGreedyPolicy(explore)
     elif type == "q":
-        p = QPolicy({}, id, explore)
+        print("Using ProbabilisticQPolicy")
+        p = ProbabilisticQPolicy({}, id, explore)
         if load_dicts:
             p.load_dict(os.path.join("models",f"{id}_{env_type}_pi_q{extra}.json"))
     elif type == "handcrafted":
+        print("Using HandcraftedPolicy")
         is_soccer = True
         if env_type == "catch":
             is_soccer = False
         p = HandcraftedPolicy(id, is_soccer=is_soccer)
     elif type == "minimax":
+        print("Using LearnedMiniMaxPolicy")
         p = LearnedMiniMaxPolicy(env, id, explore)
         if load_dicts:
             p.load_dict(os.path.join("models",f"{id}_{env_type}_pi_minimax{extra}.json"))
     elif type == "mock":
+        print("Using MockPolicy")
         p = MockPolicy(id,env)
         if load_dicts:
             print("MockPolicy does not load dict.")
@@ -105,9 +138,9 @@ def save_policies_and_value_functions(agentA, agentB, policyA, policyB, value_Fu
         env_type = "soccer"
     if isinstance(policyA, LearnedMiniMaxPolicy):
         algoA = "minimax"
-    elif isinstance(policyA, QPolicy):
+    elif isinstance(policyA, ProbabilisticQPolicy):
         algoA = "q"
-    elif isinstance(policyA, EpsilonGreedyPolicy) or isinstance(policyA, GreedyPolicy):
+    elif isinstance(policyA, EpsilonGreedyPolicy) or isinstance(policyA, QPolicy):
         ## make sure extra saves it as epsilon greedy in both cases
         last = range(len(extra))
         for index in last:
@@ -118,9 +151,9 @@ def save_policies_and_value_functions(agentA, agentB, policyA, policyB, value_Fu
         algoA = "random"
     if isinstance(policyB, LearnedMiniMaxPolicy):
         algoB = "minimax"
-    elif isinstance(policyB, QPolicy):
+    elif isinstance(policyB, ProbabilisticQPolicy):
         algoB = "q"
-    elif isinstance(policyB, EpsilonGreedyPolicy) or isinstance(policyB, GreedyPolicy):
+    elif isinstance(policyB, EpsilonGreedyPolicy) or isinstance(policyB, QPolicy):
         ## make sure extra saves it as epsilon greedy in both cases
         last = range(len(extra))
         for index in last:
@@ -154,24 +187,28 @@ def get_agents_policies_value_functions(type1, type2, env, explore, learning_rat
 
 
 
-def train(A_type, B_type,env, explore_decay,explore, learning_rate, decay, timesteps = 1000000, training=True, use_gui=False, mac=False, extra=""):
+def train(_A_type, _B_type,env, explore_decay,explore, learning_rate, decay, timesteps = 1000000, training=True, use_gui=False, mac=False, extra=""):
     """
     Runs the simulation for a million timesteps
     """
-    agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B = get_agents_policies_value_functions(A_type, B_type, env,explore, learning_rate, decay,load_dicts=False,extra=extra)
+    A_type = get_old_type(_A_type)
+    B_type = get_old_type(_B_type)
+    agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B = get_agents_policies_value_functions(A_type, B_type, env,explore, learning_rate, decay,load_dicts=False,extra=get_old_extra(extra))
     if isinstance(env, CatchEnvironment):
         simulation = CatchSimulation(env, agentA, agentB, explore_decay=explore_decay, training=training, use_gui=use_gui, mac=mac)
     else:
         simulation = SoccerSimulation(env, agentA, agentB, explore_decay=explore_decay, training=training, use_gui=use_gui, mac=mac)
     r = simulation.run(timesteps)
-    save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env, extra=extra)
+    save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env, extra=get_old_extra(extra))
     return r
 
-def test(A_type, B_type, env,explore_decay,explore, learning_rate, decay,timesteps=100000, use_gui=False, mac=False,extra=""):
+def test(_A_type, _B_type, env,explore_decay,explore, learning_rate, decay,timesteps=100000, use_gui=False, mac=False,extra=""):
     """
     Runs the simulation for 100k timesteps.  explore decay stayed to make the arguments the same, but its always 1.
     """
-    agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B = get_agents_policies_value_functions(A_type, B_type, env,explore, learning_rate, decay, load_dicts=True,extra=extra)
+    A_type = get_old_type(_A_type)
+    B_type = get_old_type(_B_type)
+    agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B = get_agents_policies_value_functions(A_type, B_type, env,explore, learning_rate, decay, load_dicts=True,extra=get_old_extra(extra))
     if isinstance(env, CatchEnvironment):
         simulation = CatchSimulation(env, agentA, agentB, explore_decay=1, training=False, use_gui=use_gui, mac=mac)
     else:
@@ -206,6 +243,7 @@ def train_all():
     print("Catch Results:")
     print(catch_results)
     return
+
 def test_trained():
     learning_rate = 1
     explore = 0
@@ -216,12 +254,12 @@ def test_trained():
     soccer_results = {}
     catch_results = {}
 
-    for A_type in ["random", "greedy", "epsilon_greedy", "q", "minimax", "handcrafted"]:
-        for B_type in ["random", "greedy", "epsilon_greedy", "q", "minimax", "handcrafted"]:
+    for A_type in ["q", "minimax", "handcrafted"]:  # "random", "probabilistic_q", "epsilon_greedy",
+        for B_type in ["random", "probabilistic_q", "epsilon_greedy", "q", "minimax", "handcrafted"]:
             extra = [str(A_type[0]+B_type[0]), str(A_type[0]+B_type[0])]
-            if A_type in ["random","handcrafted"] and B_type in ["greedy", "epsilon_greedy", "q", "minimax"]:
+            if A_type in ["random","handcrafted"] and B_type in ["probabilistic_q", "epsilon_greedy", "q", "minimax"]:
                 continue
-            if A_type != B_type and B_type in ["greedy", "epsilon_greedy", "q", "minimax", "handcrafted"]:
+            if A_type != B_type and B_type in ["probabilistic_q", "epsilon_greedy", "q", "minimax", "handcrafted"]:
                 ## this is to make them use the version trained against themselfs, we can also replace the second char of each of the item's list to r to make it the version trained against random
                 extra = [str(A_type[0]+A_type[0]), str(B_type[0] + B_type[0])]
             print(f"A: {A_type}, B: {B_type}")
