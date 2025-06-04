@@ -11,35 +11,35 @@
     },
     "((0, 0), (0, 1), 0)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((0, 0), (0, 1), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((0, 0), (0, 2), 0)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((0, 0), (0, 2), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((0, 0), (0, 3), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((0, 0), (0, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
@@ -47,24 +47,24 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((0, 0), (1, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((0, 0), (1, 1), 0)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 0), (1, 1), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
+        "stay": 0.5066413662239089,
+        "move_right": 0.4952741020793951,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -73,25 +73,25 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((0, 0), (1, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((0, 0), (1, 3), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((0, 0), (1, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
@@ -99,10 +99,10 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((0, 0), (2, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -111,38 +111,38 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((0, 0), (2, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((0, 0), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((0, 0), (2, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 0), (2, 3), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((0, 0), (2, 3), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
@@ -157,18 +157,18 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((0, 0), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((0, 0), (3, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -177,25 +177,25 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((0, 0), (3, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 0), (3, 3), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((0, 0), (3, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
@@ -217,7 +217,7 @@
     },
     "((0, 0), (4, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -225,33 +225,33 @@
     "((0, 0), (4, 2), 0)": {
         "stay": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((0, 0), (4, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 0), (4, 3), 0)": {
-        "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "stay": 0.6666666666666666,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((0, 0), (4, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((0, 1), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 0.5098039215686274,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 0.49144254278728605
     },
     "((0, 1), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
@@ -268,7 +268,7 @@
         "move_down": 0.25
     },
     "((0, 1), (0, 2), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -276,27 +276,27 @@
     "((0, 1), (0, 2), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((0, 1), (0, 3), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((0, 1), (0, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_down": 0.3333333333333333
     },
     "((0, 1), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((0, 1), (1, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -304,12 +304,12 @@
     "((0, 1), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 1), (1, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -318,7 +318,7 @@
     "((0, 1), (1, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -327,19 +327,19 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 1), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((0, 1), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((0, 1), (2, 0), 0)": {
         "stay": 0.25,
@@ -349,34 +349,34 @@
     },
     "((0, 1), (2, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((0, 1), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 1), (2, 1), 1)": {
-        "stay": 0.2,
+        "stay": 0.32061068702290074,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
-        "move_down": 0.2
+        "move_up": 0.3409436834094368,
+        "move_down": 0.3399390243902439
     },
     "((0, 1), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 1), (2, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -384,14 +384,14 @@
     "((0, 1), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((0, 1), (2, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((0, 1), (3, 0), 0)": {
         "stay": 0.25,
@@ -403,7 +403,7 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((0, 1), (3, 1), 0)": {
         "stay": 0.2,
@@ -417,33 +417,33 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 1), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 1), (3, 2), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
+        "stay": 0.33695652173913043,
+        "move_right": 0.3199566160520607,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 0.34523809523809523,
         "move_down": 0.2
     },
     "((0, 1), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((0, 1), (3, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((0, 1), (4, 0), 0)": {
         "stay": 0.3333333333333333,
@@ -453,7 +453,7 @@
     "((0, 1), (4, 0), 1)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((0, 1), (4, 1), 0)": {
         "stay": 0.25,
@@ -462,7 +462,7 @@
         "move_down": 0.25
     },
     "((0, 1), (4, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -479,30 +479,30 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 1), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((0, 1), (4, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((0, 2), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((0, 2), (0, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_up": 0.3333333333333333
     },
     "((0, 2), (0, 1), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -526,36 +526,36 @@
         "move_down": 0.25
     },
     "((0, 2), (0, 3), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 0.48066298342541436,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 0.5222222222222223
     },
     "((0, 2), (0, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((0, 2), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((0, 2), (1, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((0, 2), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 2), (1, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -564,13 +564,13 @@
     "((0, 2), (1, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 2), (1, 2), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
+        "stay": 0.5116279069767442,
+        "move_right": 0.4942528735632184,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -578,11 +578,11 @@
     "((0, 2), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((0, 2), (1, 3), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
@@ -590,24 +590,24 @@
     "((0, 2), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((0, 2), (2, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((0, 2), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 2), (2, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -616,12 +616,12 @@
     "((0, 2), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((0, 2), (2, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -630,7 +630,7 @@
     "((0, 2), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((0, 2), (2, 3), 1)": {
@@ -642,19 +642,19 @@
     "((0, 2), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((0, 2), (3, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((0, 2), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -663,7 +663,7 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 2), (3, 2), 0)": {
         "stay": 0.2,
@@ -677,7 +677,7 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 2), (3, 3), 0)": {
         "stay": 0.25,
@@ -687,7 +687,7 @@
     },
     "((0, 2), (3, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
@@ -699,7 +699,7 @@
     "((0, 2), (4, 0), 1)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((0, 2), (4, 1), 0)": {
         "stay": 0.25,
@@ -712,7 +712,7 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 2), (4, 2), 0)": {
         "stay": 0.25,
@@ -725,7 +725,7 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 2), (4, 3), 0)": {
         "stay": 0.3333333333333333,
@@ -735,15 +735,15 @@
     "((0, 2), (4, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((0, 3), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((0, 3), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
@@ -751,22 +751,22 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((0, 3), (0, 1), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((0, 3), (0, 2), 0)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((0, 3), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -782,14 +782,14 @@
         "move_down": 0.3333333333333333
     },
     "((0, 3), (1, 0), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((0, 3), (1, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
@@ -798,18 +798,18 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 3), (1, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 3), (1, 2), 0)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -819,28 +819,28 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 3), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((0, 3), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((0, 3), (2, 0), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((0, 3), (2, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -850,25 +850,25 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 3), (2, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 0.4922630560928433,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.5082125603864734
     },
     "((0, 3), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 3), (2, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -877,11 +877,11 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((0, 3), (2, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
@@ -892,7 +892,7 @@
         "move_up": 0.25
     },
     "((0, 3), (3, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -902,25 +902,25 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 3), (3, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 3), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 3), (3, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -932,7 +932,7 @@
         "move_down": 0.25
     },
     "((0, 3), (3, 3), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
@@ -943,9 +943,9 @@
         "move_up": 0.3333333333333333
     },
     "((0, 3), (4, 0), 1)": {
-        "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "stay": 0.34474495035946595,
+        "move_left": 0.31679781046869654,
+        "move_up": 0.339041095890411
     },
     "((0, 3), (4, 1), 0)": {
         "stay": 0.25,
@@ -958,7 +958,7 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((0, 3), (4, 2), 0)": {
         "stay": 0.25,
@@ -967,11 +967,11 @@
         "move_down": 0.25
     },
     "((0, 3), (4, 2), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
-        "move_down": 0.2
+        "stay": 0.21653543307086615,
+        "move_right": 0.19367588932806323,
+        "move_left": 0.17938931297709923,
+        "move_up": 0.23684210526315788,
+        "move_down": 0.19771863117870722
     },
     "((0, 3), (4, 3), 0)": {
         "stay": 0.3333333333333333,
@@ -981,20 +981,20 @@
     "((0, 3), (4, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((1, 0), (0, 0), 0)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_up": 0.3333333333333333
     },
     "((1, 0), (0, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_up": 0.3333333333333333
     },
     "((1, 0), (0, 1), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -1002,29 +1002,29 @@
     "((1, 0), (0, 1), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((1, 0), (0, 2), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((1, 0), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((1, 0), (0, 3), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((1, 0), (0, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_down": 0.3333333333333333
     },
     "((1, 0), (1, 0), 0)": {
@@ -1042,19 +1042,19 @@
     "((1, 0), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((1, 0), (1, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((1, 0), (1, 2), 0)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -1064,43 +1064,43 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((1, 0), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 0), (1, 3), 1)": {
-        "stay": 0.25,
-        "move_right": 0.25,
+        "stay": 0.5084388185654009,
+        "move_right": 0.49208025343189016,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((1, 0), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25
+        "move_left": 0.5519125683060109,
+        "move_up": 0.45108695652173914
     },
     "((1, 0), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 0), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((1, 0), (2, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -1108,13 +1108,13 @@
     "((1, 0), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
+        "move_left": 0.525,
+        "move_up": 0.48148148148148145,
         "move_down": 0.2
     },
     "((1, 0), (2, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -1122,12 +1122,12 @@
     "((1, 0), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 0), (2, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
@@ -1135,10 +1135,10 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((1, 0), (3, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -1146,12 +1146,12 @@
     "((1, 0), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
+        "move_left": 0.5729166666666666,
+        "move_up": 0.44086021505376344,
         "move_down": 0.2
     },
     "((1, 0), (3, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -1160,13 +1160,13 @@
     "((1, 0), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
+        "move_left": 0.5,
+        "move_up": 0.5135135135135135,
         "move_down": 0.2
     },
     "((1, 0), (3, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -1174,12 +1174,12 @@
     "((1, 0), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 0), (3, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
@@ -1191,17 +1191,17 @@
     "((1, 0), (4, 0), 1)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((1, 0), (4, 1), 0)": {
         "stay": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((1, 0), (4, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -1209,79 +1209,79 @@
     "((1, 0), (4, 2), 0)": {
         "stay": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((1, 0), (4, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((1, 0), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((1, 0), (4, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((1, 1), (0, 0), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((1, 1), (0, 0), 1)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((1, 1), (0, 1), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((1, 1), (0, 1), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((1, 1), (0, 2), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((1, 1), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 0.5136612021857924,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 0.4891304347826087,
         "move_down": 0.25
     },
     "((1, 1), (0, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_right": 0.4996971532404603,
+        "move_down": 0.5005045408678103
     },
     "((1, 1), (0, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_down": 0.3333333333333333
     },
     "((1, 1), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 1), (1, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
@@ -1302,12 +1302,12 @@
     "((1, 1), (1, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((1, 1), (1, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -1316,31 +1316,31 @@
     "((1, 1), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 1), (1, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((1, 1), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 1), (2, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((1, 1), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -1348,13 +1348,13 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((1, 1), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -1362,17 +1362,17 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((1, 1), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 1), (2, 3), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
@@ -1385,19 +1385,19 @@
     },
     "((1, 1), (3, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 0.5048,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 0.49640861931364727
     },
     "((1, 1), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((1, 1), (3, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -1406,13 +1406,13 @@
     "((1, 1), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((1, 1), (3, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -1420,14 +1420,14 @@
     "((1, 1), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 1), (3, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_down": 0.25
+        "move_left": 0.4943181818181818,
+        "move_down": 0.5066162570888468
     },
     "((1, 1), (4, 0), 0)": {
         "stay": 0.3333333333333333,
@@ -1435,7 +1435,7 @@
         "move_up": 0.3333333333333333
     },
     "((1, 1), (4, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
@@ -1447,7 +1447,7 @@
     },
     "((1, 1), (4, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -1462,31 +1462,31 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((1, 1), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((1, 1), (4, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((1, 2), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((1, 2), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((1, 2), (0, 1), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -1495,16 +1495,16 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((1, 2), (0, 2), 0)": {
-        "stay": 0.25,
+        "stay": 0.5006697823951418,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.4993748139327181
     },
     "((1, 2), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -1512,21 +1512,21 @@
     "((1, 2), (0, 3), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((1, 2), (0, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 0.5102685624012638,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 0.49050632911392406
     },
     "((1, 2), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 2), (1, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -1534,13 +1534,13 @@
     "((1, 2), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((1, 2), (1, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -1562,31 +1562,31 @@
     "((1, 2), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 2), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 2), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 2), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((1, 2), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -1594,19 +1594,19 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((1, 2), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((1, 2), (2, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -1614,31 +1614,31 @@
     "((1, 2), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 2), (2, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 2), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 2), (3, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((1, 2), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -1647,12 +1647,12 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((1, 2), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -1661,17 +1661,17 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((1, 2), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((1, 2), (3, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
@@ -1683,7 +1683,7 @@
     "((1, 2), (4, 0), 1)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((1, 2), (4, 1), 0)": {
         "stay": 0.25,
@@ -1696,7 +1696,7 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((1, 2), (4, 2), 0)": {
         "stay": 0.25,
@@ -1709,7 +1709,7 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((1, 2), (4, 3), 0)": {
         "stay": 0.3333333333333333,
@@ -1719,38 +1719,38 @@
     "((1, 2), (4, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((1, 3), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((1, 3), (0, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_up": 0.3333333333333333
     },
     "((1, 3), (0, 1), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((1, 3), (0, 1), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((1, 3), (0, 2), 0)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((1, 3), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -1758,36 +1758,36 @@
     "((1, 3), (0, 3), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((1, 3), (0, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((1, 3), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 3), (1, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((1, 3), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 0.45454545454545453,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.5538461538461539
     },
     "((1, 3), (1, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -1796,10 +1796,10 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((1, 3), (1, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -1820,24 +1820,24 @@
     "((1, 3), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 3), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 3), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 0.4074074074074074,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.6153846153846154
     },
     "((1, 3), (2, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -1845,13 +1845,13 @@
     },
     "((1, 3), (2, 2), 0)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((1, 3), (2, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -1860,11 +1860,11 @@
     "((1, 3), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_down": 0.25
+        "move_left": 0.5357142857142857,
+        "move_down": 0.47183098591549294
     },
     "((1, 3), (2, 3), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
@@ -1872,88 +1872,88 @@
     "((1, 3), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((1, 3), (3, 0), 1)": {
-        "stay": 0.25,
+        "stay": 0.5138385188012979,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.4862595419847328,
         "move_up": 0.25
     },
     "((1, 3), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 0.5,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.6
     },
     "((1, 3), (3, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((1, 3), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 0.2857142857142857,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.8333333333333334
     },
     "((1, 3), (3, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((1, 3), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((1, 3), (3, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((1, 3), (4, 0), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((1, 3), (4, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((1, 3), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.3333333333333333
     },
     "((1, 3), (4, 1), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
-        "move_down": 0.2
+        "stay": 0.2020565552699229,
+        "move_right": 0.20267489711934156,
+        "move_left": 0.20607934054611024,
+        "move_up": 0.19667013527575442,
+        "move_down": 0.19619928094504366
     },
     "((1, 3), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.5,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.6
     },
     "((1, 3), (4, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -1963,28 +1963,28 @@
         "move_down": 0.3333333333333333
     },
     "((1, 3), (4, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((2, 0), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "stay": 0.5333333333333333,
+        "move_right": 0.47107438016528924,
         "move_up": 0.3333333333333333
     },
     "((2, 0), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((2, 0), (0, 1), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((2, 0), (0, 1), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -1992,39 +1992,39 @@
     "((2, 0), (0, 2), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((2, 0), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 0.499184339314845,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 0.5020441537203598,
         "move_down": 0.25
     },
     "((2, 0), (0, 3), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((2, 0), (0, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((2, 0), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 0), (1, 0), 1)": {
-        "stay": 0.25,
-        "move_right": 0.25,
+        "stay": 0.4908485856905158,
+        "move_right": 0.51,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((2, 0), (1, 1), 0)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -2034,18 +2034,18 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((2, 0), (1, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 0), (1, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -2054,13 +2054,13 @@
     "((2, 0), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 0), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 0), (2, 0), 0)": {
@@ -2078,19 +2078,19 @@
     "((2, 0), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 0), (2, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 0), (2, 2), 0)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -2098,45 +2098,45 @@
     },
     "((2, 0), (2, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 0.4946236559139785,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 0.5059203444564048,
         "move_down": 0.2
     },
     "((2, 0), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 0), (2, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((2, 0), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25
+        "move_left": 0.4975124378109453,
+        "move_up": 0.507537688442211
     },
     "((2, 0), (3, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 0), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
+        "move_left": 0.47794117647058826,
+        "move_up": 0.5259259259259259,
         "move_down": 0.2
     },
     "((2, 0), (3, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -2144,12 +2144,12 @@
     "((2, 0), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
+        "move_left": 0.5416666666666666,
+        "move_up": 0.5238095238095238,
         "move_down": 0.2
     },
     "((2, 0), (3, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -2158,79 +2158,79 @@
     "((2, 0), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 0), (3, 3), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((2, 0), (4, 0), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_left": 0.463768115942029,
+        "move_up": 0.5492957746478874
     },
     "((2, 0), (4, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((2, 0), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25,
+        "move_left": 0.5882352941176471,
+        "move_up": 0.47368421052631576,
         "move_down": 0.25
     },
     "((2, 0), (4, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((2, 0), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25,
+        "move_left": 0.5,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((2, 0), (4, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 0), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((2, 0), (4, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((2, 1), (0, 0), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((2, 1), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "stay": 0.33715596330275227,
+        "move_right": 0.31378836463582227,
+        "move_up": 0.34967919340055
     },
     "((2, 1), (0, 1), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((2, 1), (0, 1), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -2244,55 +2244,55 @@
     "((2, 1), (0, 2), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
-        "move_down": 0.25
+        "move_up": 0.5041731872717788,
+        "move_down": 0.49634464751958224
     },
     "((2, 1), (0, 3), 0)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "stay": 0.32391048292108365,
+        "move_right": 0.34127684613121506,
+        "move_down": 0.33529584927877537
     },
     "((2, 1), (0, 3), 1)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "stay": 0.48678893378924465,
+        "move_right": 0.5133706467661692,
         "move_down": 0.3333333333333333
     },
     "((2, 1), (1, 0), 0)": {
-        "stay": 0.25,
+        "stay": 0.4011627906976744,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 0.6023391812865497
     },
     "((2, 1), (1, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
-        "move_left": 0.25,
+        "move_right": 0.4872881355932203,
+        "move_left": 0.5137420718816068,
         "move_up": 0.25
     },
     "((2, 1), (1, 1), 0)": {
-        "stay": 0.2,
+        "stay": 0.3603960396039604,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
-        "move_down": 0.2
+        "move_up": 0.32677165354330706,
+        "move_down": 0.3155818540433925
     },
     "((2, 1), (1, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((2, 1), (1, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 1), (1, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -2300,25 +2300,25 @@
     "((2, 1), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 1), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 1), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 1), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 1), (2, 1), 0)": {
@@ -2338,37 +2338,37 @@
     "((2, 1), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 1), (2, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 0.5047619047619047,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.495581237253569
     },
     "((2, 1), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 1), (2, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_down": 0.25
+        "move_left": 0.5138888888888888,
+        "move_down": 0.4881422924901186
     },
     "((2, 1), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 1), (3, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -2376,21 +2376,21 @@
     "((2, 1), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 1), (3, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 0.49615975422427033,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 0.5057825751734772,
         "move_down": 0.2
     },
     "((2, 1), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -2399,17 +2399,17 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((2, 1), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 1), (3, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
@@ -2419,26 +2419,26 @@
         "move_up": 0.3333333333333333
     },
     "((2, 1), (4, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((2, 1), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((2, 1), (4, 1), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
-        "move_down": 0.2
+        "stay": 0.20495049504950494,
+        "move_right": 0.20641975308641974,
+        "move_left": 0.22529644268774704,
+        "move_up": 0.1888560157790927,
+        "move_down": 0.17644159684573682
     },
     "((2, 1), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
@@ -2447,42 +2447,42 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((2, 1), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((2, 1), (4, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((2, 2), (0, 0), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((2, 2), (0, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_right": 0.4961811238406983,
+        "move_up": 0.5039541859830925
     },
     "((2, 2), (0, 1), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
-        "move_down": 0.25
+        "move_up": 0.5170831208567057,
+        "move_down": 0.4829989799387963
     },
     "((2, 2), (0, 1), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
-        "move_down": 0.25
+        "move_up": 0.5203299941072481,
+        "move_down": 0.4799764428739694
     },
     "((2, 2), (0, 2), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -2491,7 +2491,7 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((2, 2), (0, 3), 0)": {
         "stay": 0.3333333333333333,
@@ -2499,32 +2499,32 @@
         "move_down": 1.0
     },
     "((2, 2), (0, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((2, 2), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 2), (1, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 2), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 2), (1, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -2534,10 +2534,10 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((2, 2), (1, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -2547,22 +2547,22 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((2, 2), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((2, 2), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 2), (2, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -2570,13 +2570,13 @@
     "((2, 2), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 2), (2, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -2598,37 +2598,37 @@
     "((2, 2), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 2), (2, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((2, 2), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 2), (3, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((2, 2), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 2), (3, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -2636,7 +2636,7 @@
     "((2, 2), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -2644,34 +2644,34 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((2, 2), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 2), (3, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((2, 2), (4, 0), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((2, 2), (4, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((2, 2), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
@@ -2679,17 +2679,17 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((2, 2), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((2, 2), (4, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -2701,22 +2701,22 @@
         "move_down": 0.3333333333333333
     },
     "((2, 2), (4, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((2, 3), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((2, 3), (0, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_up": 0.3333333333333333
     },
     "((2, 3), (0, 1), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -2725,17 +2725,17 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((2, 3), (0, 2), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((2, 3), (0, 2), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
@@ -2745,18 +2745,18 @@
         "move_down": 0.3333333333333333
     },
     "((2, 3), (0, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((2, 3), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 3), (1, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -2764,12 +2764,12 @@
     "((2, 3), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 3), (1, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -2780,41 +2780,41 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((2, 3), (1, 2), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
-        "move_left": 0.2,
+        "stay": 0.24120030387439859,
+        "move_right": 0.2543915076456464,
+        "move_left": 0.24993682082385646,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.25512010113780026
     },
     "((2, 3), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((2, 3), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((2, 3), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 3), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 3), (2, 1), 0)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -2822,7 +2822,7 @@
     },
     "((2, 3), (2, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -2830,13 +2830,13 @@
     "((2, 3), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((2, 3), (2, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -2856,38 +2856,38 @@
     "((2, 3), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((2, 3), (3, 0), 1)": {
-        "stay": 0.25,
+        "stay": 0.4993618379068283,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.5007974481658692,
         "move_up": 0.25
     },
     "((2, 3), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 0.38461538461538464,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.6428571428571429
     },
     "((2, 3), (3, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((2, 3), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((2, 3), (3, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -2896,47 +2896,47 @@
     "((2, 3), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_down": 0.25
+        "move_left": 0.5714285714285714,
+        "move_down": 1.0
     },
     "((2, 3), (3, 3), 1)": {
-        "stay": 0.25,
+        "stay": 0.4740566037735849,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 0.5292740046838408
     },
     "((2, 3), (4, 0), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((2, 3), (4, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((2, 3), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.75,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.5714285714285714
     },
     "((2, 3), (4, 1), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
-        "move_down": 0.2
+        "stay": 0.19605077574047955,
+        "move_right": 0.20757363253856942,
+        "move_left": 0.21378340365682139,
+        "move_up": 0.15285714285714286,
+        "move_down": 0.2345505617977528
     },
     "((2, 3), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.4444444444444444,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.625
     },
     "((2, 3), (4, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -2944,65 +2944,65 @@
     "((2, 3), (4, 3), 0)": {
         "stay": 0.3333333333333333,
         "move_left": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((2, 3), (4, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((3, 0), (0, 0), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((3, 0), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "stay": 0.49654491609081935,
+        "move_right": 0.5039447731755424,
         "move_up": 0.3333333333333333
     },
     "((3, 0), (0, 1), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((3, 0), (0, 1), 1)": {
-        "stay": 0.25,
-        "move_right": 0.25,
-        "move_up": 0.25,
+        "stay": 0.3223981900452489,
+        "move_right": 0.3338983050847458,
+        "move_up": 0.3442622950819672,
         "move_down": 0.25
     },
     "((3, 0), (0, 2), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((3, 0), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 0.5164230112018227,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 0.48376068376068376,
         "move_down": 0.25
     },
     "((3, 0), (0, 3), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((3, 0), (0, 3), 1)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "stay": 0.5017835909631391,
+        "move_right": 0.4982826948480845,
         "move_down": 0.3333333333333333
     },
     "((3, 0), (1, 0), 0)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((3, 0), (1, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -3010,7 +3010,7 @@
     "((3, 0), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -3018,11 +3018,11 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 0), (1, 2), 0)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -3032,18 +3032,18 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 0), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((3, 0), (1, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
@@ -3051,18 +3051,18 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((3, 0), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((3, 0), (2, 1), 0)": {
         "stay": 0.2,
-        "move_right": 0.2,
-        "move_left": 0.2,
+        "move_right": 0.49193548387096775,
+        "move_left": 0.512,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -3070,33 +3070,33 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 0), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 0), (2, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 0), (2, 3), 0)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((3, 0), (2, 3), 1)": {
-        "stay": 0.25,
+        "stay": 0.5100133511348465,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.4903268845897265,
         "move_down": 0.25
     },
     "((3, 0), (3, 0), 0)": {
@@ -3114,27 +3114,27 @@
     "((3, 0), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 0), (3, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 0), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 0), (3, 2), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -3142,28 +3142,28 @@
     "((3, 0), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((3, 0), (3, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((3, 0), (4, 0), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_left": 0.5161290322580645,
+        "move_up": 0.4875444839857651
     },
     "((3, 0), (4, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((3, 0), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
@@ -3171,17 +3171,17 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 0), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25,
+        "move_left": 0.6,
+        "move_up": 0.5714285714285714,
         "move_down": 0.25
     },
     "((3, 0), (4, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -3189,32 +3189,32 @@
     },
     "((3, 0), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((3, 0), (4, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((3, 1), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((3, 1), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "stay": 0.32799181725196047,
+        "move_right": 0.3253995239714383,
+        "move_up": 0.34816576086956524
     },
     "((3, 1), (0, 1), 0)": {
         "stay": 0.25,
-        "move_right": 0.25,
-        "move_up": 0.25,
+        "move_right": 0.529126213592233,
+        "move_up": 0.48095238095238096,
         "move_down": 0.25
     },
     "((3, 1), (0, 1), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -3222,99 +3222,99 @@
     "((3, 1), (0, 2), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 1.0,
-        "move_down": 0.25
+        "move_up": 0.5037037037037037,
+        "move_down": 0.4970326409495549
     },
     "((3, 1), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((3, 1), (0, 3), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 0.5277777777777778,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 0.47295208655332305
     },
     "((3, 1), (0, 3), 1)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "stay": 0.3316987740805604,
+        "move_right": 0.33718892393971256,
+        "move_down": 0.3314646110721794
     },
     "((3, 1), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25
+        "move_left": 0.32,
+        "move_up": 0.6850393700787402
     },
     "((3, 1), (1, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((3, 1), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 1), (1, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 1), (1, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 1), (1, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 1), (1, 3), 0)": {
-        "stay": 0.25,
+        "stay": 0.3219814241486068,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_down": 0.25
+        "move_left": 0.3549382716049383,
+        "move_down": 0.32608695652173914
     },
     "((3, 1), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((3, 1), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((3, 1), (2, 0), 1)": {
-        "stay": 0.25,
-        "move_right": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25
+        "stay": 0.24733475479744135,
+        "move_right": 0.2673056443024494,
+        "move_left": 0.2508038585209003,
+        "move_up": 0.2372340425531915
     },
     "((3, 1), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 1), (2, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -3322,7 +3322,7 @@
     "((3, 1), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -3330,30 +3330,30 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 1), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((3, 1), (2, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((3, 1), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((3, 1), (3, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
@@ -3374,12 +3374,12 @@
     "((3, 1), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 1), (3, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -3388,33 +3388,33 @@
     "((3, 1), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((3, 1), (3, 3), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((3, 1), (4, 0), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((3, 1), (4, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((3, 1), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((3, 1), (4, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -3422,7 +3422,7 @@
     },
     "((3, 1), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
@@ -3431,38 +3431,38 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((3, 1), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((3, 1), (4, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((3, 2), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 0.4946236559139785,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 0.5132275132275133
     },
     "((3, 2), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "stay": 0.4958233317330773,
+        "move_right": 0.5042718633003744,
         "move_up": 0.3333333333333333
     },
     "((3, 2), (0, 1), 0)": {
-        "stay": 0.25,
+        "stay": 0.4849246231155779,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 0.5163727959697733,
         "move_down": 0.25
     },
     "((3, 2), (0, 1), 1)": {
-        "stay": 0.25,
-        "move_right": 0.25,
-        "move_up": 0.25,
+        "stay": 0.33492647058823527,
+        "move_right": 0.3276940051489518,
+        "move_up": 0.33849557522123896,
         "move_down": 0.25
     },
     "((3, 2), (0, 2), 0)": {
@@ -3472,7 +3472,7 @@
         "move_down": 0.25
     },
     "((3, 2), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -3480,96 +3480,96 @@
     "((3, 2), (0, 3), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((3, 2), (0, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((3, 2), (1, 0), 0)": {
-        "stay": 0.25,
+        "stay": 0.4700854700854701,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.5378151260504201,
         "move_up": 0.25
     },
     "((3, 2), (1, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((3, 2), (1, 1), 0)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 0.49755501222493886,
         "move_left": 0.2,
-        "move_up": 1.0,
+        "move_up": 0.5024726343279435,
         "move_down": 0.2
     },
     "((3, 2), (1, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((3, 2), (1, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 2), (1, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 2), (1, 3), 0)": {
-        "stay": 0.25,
+        "stay": 0.4634146341463415,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.5378973105134475,
         "move_down": 0.25
     },
     "((3, 2), (1, 3), 1)": {
-        "stay": 0.25,
-        "move_right": 0.25,
+        "stay": 0.479108635097493,
+        "move_right": 0.5235457063711911,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((3, 2), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((3, 2), (2, 0), 1)": {
-        "stay": 0.25,
-        "move_right": 0.25,
+        "stay": 0.33447098976109213,
+        "move_right": 0.33248081841432225,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 0.3339011925042589
     },
     "((3, 2), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 2), (2, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 2), (2, 2), 0)": {
-        "stay": 0.2,
+        "stay": 0.49867021276595747,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 0.5022123893805309,
         "move_down": 0.2
     },
     "((3, 2), (2, 2), 1)": {
@@ -3577,44 +3577,44 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((3, 2), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_down": 0.25
+        "move_left": 0.5457317073170732,
+        "move_down": 0.4613003095975232
     },
     "((3, 2), (2, 3), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_down": 0.25
     },
     "((3, 2), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((3, 2), (3, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((3, 2), (3, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 2), (3, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 0.5246666666666666,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 0.4756828780812791,
         "move_down": 0.2
     },
     "((3, 2), (3, 2), 0)": {
@@ -3634,11 +3634,11 @@
     "((3, 2), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((3, 2), (3, 3), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
@@ -3650,25 +3650,25 @@
     },
     "((3, 2), (4, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((3, 2), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((3, 2), (4, 1), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
-        "move_down": 0.2
+        "stay": 0.19434628975265017,
+        "move_right": 0.19011598587997983,
+        "move_left": 0.21161616161616162,
+        "move_up": 0.218970736629667,
+        "move_down": 0.18604651162790697
     },
     "((3, 2), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
@@ -3677,97 +3677,97 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((3, 2), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((3, 2), (4, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((3, 3), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "stay": 0.5264423076923077,
+        "move_right": 0.4748201438848921,
         "move_up": 0.3333333333333333
     },
     "((3, 3), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((3, 3), (0, 1), 0)": {
-        "stay": 0.25,
-        "move_right": 0.25,
+        "stay": 0.34560906515580736,
+        "move_right": 0.3792134831460674,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.2801120448179272
     },
     "((3, 3), (0, 1), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((3, 3), (0, 2), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((3, 3), (0, 2), 1)": {
-        "stay": 0.25,
-        "move_right": 0.25,
+        "stay": 0.3387596899224806,
+        "move_right": 0.329161590430834,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.33218874612317234
     },
     "((3, 3), (0, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_down": 0.3333333333333333
     },
     "((3, 3), (0, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_right": 0.3333333333333333,
+        "move_right": 1.0,
         "move_down": 0.3333333333333333
     },
     "((3, 3), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((3, 3), (1, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((3, 3), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 3), (1, 1), 1)": {
-        "stay": 0.2,
+        "stay": 0.4828080229226361,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.5178826895565093
     },
     "((3, 3), (1, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((3, 3), (1, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -3777,16 +3777,16 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((3, 3), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((3, 3), (2, 0), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -3794,7 +3794,7 @@
     "((3, 3), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((3, 3), (2, 1), 0)": {
@@ -3802,24 +3802,24 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((3, 3), (2, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 3), (2, 2), 0)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 3), (2, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -3829,36 +3829,36 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((3, 3), (2, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((3, 3), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((3, 3), (3, 0), 1)": {
         "stay": 0.25,
-        "move_right": 0.25,
+        "move_right": 1.0,
         "move_left": 0.25,
         "move_up": 0.25
     },
     "((3, 3), (3, 1), 0)": {
-        "stay": 0.2,
+        "stay": 0.5569620253164557,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.45
     },
     "((3, 3), (3, 1), 1)": {
         "stay": 0.2,
-        "move_right": 0.2,
+        "move_right": 1.0,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
@@ -3866,12 +3866,12 @@
     "((3, 3), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 3), (3, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -3891,48 +3891,48 @@
     },
     "((3, 3), (4, 0), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((3, 3), (4, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((3, 3), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.6666666666666666,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.5
     },
     "((3, 3), (4, 1), 1)": {
-        "stay": 0.2,
-        "move_right": 0.2,
-        "move_left": 0.2,
-        "move_up": 0.2,
-        "move_down": 0.2
+        "stay": 0.22467532467532467,
+        "move_right": 0.20827943078913325,
+        "move_left": 0.17317708333333334,
+        "move_up": 0.20496083550913838,
+        "move_down": 0.19300518134715025
     },
     "((3, 3), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.4166666666666667,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.6428571428571429
     },
     "((3, 3), (4, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((3, 3), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_left": 0.5625,
+        "move_down": 0.45652173913043476
     },
     "((3, 3), (4, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((4, 0), (0, 0), 0)": {
@@ -3941,32 +3941,32 @@
         "move_up": 0.3333333333333333
     },
     "((4, 0), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 0.5081081081081081,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 0.49341595662277304
     },
     "((4, 0), (0, 1), 0)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((4, 0), (0, 1), 1)": {
-        "stay": 0.25,
+        "stay": 0.5040650406504065,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 0.49603836530442036,
         "move_down": 0.25
     },
     "((4, 0), (0, 2), 0)": {
-        "stay": 0.25,
+        "stay": 0.5588235294117647,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 0.4540229885057471,
         "move_down": 0.25
     },
     "((4, 0), (0, 2), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((4, 0), (0, 3), 0)": {
@@ -3975,7 +3975,7 @@
         "move_down": 0.3333333333333333
     },
     "((4, 0), (0, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
@@ -3983,104 +3983,104 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((4, 0), (1, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((4, 0), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((4, 0), (1, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 0), (1, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 0), (1, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 0), (1, 3), 0)": {
-        "stay": 0.25,
+        "stay": 0.5313653136531366,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.4744525547445255,
         "move_down": 0.25
     },
     "((4, 0), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 0), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((4, 0), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25
+        "move_left": 0.4458204334365325,
+        "move_up": 0.5559006211180124
     },
     "((4, 0), (2, 1), 0)": {
-        "stay": 0.2,
+        "stay": 0.5079365079365079,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 0.5,
         "move_down": 0.2
     },
     "((4, 0), (2, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((4, 0), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 0), (2, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 0), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 0), (2, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 0), (3, 0), 0)": {
@@ -4092,14 +4092,14 @@
     "((4, 0), (3, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((4, 0), (3, 1), 0)": {
-        "stay": 0.2,
+        "stay": 0.45588235294117646,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 0.5507246376811594,
         "move_down": 0.2
     },
     "((4, 0), (3, 1), 1)": {
@@ -4112,7 +4112,7 @@
     "((4, 0), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -4120,19 +4120,19 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((4, 0), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 0), (3, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 0), (4, 0), 0)": {
@@ -4147,7 +4147,7 @@
     },
     "((4, 0), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
@@ -4168,71 +4168,71 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((4, 0), (4, 3), 0)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((4, 0), (4, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((4, 1), (0, 0), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((4, 1), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 0.49541097287375074,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 0.5047910295616718
     },
     "((4, 1), (0, 1), 0)": {
-        "stay": 0.25,
+        "stay": 0.5058823529411764,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 0.49609375,
         "move_down": 0.25
     },
     "((4, 1), (0, 1), 1)": {
-        "stay": 0.25,
+        "stay": 0.3495361781076067,
         "move_right": 0.25,
-        "move_up": 0.25,
-        "move_down": 0.25
+        "move_up": 0.3179373029122612,
+        "move_down": 0.33290011139992576
     },
     "((4, 1), (0, 2), 0)": {
-        "stay": 0.25,
+        "stay": 0.34444444444444444,
         "move_right": 0.25,
-        "move_up": 0.25,
-        "move_down": 0.25
+        "move_up": 0.33643122676579923,
+        "move_down": 0.325187969924812
     },
     "((4, 1), (0, 2), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((4, 1), (0, 3), 0)": {
-        "stay": 1.0,
+        "stay": 0.49171270718232046,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 0.5089655172413793
     },
     "((4, 1), (0, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((4, 1), (1, 0), 0)": {
-        "stay": 0.25,
+        "stay": 0.6666666666666666,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 0.38461538461538464
     },
     "((4, 1), (1, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -4240,14 +4240,14 @@
     "((4, 1), (1, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 1), (1, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -4256,43 +4256,43 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 1), (1, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 1), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 1), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 1), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25
+        "move_left": 0.3611111111111111,
+        "move_up": 0.6764705882352942
     },
     "((4, 1), (2, 0), 1)": {
-        "stay": 0.25,
+        "stay": 0.5008130081300813,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.5016339869281046,
         "move_up": 0.25
     },
     "((4, 1), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -4301,12 +4301,12 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 1), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -4314,29 +4314,29 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((4, 1), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 1), (2, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 1), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((4, 1), (3, 0), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_up": 0.25
@@ -4345,7 +4345,7 @@
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 1.0,
         "move_down": 0.2
     },
     "((4, 1), (3, 1), 1)": {
@@ -4353,17 +4353,17 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 1), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 1), (3, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -4372,14 +4372,14 @@
     "((4, 1), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 1), (3, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((4, 1), (4, 0), 0)": {
         "stay": 0.3333333333333333,
@@ -4387,7 +4387,7 @@
         "move_up": 0.3333333333333333
     },
     "((4, 1), (4, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
@@ -4406,7 +4406,7 @@
     },
     "((4, 1), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
@@ -4423,77 +4423,77 @@
         "move_down": 0.3333333333333333
     },
     "((4, 1), (4, 3), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_left": 0.3333333333333333,
         "move_down": 0.3333333333333333
     },
     "((4, 2), (0, 0), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_up": 0.3333333333333333
+        "move_up": 1.0
     },
     "((4, 2), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((4, 2), (0, 1), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 1.0,
         "move_down": 0.25
     },
     "((4, 2), (0, 1), 1)": {
-        "stay": 0.25,
+        "stay": 0.33990929705215417,
         "move_right": 0.25,
-        "move_up": 0.25,
-        "move_down": 0.25
+        "move_up": 0.32477856007267775,
+        "move_down": 0.3359782362276128
     },
     "((4, 2), (0, 2), 0)": {
-        "stay": 0.25,
+        "stay": 0.49696969696969695,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 0.5060975609756098,
         "move_down": 0.25
     },
     "((4, 2), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 0.5002709188017649,
         "move_right": 0.25,
-        "move_up": 0.25,
+        "move_up": 0.4997678018575851,
         "move_down": 0.25
     },
     "((4, 2), (0, 3), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 0.5301724137931034,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 0.47058823529411764
     },
     "((4, 2), (0, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((4, 2), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((4, 2), (1, 0), 1)": {
-        "stay": 0.25,
+        "stay": 0.4948341489940185,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.505971769815418,
         "move_up": 0.25
     },
     "((4, 2), (1, 1), 0)": {
-        "stay": 0.2,
+        "stay": 0.5112540192926045,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 0.49038461538461536,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 2), (1, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -4505,7 +4505,7 @@
         "move_down": 0.2
     },
     "((4, 2), (1, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -4515,30 +4515,30 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((4, 2), (1, 3), 1)": {
-        "stay": 0.25,
+        "stay": 0.31626506024096385,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_down": 0.25
+        "move_left": 0.36555891238670696,
+        "move_down": 0.3231707317073171
     },
     "((4, 2), (2, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_up": 0.25
+        "move_up": 1.0
     },
     "((4, 2), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
-        "move_up": 0.25
+        "move_left": 0.4851031321619557,
+        "move_up": 0.5156847742922723
     },
     "((4, 2), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -4547,84 +4547,84 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 2), (2, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 2), (2, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 2), (2, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 2), (2, 3), 1)": {
-        "stay": 0.25,
+        "stay": 0.49404761904761907,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.5117647058823529,
         "move_down": 0.25
     },
     "((4, 2), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((4, 2), (3, 0), 1)": {
-        "stay": 0.25,
+        "stay": 0.5112456747404844,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.48917748917748916,
         "move_up": 0.25
     },
     "((4, 2), (3, 1), 0)": {
-        "stay": 0.2,
+        "stay": 0.514018691588785,
         "move_right": 0.2,
         "move_left": 0.2,
-        "move_up": 0.2,
+        "move_up": 0.49074074074074076,
         "move_down": 0.2
     },
     "((4, 2), (3, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 2), (3, 2), 0)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 2), (3, 2), 1)": {
-        "stay": 0.2,
+        "stay": 0.49177538287010775,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 0.509090909090909
     },
     "((4, 2), (3, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_left": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((4, 2), (3, 3), 1)": {
-        "stay": 0.25,
+        "stay": 0.5005649717514125,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.5,
         "move_down": 0.25
     },
     "((4, 2), (4, 0), 0)": {
@@ -4634,12 +4634,12 @@
     },
     "((4, 2), (4, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((4, 2), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
@@ -4648,7 +4648,7 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 2), (4, 2), 0)": {
         "stay": 0.25,
@@ -4670,16 +4670,16 @@
     },
     "((4, 2), (4, 3), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_down": 0.3333333333333333
     },
     "((4, 3), (0, 0), 0)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
     "((4, 3), (0, 0), 1)": {
-        "stay": 0.3333333333333333,
+        "stay": 1.0,
         "move_right": 0.3333333333333333,
         "move_up": 0.3333333333333333
     },
@@ -4687,22 +4687,22 @@
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((4, 3), (0, 1), 1)": {
-        "stay": 0.25,
+        "stay": 0.4858681022880215,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 0.5158676569885212
     },
     "((4, 3), (0, 2), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
         "move_up": 0.25,
-        "move_down": 0.25
+        "move_down": 1.0
     },
     "((4, 3), (0, 2), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_up": 0.25,
         "move_down": 0.25
@@ -4710,34 +4710,34 @@
     "((4, 3), (0, 3), 0)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((4, 3), (0, 3), 1)": {
         "stay": 0.3333333333333333,
         "move_right": 0.3333333333333333,
-        "move_down": 0.3333333333333333
+        "move_down": 1.0
     },
     "((4, 3), (1, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((4, 3), (1, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((4, 3), (1, 1), 0)": {
-        "stay": 0.2,
+        "stay": 0.5445859872611465,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 0.4605678233438486,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 3), (1, 1), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -4748,50 +4748,50 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 3), (1, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 3), (1, 3), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 3), (1, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 3), (2, 0), 0)": {
-        "stay": 0.25,
+        "stay": 0.4230769230769231,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 0.5801526717557252,
         "move_up": 0.25
     },
     "((4, 3), (2, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((4, 3), (2, 1), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 3), (2, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
@@ -4800,10 +4800,10 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 3), (2, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -4818,19 +4818,19 @@
     "((4, 3), (2, 3), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_down": 0.25
     },
     "((4, 3), (3, 0), 0)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((4, 3), (3, 0), 1)": {
         "stay": 0.25,
         "move_right": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25
     },
     "((4, 3), (3, 1), 0)": {
@@ -4838,24 +4838,24 @@
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 3), (3, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
-        "move_down": 0.2
+        "move_down": 1.0
     },
     "((4, 3), (3, 2), 0)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 3), (3, 2), 1)": {
-        "stay": 0.2,
+        "stay": 1.0,
         "move_right": 0.2,
         "move_left": 0.2,
         "move_up": 0.2,
@@ -4868,7 +4868,7 @@
         "move_down": 0.25
     },
     "((4, 3), (3, 3), 1)": {
-        "stay": 0.25,
+        "stay": 1.0,
         "move_right": 0.25,
         "move_left": 0.25,
         "move_down": 0.25
@@ -4880,32 +4880,32 @@
     },
     "((4, 3), (4, 0), 1)": {
         "stay": 0.3333333333333333,
-        "move_left": 0.3333333333333333,
+        "move_left": 1.0,
         "move_up": 0.3333333333333333
     },
     "((4, 3), (4, 1), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((4, 3), (4, 1), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },
     "((4, 3), (4, 2), 0)": {
         "stay": 0.25,
-        "move_left": 0.25,
+        "move_left": 1.0,
         "move_up": 0.25,
         "move_down": 0.25
     },
     "((4, 3), (4, 2), 1)": {
         "stay": 0.2,
         "move_right": 0.2,
-        "move_left": 0.2,
+        "move_left": 1.0,
         "move_up": 0.2,
         "move_down": 0.2
     },

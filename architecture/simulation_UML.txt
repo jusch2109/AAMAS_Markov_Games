@@ -1,0 +1,36 @@
+@startuml
+class SoccerSimulation {
+    run()
+    return_wins()
+        environment
+    agentA
+    agentB
+    state
+    explore_decay
+    training
+    mac
+    save_and_load
+    cooldown
+    gui
+    gui
+    state
+    state
+    games_won
+    percentage_won
+    __init__()
+}
+class CatchSimulation {
+    run()
+        environment
+    agentA
+    agentB
+    state
+    explore_decay
+    training
+    mac
+    cooldown
+    gui
+    gui
+    __init__()
+}
+@enduml

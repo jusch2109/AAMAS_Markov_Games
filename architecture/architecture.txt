@@ -1,0 +1,137 @@
+@startuml
+
+skinparam defaultFontSize 14
+
+class Agent {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+        value_function
+    agent_index
+}
+class SoccerEnvironment {
+    getCurrentState()
+    getPossibleActions()
+    doAction()
+    reset()
+}
+class CatchEnvironment {
+    getCurrentState()
+    getPossibleActions()
+    doAction()
+    reset()
+}
+class Policy {
+    getAction()
+}
+class RandomPolicy {
+    getAction()
+}
+class QPolicy {
+    getAction()
+}
+class EpsilonGreedyPolicy {
+    getAction()
+        epsilon
+}
+class ProbabilisticQPolicy {
+    getAction()
+}
+class LearnedMiniMaxPolicy {
+    getAction()
+    update()
+}
+class JAL_AM_Policy {
+    getAction()
+}
+class MockPolicy {
+    getAction()
+}
+class HandcraftedPolicy {
+    getAction()
+}
+Policy <|-- RandomPolicy
+Policy <|-- QPolicy
+Policy <|-- EpsilonGreedyPolicy
+Policy <|-- ProbabilisticQPolicy
+Policy <|-- LearnedMiniMaxPolicy
+Policy <|-- JAL_AM_Policy
+Policy <|-- MockPolicy
+Policy <|-- HandcraftedPolicy
+class SoccerSimulation {
+    run()
+        environment
+    agentA
+    agentB
+    state
+}
+class CatchSimulation {
+    run()
+        environment
+    agentA
+    agentB
+    state
+}
+class Value_Function {
+    getValue()
+    getQValue()
+    getAction()
+    updateQValue()
+}
+class Q_Function {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+    
+    Q
+    policy
+}
+class JAL_AM_Q_Function {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+    update_AV()
+        Q
+    policy
+    opponent_model
+}
+class MinimaxQ_Function {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+    Q
+    V
+    policy
+
+}
+class RandomPolicy_Value_Function {
+    getAction()
+}
+class Handcrafted_Value_Function {
+    getAction()
+}
+class Mock_Value_Function {
+    getAction()
+}
+Value_Function <|-- Q_Function
+Value_Function <|-- JAL_AM_Q_Function
+Value_Function <|-- MinimaxQ_Function
+Value_Function <|-- RandomPolicy_Value_Function
+Value_Function <|-- Handcrafted_Value_Function
+
+Value_Function --> Policy : has
+
+Agent --> Value_Function : has
+
+SoccerSimulation --> Agent : agentA/agentB
+SoccerSimulation --> SoccerEnvironment : environment
+
+CatchSimulation --> Agent : agentA/agentB
+CatchSimulation --> CatchEnvironment : environment
+
+Value_Function <|-- Mock_Value_Function
+@enduml

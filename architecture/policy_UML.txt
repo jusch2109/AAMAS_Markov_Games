@@ -1,0 +1,90 @@
+@startuml
+class Policy {
+    getAction()
+    getActionProbability()
+    save_dict()
+    load_dict()
+        __init__()
+}
+class RandomPolicy {
+    getAction()
+    save_dict()
+    load_dict()
+        agent
+    __init__()
+}
+class QPolicy {
+    getAction()
+    save_dict()
+    load_dict()
+        q_table
+    agent
+    __init__()
+}
+class EpsilonGreedyPolicy {
+    getAction()
+    save_dict()
+    load_dict()
+        epsilon
+    __init__()
+}
+class ProbabilisticQPolicy {
+    getAction()
+    save_dict()
+    load_dict()
+        epsilon
+    q_table
+    agent
+    __init__()
+}
+class LearnedMiniMaxPolicy {
+    getAction()
+    update()
+    save_dict()
+    load_dict()
+        explore
+    pi
+    pi
+    __init__()
+}
+class JAL_AM_Policy {
+    getAction()
+    save_dict()
+    load_dict()
+        epsilon
+    decay
+    epsilon
+    __init__()
+}
+class MockPolicy {
+    getAction()
+    update()
+    save_dict()
+    load_dict()
+        agent
+    environment
+    __init__()
+}
+class HandcraftedPolicy {
+    getAction()
+    save_dict()
+    load_dict()
+        agent
+    is_soccer
+    finta
+    finta
+    finta
+    finta
+    finta
+    finta
+    __init__()
+}
+Policy <|-- RandomPolicy
+Policy <|-- QPolicy
+Policy <|-- EpsilonGreedyPolicy
+Policy <|-- ProbabilisticQPolicy
+Policy <|-- LearnedMiniMaxPolicy
+Policy <|-- JAL_AM_Policy
+Policy <|-- MockPolicy
+Policy <|-- HandcraftedPolicy
+@enduml

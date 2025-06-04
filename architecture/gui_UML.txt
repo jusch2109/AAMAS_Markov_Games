@@ -1,0 +1,18 @@
+@startuml
+class SoccerGui {
+    run()
+    _main_loop()
+        env
+    mac
+    running
+    __init__()
+}
+class CatchGui {
+    run()
+    _main_loop()
+        env
+    mac
+    running
+    __init__()
+}
+@enduml

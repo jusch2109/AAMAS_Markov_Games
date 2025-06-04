@@ -1,0 +1,21 @@
+@startuml
+class SoccerEnvironment {
+    getCurrentState()
+    getPossibleActions()
+    doAction()
+    reset()
+        ball
+    ball
+    ball
+    __init__()
+}
+class CatchEnvironment {
+    getCurrentState()
+    getPossibleActions()
+    doAction()
+    reset()
+        hunter
+    hunter
+    __init__()
+}
+@enduml

@@ -384,20 +384,20 @@ def c_test_challengerJALQQ():
 
 
 def main():
-    #s_train_challengerJALMR()
-    #s_train_challengerJALMM()
-    #s_train_challengerJALQR()
-    #s_train_challengerJALQQ()
+    s_train_challengerJALMR()
+    s_train_challengerJALMM()
+    s_train_challengerJALQR()
+    s_train_challengerJALQQ()
 
     s_test_challengerJALMR()
     s_test_challengerJALMM()
     s_test_challengerJALQR()
     s_test_challengerJALQQ()
 
-    #c_train_challengerJALMR()
-    #c_train_challengerJALMM()
-    #c_train_challengerJALQR()
-    #c_train_challengerJALQQ()
+    c_train_challengerJALMR()
+    c_train_challengerJALMM()
+    c_train_challengerJALQR()
+    c_train_challengerJALQQ()
 
     c_test_challengerJALMR()
     c_test_challengerJALMM()

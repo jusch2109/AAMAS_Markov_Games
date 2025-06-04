@@ -1,0 +1,11 @@
+@startuml
+class Agent {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+        value_function
+    agent_index
+    __init__()
+}
+@enduml

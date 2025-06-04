@@ -1,0 +1,112 @@
+@startuml
+class Value_Function {
+    getValue()
+    getQValue()
+    getAction()
+    updateQValue()
+    save_dict()
+    load_dict()
+        __init__()
+}
+class Q_Function {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+    save_dict()
+    load_dict()
+        Q
+    Q
+    start_value
+    learning_rate
+    policy
+    discount_factor
+    Q
+    __init__()
+}
+class JAL_AM_Q_Function {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+    update_AV()
+    save_dict()
+    load_dict()
+        Q
+    Q
+    opponent_model
+    opponent_model
+    opponent_counter
+    AV
+    start_value
+    learning_rate
+    policy
+    discount_factor
+    learning_rate
+    AV
+    Q
+    opponent_model
+    __init__()
+}
+class MinimaxQ_Function {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+    save_dict()
+    load_dict()
+        start_value
+    Q
+    Q
+    V
+    V
+    start_value
+    learning_rate
+    discount_factor
+    decay
+    policy
+    learning_rate
+    Q
+    V
+    __init__()
+}
+class RandomPolicy_Value_Function {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+    save_dict()
+    load_dict()
+        policy
+    Q
+    __init__()
+}
+class Handcrafted_Value_Function {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+    save_dict()
+    load_dict()
+        policy
+    Q
+    __init__()
+}
+class Mock_Value_Function {
+    getAction()
+    getValue()
+    getQValue()
+    updateQValue()
+    save_dict()
+    load_dict()
+        policy
+    Q
+    __init__()
+}
+Value_Function <|-- Q_Function
+Value_Function <|-- JAL_AM_Q_Function
+Value_Function <|-- MinimaxQ_Function
+Value_Function <|-- RandomPolicy_Value_Function
+Value_Function <|-- Handcrafted_Value_Function
+Value_Function <|-- Mock_Value_Function
+@enduml
