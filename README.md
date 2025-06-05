@@ -39,6 +39,9 @@ Boolean. If using a GUI on macOS, set this to True.
 
 extra:
 List of two strings used when loading trained agents. Each string is a two-letter code.
+
+
+For the evaluation we ran the run_simulation_challenger and run_simulation_jal.
 The first letter is the type of the agent; the second is the type it was trained against.
 For example, ["qr", "qq"] loads a Q-learning agent trained vs Random, and a Q-learning agent trained vs another Q-learning agent.
 Some agent combinations may not have trained models available.
