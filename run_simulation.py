@@ -1,8 +1,8 @@
 from simulation import *
 from environment import SoccerEnvironment
 from policy import RandomPolicy
-from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function, Handcrafted_Value_Function
-from policy import EpsilonGreedyPolicy, QPolicy, MockPolicy, ProbabilisticQPolicy, LearnedMiniMaxPolicy, HandcraftedPolicy
+from value_function import Value_Function, RandomPolicy_Value_Function,Q_Function, Mock_Value_Function, Handcrafted_Value_Function, JAL_AM_Q_Function
+from policy import EpsilonGreedyPolicy, QPolicy, MockPolicy, ProbabilisticQPolicy, LearnedMiniMaxPolicy, HandcraftedPolicy, JAL_AM_Policy
 from agent import Agent
 from value_function import MinimaxQ_Function
 
@@ -254,18 +254,16 @@ def test_trained():
     soccer_results = {}
     catch_results = {}
 
-    for A_type in ["q", "minimax", "handcrafted"]:  # "random", "probabilistic_q", "epsilon_greedy",
-        for B_type in ["random", "probabilistic_q", "epsilon_greedy", "q", "minimax", "handcrafted"]:
+    for A_type in ["random", "probabilistic_q", "q", "minimax", "handcrafted"]:
+        for B_type in ["random", "probabilistic_q", "q", "minimax", "handcrafted"]:
             extra = [str(A_type[0]+B_type[0]), str(A_type[0]+B_type[0])]
-            if A_type in ["random","handcrafted"] and B_type in ["probabilistic_q", "epsilon_greedy", "q", "minimax"]:
+            if A_type in ["random", "handcrafted"] and B_type not in ["random", "handcrafted"]:
                 continue
-            if A_type != B_type and B_type in ["probabilistic_q", "epsilon_greedy", "q", "minimax", "handcrafted"]:
-                ## this is to make them use the version trained against themselfs, we can also replace the second char of each of the item's list to r to make it the version trained against random
-                extra = [str(A_type[0]+A_type[0]), str(B_type[0] + B_type[0])]
+            if A_type in ["probabilistic_q", "q", "minimax"] and B_type in ["probabilistic_q", "q", "minimax"]:
+                extra = [str(A_type[0]+A_type[0]), str(B_type[0]+B_type[0])]    # use the ones trained against each other
             print(f"A: {A_type}, B: {B_type}")
             print("Soccer:")
             env = SoccerEnvironment()
-            
             soccer_results[A_type + "_" + B_type] = test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=extra)
             print("Catch:")
             env = CatchEnvironment()
@@ -294,13 +292,12 @@ def train_test_specific(A_type, B_type, env):
 
 
 def main():
-    #types = ["random", "greedy", "epsilon_greedy", "q", "minimax", "mock", "handcrafted"]
     #train_test_specific("epsilon_greedy", "epsilon_greedy", CatchEnvironment())
     #train_all()
     test_trained()
 
 def _main():
-    types = ["random", "greedy", "epsilon_greedy", "q", "minimax", "mock", "handcrafted"]
+    types = ["random", "probabilistic_q", "minimax", "q", "mock", "handcrafted"]
     learning_rate = 1
     explore = 0.2
     decay = 0.9999954
