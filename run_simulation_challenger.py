@@ -412,20 +412,20 @@ def c_test_challengerMM():
 
 
 def main():
-    s_train_challengerMR()
-    s_train_challengerMM()
-    s_train_challengerQR()
-    s_train_challengerQQ()
+    #s_train_challengerMR()
+    #s_train_challengerMM()
+    #s_train_challengerQR()
+    #s_train_challengerQQ()
 
     s_test_challengerMR()
     s_test_challengerMM()
     s_test_challengerQR()
     s_test_challengerQQ()
 
-    c_train_challengerMR()
-    c_train_challengerMM()
-    c_train_challengerQR()
-    c_train_challengerQQ()
+    #c_train_challengerMR()
+    #c_train_challengerMM()
+    #c_train_challengerQR()
+    #c_train_challengerQQ()
 
     c_test_challengerMR()
     c_test_challengerMM()
