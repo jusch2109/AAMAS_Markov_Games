@@ -1,2 +1,0 @@
-Is Q_Function exact like described in paper? 
-"The Q-learning algo- rithm (QR, QQ) was identical except a “max” operator was used in place of the minimax and the -table did not keep information about the opponent’s action"
