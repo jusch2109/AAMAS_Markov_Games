@@ -202,13 +202,21 @@ def train(_A_type, _B_type,env, explore_decay,explore, learning_rate, decay, tim
     save_policies_and_value_functions(agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B, env, extra=get_old_extra(extra))
     return r
 
-def test(_A_type, _B_type, env,explore_decay,explore, learning_rate, decay,timesteps=100000, use_gui=False, mac=False,extra=""):
+def test(_A_type, _B_type, env,explore_decay,explore, learning_rate, decay,timesteps=100000, use_gui=False, mac=False,extra="", jalm_test=False):
     """
     Runs the simulation for 100k timesteps.  explore decay stayed to make the arguments the same, but its always 1.
     """
     A_type = get_old_type(_A_type)
     B_type = get_old_type(_B_type)
     agentA, agentB, policy_A, policy_B, value_Function_A, value_Function_B = get_agents_policies_value_functions(A_type, B_type, env,explore, learning_rate, decay, load_dicts=True,extra=get_old_extra(extra))
+    if jalm_test:
+        policy_A = JAL_AM_Policy(epsilon=0, decay=1)
+        value_Function_A = JAL_AM_Q_Function(policy=policy_A,env=env,agent_idx=0,start_value=0.0,learning_rate=0,discount_factor=1)
+        value_Function_A.load_dict(os.path.join("jal_models",f"0_catch_jalqr.json"))
+        policy_B = EpsilonGreedyPolicy(0)
+        value_Function_B = Q_Function(policy_B, learning_rate=0, decay=1)
+        value_Function_B.load_dict(os.path.join("models",f"0_catch_gqer.json"))
+
     if isinstance(env, CatchEnvironment):
         simulation = CatchSimulation(env, agentA, agentB, explore_decay=1, training=False, use_gui=use_gui, mac=mac)
     else:
@@ -217,32 +225,7 @@ def test(_A_type, _B_type, env,explore_decay,explore, learning_rate, decay,times
     return r
 
 
-def train_all():
-    learning_rate = 1
-    explore = 0.2
-    decay = 0.9999954
-    explore_decay = decay
-    timesteps = 1000000  
-
-    soccer_results = []
-    catch_results = []
-
-    for A_type in ["epsilon_greedy", "q","minimax"]:
-        for B_type in [A_type, "random"]:
-            print(f"A: {A_type}, B: {B_type}")
-            print("Soccer:")
-            env = SoccerEnvironment()
-            soccer_results[A_type + "_" + B_type] = train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=[str(A_type[0]+B_type[0]),str(A_type[0]+B_type[0])])
-            print("Catch:")
-            env = CatchEnvironment()
-            catch_results[A_type + "_" + B_type] = train(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=[str(A_type[0]+B_type[0]),str(A_type[0]+B_type[0])])
-            print("\n\n")
     
-    print("Soccer Results:")
-    print(soccer_results)
-    print("Catch Results:")
-    print(catch_results)
-    return
 
 def test_trained():
     learning_rate = 1
@@ -289,12 +272,43 @@ def train_test_specific(A_type, B_type, env):
     env = CatchEnvironment()
     test(A_type, B_type, env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=str(A_type[0]+B_type[0]), use_gui=False)
 
+def show_agents():
+    learning_rate = 1
+    explore = 0
+    decay = 1
+    explore_decay = decay
+    timesteps = 1000000
+    env = SoccerEnvironment()
+    env.state[2] = 1   # setting the random with the ball
+    test("handcrafted", "random", env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=True, mac=False, extra=["hr","aa"])
+    env.state[2] = 1   # setting the random with the ball
+    ## QR vs R
+    test("q", "random", env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=True, mac=False, extra=["qr","qr"])
+    
+    env = CatchEnvironment()
+    env.state[2] = 0   # setting the handcrafted as the catcher
+    test("handcrafted", "random", env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=True, mac=False, extra=["hr","aa"])
+    env.state[2] = 0   # setting the minimax as the catcher
+    ## MM VS MM
+    test("minimax", "minimax", env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=True, mac=False, extra=["mm","mm"])
+    env = CatchEnvironment()
+    env.state[2] = 0   # setting jal as the catcher
+    ## JAL AM vs Q
+    ## this test is hardcoded, its not random random.
+    test("random", "random", env, explore_decay, explore, learning_rate, decay, timesteps=timesteps,extra=[str("rr"), "rr"], use_gui=True, jalm_test=True)
 
 
-def main():
-    #train_test_specific("epsilon_greedy", "epsilon_greedy", CatchEnvironment())
-    #train_all()
-    test_trained()
+
+def main():   
+    learning_rate = 1
+    explore = 0.2
+    decay = 0.9999954
+    explore_decay = decay
+    timesteps = 1000000   
+    #env = SoccerEnvironment()
+    #train("epsilon_greedy", "random", env, explore_decay, explore, learning_rate, decay, timesteps=timesteps, use_gui=False, mac=False, extra=["qr","qr"])
+
+    show_agents()
 
 def _main():
     types = ["random", "probabilistic_q", "minimax", "q", "mock", "handcrafted"]

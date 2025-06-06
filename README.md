@@ -7,6 +7,7 @@ Strings indicating the type of each agent. Valid options:
 "random" – takes random actions
 "probabilistic_q" – Q-learning agent with probabilistic action selection
 "minimax" – uses minimax Q-learning
+"epsilon_greedy" - Used to train q
 "q" – standard Q-learning agent
 "mock" – human-controlled agent (uses keyboard input)
 "handcrafted" – rule-based agent
@@ -15,15 +16,15 @@ env:
 Environment type, SoccerEnvironment() or CatchEnvironment().
 
 explore:
-Initial exploration rate (epsilon) for "probabilistic_q", "minimax", and "q" agents.
+Initial exploration rate (epsilon) for "probabilistic_q", "minimax","epsilon_greedy", and "q" agents.
 Has no effect on other types.
 
 decay:
-Learning rate decay, only applies to "probabilistic_q", "minimax", and "q" agents.
+Learning rate decay, only applies to "probabilistic_q", "minimax", "epsilon_greedy", and "q" agents.
 
 explore_decay:
 Rate at which the exploration value decreases over time.
-Also only affects "probabilistic_q", "minimax", and "q".
+Also only affects "probabilistic_q", "minimax", "epsilon_greedy", and "q".
 
 timesteps:
 Integer for how many time steps the simulation should run.
@@ -43,4 +44,4 @@ The first letter is the type of the agent; the second is the type it was trained
 For example, ["qr", "qq"] loads a Q-learning agent trained vs Random, and a Q-learning agent trained vs another Q-learning agent.
 Some agent combinations may not have trained models available.
 
-A working example is function test_trained().
+A working example is function test_trained(). If you want to run like in the video one game per example uncomment the 4 break in the file simulation.py.

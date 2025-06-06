@@ -27,7 +27,7 @@ class SoccerSimulation():
         self.training = training
         self.mac = mac
         self.save_and_load = False
-        self.cooldown = 2
+        self.cooldown = 1
         if use_gui:
             self.gui = SoccerGui(environment,mac)
             
@@ -97,8 +97,11 @@ class SoccerSimulation():
             
             if rewardA == 1:
                 A_wins += 1
+                # TODO: changeback
+                # break
             elif rewardB == 1:
                 B_wins += 1
+                # break
   
 
             # Update state
@@ -153,7 +156,7 @@ class CatchSimulation():
         
         self.training = training
         self.mac = mac
-        self.cooldown = 0.5
+        self.cooldown = 1.5
         if use_gui:
             self.gui = CatchGui(environment,mac)
             
@@ -188,10 +191,15 @@ class CatchSimulation():
 
             if rewardA == 1:
                 steps_A_wins.append(steps_till_end)
+                # TODO: changeback
                 steps_till_end = 0
+                #break
             elif rewardB == 1:
+                # TODO: changeback
+                steps_till_end = 0
                 steps_B_wins.append(steps_till_end)
                 steps_till_end = 0
+                #break
             else:
                 steps_till_end +=1
 
