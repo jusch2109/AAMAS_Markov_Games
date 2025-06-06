@@ -47,4 +47,4 @@ Some agent combinations may not have trained models available.
 A working example is function test_trained().
 
 ## Challenger Evaluation
-To run the evaluation against the respective challengers, start the script run_simulation_challengers. The functions to run MR, MM, QR and QQ against their challenger are already set. For running the evaluation against the JAL challenger, run the file run_simulation_challengerjal
+To run the evaluation against the respective challengers, start the script run_simulation_challengers. The functions to run MR, MM, QR and QQ against their challenger are already set. For running the evaluation against the JAL challenger, run the file run_simulation_jal.
